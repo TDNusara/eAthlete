@@ -1,4 +1,7 @@
-eAthlete <br>
-![Logo](src/assets/logo.png)
+<h1 align="center">
+  eAthlete
+</h1>
+ <br>
+<span align= "center">![Logo](src/assets/logo.png)</span>
 <br>
-An Online Sports Learning and Training Hub
+<h3>An Online Sports Learning and Training Hub</h3>
