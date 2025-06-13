@@ -2,6 +2,8 @@
   eAthlete
 </h1>
  <br>
-<span align= "center">![Logo](src/assets/logo.png)</span>
+ <p align="center">
+  <img src="src/assets/logo.png" alt="Logo">
+</p>
 <br>
-<h3>An Online Sports Learning and Training Hub</h3>
+<h3 align="center">An Online Sports Learning and Training Hub</h3>
