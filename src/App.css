@@ -26,10 +26,16 @@ body {
 nav{
     background-color: var(--white);
 }
-.navbar{
+.deskNavbar{
     row-gap: 12px;
     padding: 0px 112px 0px 112px;
     align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.navbar-mobile,
+.mobile-links {
+  display: none;
 }
 .logo{
     max-width:200px;
@@ -68,6 +74,86 @@ nav{
     font-style: normal;
     font-weight: 500;
     color: var(--white);
+}
+
+@media only screen and (max-width: 1020px) {
+  .deskNavbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .logo-center img {
+    max-width: 150px;
+  }
+
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .mobile-links a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Saira Condensed";
+    color: var(--black);
+    font-size: 1.05rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .mobile-links a:hover {
+    background-color: #e9ecef;
+    color: var(--PerfectRed);
+  }
+    .signin{
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .logo-center img {
+    max-width: 120px;
+  }
+
+  .mobile-links a {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+   .nav-btn{
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .logo-center img {
+    max-width: 100px;
+  }
+  .signin{
+     padding: 1.5px 8px 1.5px 8px ;
+  }
 }
 
 
