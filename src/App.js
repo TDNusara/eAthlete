@@ -7,6 +7,8 @@ import GHome from "./pages/GuestHome";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
@@ -20,6 +22,7 @@ function App() {
       <div>
         {isLoggedIn ? <HNavbar onLogout={handleLogout} /> : <SNavbar />}
         <Routes>
+          <Route path="/" element={<Navigate to="/GuestHome" replace />} />
           <Route path="/GuestHome" element={<GHome />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
@@ -29,12 +32,16 @@ function App() {
               <Route path="/LearnerHome" element={<LHome />} />
               <Route path="/About" element={<About />} />
               <Route path="/Contact" element={<Contact />} />
+              <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+              <Route path="/Term" element={<Term />} />
             </>
           ) : (
             <>
               <Route path="/LearnerHome" element={<Navigate to="/login" />} />
               <Route path="/About" element={<Navigate to="/login" />} />
               <Route path="/Contact" element={<Navigate to="/login" />} />
+              <Route path="/PrivacyPolicy" element={<Navigate to="/PrivacyPolicy" />} />
+              <Route path="/Term" element={<Navigate to="/Term" />} />
             </>
           )}
         </Routes>

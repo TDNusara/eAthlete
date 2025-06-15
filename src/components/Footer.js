@@ -39,6 +39,20 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
+                <div className="row Fsecondrow">
+                    <div className="col-12 col-sm-3 ft-links">
+                        <Link to="/PrivacyPolicy" className="ft-link">Privacy policy</Link>                   
+                    </div>
+                    <div className="col-12 col-sm-3 ft-links">
+                        <Link to="/About" className="ft-link">About Us</Link>    
+                    </div>
+                    <div className="col-12 col-sm-3 ft-links">
+                        <Link to="/Contact" className="ft-link">Contact Us</Link>
+                    </div>
+                    <div className="col-12 col-sm-3 ft-links">
+                        <Link to="/Term" className="ft-link">Term & conditions</Link>
+                    </div>
+                </div>
             </div>
         </footer>
     );

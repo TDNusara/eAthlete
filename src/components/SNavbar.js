@@ -18,7 +18,7 @@ function SNavbar() {
             <Link to="/GuestHome"><img src={logo} alt="Logo" className="logo-img" /></Link>
           </div>
           <div className="signin">
-            <Link to="/login" className="nav-btn">Sign In</Link>
+            <Link to="/Login" className="nav-btn">Sign In</Link>
           </div>
         </div>
 
