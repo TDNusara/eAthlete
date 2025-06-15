@@ -38,10 +38,10 @@ function SNavbar() {
       {/* Desktop Navbar */}
       <div className="container-fluid">
         <div className="row deskNavbar">
-          <div className="col-md-3 logo">
+          <div className="col-md-2 logo">
             <Link to="/GuestHome" className="navbar-brand"><img className='logo' src={logo} alt='Logo' /></Link>
           </div>
-          <div className="col-md-9 nav_items">
+          <div className="col-md-10 nav_items">
             <ul className="nav justify-content-center align align-items-center">
               <li className="nav-item">
                 <Link to="/GuestHome" className="nav-link active">Home</Link>
