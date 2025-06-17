@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import SNavbar from "./components/SNavbar";
-import HNavbar from "./components/HNavbar";
-import Footer from "./components/Footer";
+/*import SNavbar from "./components/SNavbar";
+import HNavbar from "./components/HNavbar";*/
 import GHome from "./pages/GuestHome";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -16,10 +15,10 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => setIsLoggedIn(true);
-  const handleLogout = () => setIsLoggedIn(false);
   return (
     <Router>
       <div>
+        {/*
         {isLoggedIn ? <HNavbar onLogout={handleLogout} /> : <SNavbar />}
         <Routes>
           <Route path="/" element={<Navigate to="/GuestHome" replace />} />
@@ -45,7 +44,34 @@ function App() {
             </>
           )}
         </Routes>
-        <Footer />
+        */}
+        <Routes>
+          <Route path="/" element={<Navigate to="/GuestHome" replace />} />
+          <Route path="/GuestHome" element={<GHome />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+
+          {/* Protected Routes */}
+          <Route
+            path="/LearnerHome"
+            element={isLoggedIn ? <LHome /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/About"
+            element={isLoggedIn ? <About /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Contact"
+            element={isLoggedIn ? <Contact /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/PrivacyPolicy"
+            element={isLoggedIn ? <PrivacyPolicy /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Term"
+            element={isLoggedIn ? <Term /> : <Navigate to="/login" />}
+          />
+        </Routes>
       </div>
     </Router>
   );
