@@ -16,7 +16,7 @@ function HNavbar() {
         <div className="navbar-mobile">
           <div className="menu-icon" onClick={toggleMenu}>&#9776;</div>
           <div className="logo-center">
-            <Link to="/GuestHome"><img src={logo} alt="Logo" className="logo-img" /></Link>
+            <Link to="/LearnerHome"><img src={logo} alt="Logo" className="logo-img" /></Link>
           </div>
           <div className="right">
             <Link to="/profile" className="profile-icon-link">
@@ -28,7 +28,7 @@ function HNavbar() {
         {/* Mobile Menu Links */}
         {menuOpen && (
           <div className="mobile-links">
-            <Link to="/GuestHome" onClick={toggleMenu}>Home</Link>
+            <Link to="/LearnerHome" onClick={toggleMenu}>Home</Link>
             <Link to="/" onClick={toggleMenu}>Join With Us</Link>
             <Link to="/" onClick={toggleMenu}>Grab Your Gears</Link>
             <Link to="/About" onClick={toggleMenu}>About Us</Link>
@@ -42,12 +42,12 @@ function HNavbar() {
       <div className="container-fluid">
         <div className="row deskNavbar">
           <div className="col-md-2 logo">
-            <Link to="/GuestHome" className="navbar-brand"><img className='logo' src={logo} alt='Logo' /></Link>
+            <Link to="/LearnerHome" className="navbar-brand"><img className='logo' src={logo} alt='Logo' /></Link>
           </div>
           <div className="col-md-10 nav_items">
             <ul className="nav justify-content-center align align-items-center">
               <li className="nav-item">
-                <Link to="/GuestHome" className="nav-link active">Home</Link>
+                <Link to="/LearnerHome" className="nav-link active">Home</Link>
               </li>
               <li className="nav-item">
                 <Link to="/" className="nav-link">Join With Us</Link>

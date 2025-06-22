@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
+import Coachers from "./pages/Learner/Coachers";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -62,6 +63,10 @@ function App() {
           <Route
             path="/Contact"
             element={isLoggedIn ? <Contact /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Coachers"
+            element={isLoggedIn ? <Coachers /> : <Navigate to="/login" />}
           />
           <Route
             path="/PrivacyPolicy"
