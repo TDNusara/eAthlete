@@ -29,9 +29,9 @@ function HNavbar() {
         {menuOpen && (
           <div className="mobile-links">
             <Link to="/LearnerHome" onClick={toggleMenu}>Home</Link>
-            <Link to="/" onClick={toggleMenu}>Join With Us</Link>
-            <Link to="/" onClick={toggleMenu}>Grab Your Gears</Link>
             <Link to="/About" onClick={toggleMenu}>About Us</Link>
+            <Link to="/" onClick={toggleMenu}>Articles</Link>
+            <Link to="/" onClick={toggleMenu}>Grab Your Gears</Link>
             <Link to="/Contact" onClick={toggleMenu}>Contact Us</Link>
           </div>
         )}
@@ -50,13 +50,13 @@ function HNavbar() {
                 <Link to="/LearnerHome" className="nav-link active">Home</Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link">Join With Us</Link>
+                <Link to="/About" className="nav-link">About Us</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/" className="nav-link">Articles</Link>
               </li>
               <li className="nav-item">
                 <Link to="/" className="nav-link">Grab Your Gears</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/About" className="nav-link">About Us</Link>
               </li>
               <li className="nav-item">
                 <Link to="/Contact" className="nav-link">Contact Us</Link>

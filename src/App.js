@@ -50,6 +50,8 @@ function App() {
           <Route path="/" element={<Navigate to="/GuestHome" replace />} />
           <Route path="/GuestHome" element={<GHome />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+          <Route path="/Term" element={<Term />} />
 
           {/* Protected Routes */}
           <Route
@@ -67,14 +69,6 @@ function App() {
           <Route
             path="/Coachers"
             element={isLoggedIn ? <Coachers /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/PrivacyPolicy"
-            element={isLoggedIn ? <PrivacyPolicy /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/Term"
-            element={isLoggedIn ? <Term /> : <Navigate to="/login" />}
           />
         </Routes>
       </div>
