@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
 import Coachers from "./pages/Learner/Coachers";
+import CoachHomePage from "./pages/CoachModule/CoachHome";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -57,6 +58,10 @@ function App() {
           <Route
             path="/LearnerHome"
             element={isLoggedIn ? <LHome /> : <Navigate to="/login" />}
+          />
+          <Route 
+            path="/coach" 
+            element={<CoachHomePage />} 
           />
           <Route
             path="/About"
