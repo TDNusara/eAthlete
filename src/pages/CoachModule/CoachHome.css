@@ -63,6 +63,17 @@
     width: 60%; 
     font-size: 1.2rem;
   }
+
+  .coachHome-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+
+.coachHome-text p {
+    font-size: 0.7rem;
+    margin-bottom: 100px;
+}
 }
 
 a {

@@ -15,8 +15,8 @@ function CoachHomePage() {
                         <p>Your Ultimate Learning Journey Starts Here</p>
                     </div>
                     <div className="coach-buttons">
-                        <a href="#" className="coach-btn" target="_blank"><b>USER PROFILES</b></a>
-                        <a href="#" className="coach-btn" target="_blank"><b>LESSONS</b></a>
+                        <a href="/coach-home-page/user-profiles" className="coach-btn" target="_blank"><b>USER PROFILES</b></a>
+                        <a href="/coach-home-page/add-lessons" className="coach-btn" target="_blank"><b>LESSONS</b></a>
                     </div>
                 </div>
 

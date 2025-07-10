@@ -11,6 +11,9 @@ import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
 import Coachers from "./pages/Learner/Coachers";
 import CoachHomePage from "./pages/CoachModule/CoachHome";
+import AddLessons from './pages/CoachModule/lessons/AddLessons';
+import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -60,8 +63,16 @@ function App() {
             element={isLoggedIn ? <LHome /> : <Navigate to="/login" />}
           />
           <Route 
-            path="/coach" 
+            path="/coach-home-page" 
             element={<CoachHomePage />} 
+          />
+          <Route 
+            path="/coach-home-page/add-lessons" 
+            element={<AddLessons />} 
+          />
+          <Route 
+            path="/coach-home-page/user-profiles" 
+            element={<UserProfiles />} 
           />
           <Route
             path="/About"
