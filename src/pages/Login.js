@@ -14,7 +14,7 @@ function Login({ onLogin }) {
   return (
     <div>
       <h2>Login</h2>
-      <button onClick={handleSubmit}>Login</button>
+      <button className="btn" onClick={handleSubmit}>Login</button>
       <Footer2 />
     </div>
   );

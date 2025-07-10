@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../../App.css';
 import './Learner.css'; // includes styles below
 import Footer2 from "../../components/Footer2";
 import HNavbar from "../../components/HNavbar";
@@ -50,7 +51,7 @@ function Coachers() {
         </div>
 
       <div className="gallery-wrapper">
-        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <h2 className='crd-text' style={{ textAlign: 'center', marginBottom: '1rem' }}>
           {selectedSport === 'All' ? 'All Coaches' : `${selectedSport} Coaches`}
         </h2>
 
@@ -60,6 +61,7 @@ function Coachers() {
               key={sport}
               onClick={() => setSelectedSport(sport)}
               className={selectedSport === sport ? 'active' : ''}
+              style={{ fontFamily: "Saira Condensed" }}
             >
               {sport}
             </button>
@@ -82,7 +84,7 @@ function Coachers() {
                             <div className="row g-0">
                                 {/* Left Side */}
                                 <div className="col-12 col-md-4 d-flex flex-column align-items-center text-center">
-                                    <h6 className="text-danger fw-bold mb-2">
+                                    <h6 className="crd-text text-danger fw-bold mb-2">
                                         {coach.Sport?.toUpperCase()} COACH
                                     </h6>
                                     <div className="position-relative w-100">
@@ -104,7 +106,7 @@ function Coachers() {
                                         SELECT
                                         </button>
                                     </div>
-                                    <h5 className="mt-3 fw-bold text-dark">
+                                    <h5 className="crd-text mt-3 fw-bold text-dark">
                                         {coach.FirstName.toUpperCase()} {coach.LastName.toUpperCase()}
                                     </h5>
                                 </div>

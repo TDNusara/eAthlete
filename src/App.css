@@ -24,7 +24,19 @@
 body {
     font-family: "Saira Condensed" ;
 }
+.btn{
+  font-family: "Saira Condensed";
+  color: var(--white);
+  background-color: var(--PerfectRed);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 20px;
+}
 
+.btn:hover{
+  background-color: var(--red);
+  color: var(--white);
+}
 /*-----------------------------------NAVBAR-----------------------------------------------*/
 nav{
     background-color: var(--white);
