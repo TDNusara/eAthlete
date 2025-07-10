@@ -5,7 +5,7 @@ function AddButton({ onClick }) {
     return (
         <div className="lesson-card">
             <div className="lesson-box add-button" onClick={onClick}>
-                + ADD LESSON +
+                ADD LESSON 
             </div>
         </div>
     );
