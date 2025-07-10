@@ -70,6 +70,18 @@ function App() {
             path="/Coachers"
             element={isLoggedIn ? <Coachers /> : <Navigate to="/login" />}
           />
+          <Route
+            path="/Coachers/karate"
+            element={isLoggedIn ? <Coachers filterSport="karate" /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Coachers/volleyball"
+            element={isLoggedIn ? <Coachers filterSport="volleyball" /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/Coachers/workout"
+            element={isLoggedIn ? <Coachers filterSport="workout" /> : <Navigate to="/login" />}
+          />
         </Routes>
       </div>
     </Router>
