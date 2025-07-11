@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../App.css';
-import './Learner.css'; // includes styles below
+import './Learner.css';
 import Footer2 from "../../components/Footer2";
 import HNavbar from "../../components/HNavbar";
 
@@ -20,6 +20,8 @@ function Coachers() {
 
     axios.get(url)
       .then(res => {
+        console.log("Server response:", res.data);
+
         if (Array.isArray(res.data)) {
           setCoaches(res.data);
           setError(null);
@@ -39,16 +41,16 @@ function Coachers() {
     <div>
       <HNavbar />
 
-        <div className="section coach-hero">
-            <div className="container-fluid coach-frame1">
-                <div className="row regframe">
-                    <div className="col-sm-12 coach-herocol">
-                        <h1 className="coachHtext1" style={{textAlign:"center"}}>Welcome to Your Coaching Hub</h1>
-                        <h2 className="coachHtext2">Choose your <span className="coachredtext">coach</span></h2>
-                    </div>
-                </div>
+      <div className="section coach-hero">
+        <div className="container-fluid coach-frame1">
+          <div className="row regframe">
+            <div className="col-sm-12 coach-herocol">
+              <h1 className="coachHtext1" style={{ textAlign: "center" }}>Welcome to Your Coaching Hub</h1>
+              <h2 className="coachHtext2">Choose your <span className="coachredtext">coach</span></h2>
             </div>
+          </div>
         </div>
+      </div>
 
       <div className="gallery-wrapper">
         <h2 className='crd-text' style={{ textAlign: 'center', marginBottom: '1rem' }}>
@@ -68,7 +70,7 @@ function Coachers() {
           ))}
         </div>
 
-        <div className="section  coach-sec">
+        <div className="section coach-sec">
           {error ? (
             <p className="error-msg">{error}</p>
           ) : coaches.length === 0 ? (
@@ -77,73 +79,91 @@ function Coachers() {
             </p>
           ) : (
             <div className="container card-grid mt-4">
-                <div className="row g-4">
-                    {coaches.map((coach) => (
-                    <div key={coach.CoachID} className="col-md-6 col-lg-6">
-                        <div className="card h-100 p-3 shadow-sm bg-light">
-                            <div className="row g-0">
-                                {/* Left Side */}
-                                <div className="col-12 col-md-4 d-flex flex-column align-items-center text-center">
-                                    <h6 className="crd-text text-danger fw-bold mb-2">
-                                        {coach.Sport?.toUpperCase()} COACH
-                                    </h6>
-                                    <div className="position-relative w-100">
-                                        <img
-                                        src={coach.image_url || "/default-coach.png"}
-                                        alt={`${coach.FirstName} ${coach.LastName}`}
-                                        className="img-fluid rounded"
-                                        />
-                                        {/* SELECT Button on image */}
-                                        <button
-                                        className="btn btn-danger position-absolute"
-                                        style={{
-                                            bottom: "10px",
-                                            left: "50%",
-                                            transform: "translateX(-50%)",
-                                            fontWeight: "bold",
-                                        }}
-                                        >
-                                        SELECT
-                                        </button>
-                                    </div>
-                                    <h5 className="crd-text mt-3 fw-bold text-dark">
-                                        {coach.FirstName.toUpperCase()} {coach.LastName.toUpperCase()}
-                                    </h5>
-                                </div>
-
-                                {/* Right Side */}
-                                <div className="col-12 col-md-7 mt-3 mt-md-0 ps-md-3">
-                                    <p className='coachDetails'><span className='cardHeadText'>EXPERIENCE:</span>: {coach.YearsOfExperience} YEARS</p>
-                                    <p className='coachDetails'><span className='cardHeadText'>LOCATION:</span> {coach.Location}</p>
-                                    <p className='coachDetails'><span className='cardHeadText'>ACHIEVEMENTS:</span> {coach.Achievements}</p>
-                                    <p className='coachDetails'><span className='cardHeadText'>QUALIFICATION:</span> {coach.Qualification}</p>
-                                    <p className='coachDetails'><span className='cardHeadText'>CONTACT NO:</span> {coach.Phone}</p>
-                                    <p className='coachDetails'><span className='cardHeadText'>EMAIL:</span> {coach.Email}</p>
-                                </div>
-
-                                <div className="coach-select-wrapper mobile-only">
-                                    <button
-                                        className="btn btn-danger mobile-btn position-absolute"
-                                        style={{
-                                            bottom: "10px",
-                                            left: "50%",
-                                            transform: "translateX(-50%)",
-                                            fontWeight: "bold",
-                                        }}
-                                        >
-                                        SELECT
-                                    </button>
-                                </div>
-                            </div>
+              <div className="row g-4">
+                {coaches.map((coach) => (
+                  <div key={coach.CoachID} className="col-sm-6 col-lg-6">
+                    <div className="card h-100 p-3 shadow-sm bg-light">
+                      <div className="row g-0">
+                        {/* Left Side */}
+                        <div className="col-12 col-md-4 d-flex flex-column align-items-center text-center">
+                          <h6 className="crd-text text-danger fw-bold mb-2">
+                            {coach.SportName?.toUpperCase()} COACH
+                          </h6>
+                          <div className="position-relative w-100">
+                            <img
+                              src={coach.DPlink && coach.DPlink !== "null"
+                                ? `http://localhost/eAthlete/backend/${coach.DPlink}`
+                                : "/default-coach.png"
+                              }
+                              onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "/default-coach.png";
+                              }}
+                              alt={`${coach.FirstName} ${coach.LastName}`}
+                              className="img-fluid rounded"
+                            />
+                            <button
+                              className="btn btn-danger position-absolute"
+                              style={{
+                                bottom: "10px",
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                fontWeight: "bold",
+                              }}
+                            >
+                              SELECT
+                            </button>
+                          </div>
+                          <h5 className="crd-text mt-3 fw-bold text-dark">
+                            {coach.FirstName?.toUpperCase()} {coach.LastName?.toUpperCase()}
+                          </h5>
                         </div>
-                    </div>
-                    ))}
-                </div>
-            </div>
 
+                        {/* Right Side */}
+                        <div className="col-12 col-md-7 mt-3 mt-md-0 ps-md-3">
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>QUALIFICATION:</span> {coach.Qualification || 'N/A'}
+                          </p>
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>EXPERIENCE:</span> {coach.Experience || 'N/A'} YEARS
+                          </p>
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>LOCATION:</span> {coach.District || 'N/A'}
+                          </p>
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>CONTACT NO:</span> {coach.Phone || 'N/A'}
+                          </p>
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>EMAIL:</span> {coach.Email || 'N/A'}
+                          </p>
+                          <p className='coachDetails'>
+                            <span className='cardHeadText'>BIO:</span> {coach.Bio || 'N/A'}
+                          </p>
+                        </div>
+
+                        <div className="coach-select-wrapper mobile-only">
+                          <button
+                            className="btn btn-danger mobile-btn position-absolute"
+                            style={{
+                              bottom: "10px",
+                              left: "50%",
+                              transform: "translateX(-50%)",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            SELECT
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </div>
+
       <Footer2 />
     </div>
   );

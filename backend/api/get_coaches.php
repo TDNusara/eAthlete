@@ -12,21 +12,25 @@ if (!isset($conn)) {
 $sport = isset($_GET['sport']) ? strtolower($_GET['sport']) : null;
 $allowed_sports = ['workout', 'karate', 'volleyball'];
 
-// Only allow valid sports or default to all
 if ($sport && in_array($sport, $allowed_sports)) {
     $stmt = $conn->prepare("
-        SELECT c.*, u.FirstName, u.LastName, u.Phone, u.Email, u.UserType 
-        FROM coach c
-        JOIN user u ON c.CoachID = u.UserID
-        WHERE LOWER(c.Sport) = ? AND LOWER(u.UserType) = 'coach'
+        SELECT c.CoachID, c.Qualification, c.Experience, c.Style,
+               u.FirstName, u.LastName, u.Email, u.UserType,
+               s.SportName
+        FROM Coach c
+        JOIN User u ON c.CoachID = u.UserID
+        JOIN Sport s ON c.SportID = s.SportID
+        WHERE LOWER(s.SportName) = ? AND LOWER(u.UserType) = 'coach'
     ");
     $stmt->bind_param("s", $sport);
 } else {
-    // All sports
     $stmt = $conn->prepare("
-        SELECT c.*, u.FirstName, u.LastName, u.Phone, u.Email, u.UserType 
-        FROM coach c
-        JOIN user u ON c.CoachID = u.UserID
+        SELECT c.CoachID, c.Qualification, c.Experience, c.Style,
+               u.FirstName, u.LastName, u.Email, u.UserType,
+               s.SportName
+        FROM Coach c
+        JOIN User u ON c.CoachID = u.UserID
+        JOIN Sport s ON c.SportID = s.SportID
         WHERE LOWER(u.UserType) = 'coach'
     ");
 }
@@ -44,4 +48,3 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode($coaches);
-?>
