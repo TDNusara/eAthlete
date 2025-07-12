@@ -24,7 +24,9 @@ import CWorkoutCreateAccImported from "./pages/CreateAcc/CWorkoutCreateAcc";
 import CCategory from "./pages/LoginCategory/CCategory";
 import UCategory from "./pages/LoginCategory/UCategory";
 import SCreateAccImported from './pages/CreateAcc/SCreateAcc';
-import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCard";
+import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCardL";
+import AdminPanelCCardImported from "./components/AdminComponents/AdminPanelCardC";
+import AdminPanelSCardImported from "./components/AdminComponents/AdminPanelCardS";
 
 
 function App() {
@@ -81,6 +83,8 @@ function App() {
              <Route path="/UserCategoryLogin" element={<UCategory/>} />
              <Route path="/SellerCreateAcc" element={<SCreateAccImported/>} />
             <Route path="/AdminPanelCard" element={<AdminPanelCardImported/>} />
+            <Route path="/AdminPanelCardCoach" element={<AdminPanelCCardImported/>} />
+            <Route path="/AdminPanelCardStore" element={<AdminPanelSCardImported/>} />
           {/* Rout try by Vindya-end */}
 
 

@@ -1,123 +1,77 @@
-body {
-  overflow-x: hidden;
+/*-
+----------------------------------------AdminPanel-----------------------------------------------------------*/
+.Amid{
+    background-color: #D9D9D9;
+
+
+
+
+
+}
+.A{
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding-top: 50px;
 }
 
+/*-------------------------------------------AdminPanelCard-------------------------------------------------------*/
 
-/*---------------------------------------- AdminPanel Layout ----------------------------------------*/
-.Amid {
-  background-color: #D9D9D9;
-  margin-bottom: -50px;
-  display: flex;             /* Use flexbox */
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  flex-direction: column;
-}
-
-.A {
-  color: black;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 30px;
-  padding-top: 50px;
-}
-
-.ACards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-}
-
-/* Default (Desktop): 3 cards per row */
-.ACards > * {
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: calc(33.333% - 20px);
-}
-
-/* Tablet: 2 cards per row */
-@media (max-width: 1024px) {
-  .ACards {
-    width: 90%;
-  }
-  .ACards > * {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-
-/* Mobile: 1 card per row */
-@media (max-width: 640px) {
-  .ACards > * {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-/*---------------------------------------- AdminPanel Card ----------------------------------------*/
 .card-empty {
   background-color: white;
   box-shadow: 0 4px 6px rgba(100, 116, 139, 0.2);
+  overflow: hidden;
   color: black;
-  flex: 1 1 100%;
-  width: 100%;
-  max-width: 300px;
-  aspect-ratio: 5 / 3;
-  padding: 1rem;
+  width: 231px;
+  height: 150px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;    /* center image + number horizontally */
+  justify-content: center; /* center all vertically */
   justify-content: space-evenly;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
-/* Default (Desktop): 3 cards per row */
-.card-empty > * {
-  max-width: 300px;
-}
-
-/* Tablet: 2 cards per row */
-@media (max-width: 1024px) {
-  .card-empty {
-  max-width: 300px;
-  }
-}
-
-/* Mobile: 1 card per row */
-@media (max-width: 640px) {
-  .card-empty > * {
-    max-width: 90vw;
-  }
-}
-
-.cardImage {
-  width: 40px;
+.cardImageL {
+  width: 70px;            /* or whatever fixed width you prefer */
   height: 40px;
+  margin-bottom: 12px;
   object-fit: contain;
-  margin: 15px 0 10px;
+  margin-top: 10px;
+}
+
+.CardImageAll{
+
+ width: 40px;            /* or whatever fixed width you prefer */
+  height: 40px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  margin-top: 15px;
+
 }
 
 .ACardCount {
-  font-size: 24px;
+  font-size: 0px;
   font-weight: bold;
   margin: 0;
 }
 
-.ACardLabel {
-  font-size: 14px;
+.ACardLabel{
+  font-size: 5px;
   font-weight: bold;
   margin: 0;
 }
-
-/*---------------------------------------- AdminPanel Button ----------------------------------------*/
-.AB1 {
+/*---------------------------------------AdminPanel Button--------------------------------------------------------------*/
+.AB1{
   font-size: 20px;
   color: #FFFFFF;
   width: 170px;
   height: 50px;
   background-color: #646464;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
+
+
+
+
+
