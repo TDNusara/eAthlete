@@ -30,6 +30,7 @@ function HNavbar() {
           <div className="mobile-links">
             <Link to="/LearnerHome" onClick={toggleMenu}>Home</Link>
             <Link to="/About" onClick={toggleMenu}>About Us</Link>
+            <Link to="/Coachers" onClick={toggleMenu}>Coach Directory</Link>
             <Link to="/" onClick={toggleMenu}>Articles</Link>
             <Link to="/" onClick={toggleMenu}>Grab Your Gears</Link>
             <Link to="/Contact" onClick={toggleMenu}>Contact Us</Link>
@@ -48,6 +49,9 @@ function HNavbar() {
             <ul className="nav justify-content-center align align-items-center">
               <li className="nav-item">
                 <Link to="/LearnerHome" className="nav-link active">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Coachers" className="nav-link">Coach Directory</Link>
               </li>
               <li className="nav-item">
                 <Link to="/About" className="nav-link">About Us</Link>

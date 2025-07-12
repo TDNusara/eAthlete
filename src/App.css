@@ -24,7 +24,19 @@
 body {
     font-family: "Saira Condensed" ;
 }
+.btn{
+  font-family: "Saira Condensed";
+  color: var(--white);
+  background-color: var(--PerfectRed);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 20px;
+}
 
+.btn:hover{
+  background-color: var(--red);
+  color: var(--white);
+}
 /*-----------------------------------NAVBAR-----------------------------------------------*/
 nav{
     background-color: var(--white);
@@ -97,7 +109,7 @@ nav{
   transform: scale(1.05);
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1100px) {
   .deskNavbar {
     display: none;
   }
@@ -299,8 +311,8 @@ nav{
 }
 .workouttxt, .planstxt , .karatetxt{
   font-weight: 700;
-  color: var(--black);
-  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /*---------------------------sec2-------------------------------------------*/
@@ -434,7 +446,7 @@ nav{
   background-color: #000000;
   color: white;
   padding: 120px 112px 100px 112px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
