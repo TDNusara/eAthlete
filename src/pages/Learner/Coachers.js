@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../App.css';
 import './Learner.css';
@@ -7,10 +8,18 @@ import HNavbar from "../../components/HNavbar";
 
 const sports = ['All', 'Workout', 'Volleyball', 'Karate'];
 
+
 function Coachers() {
+  const navigate = useNavigate();
+
+  const goToLessons = () => {
+    navigate('/LessonListPage');
+  };
+
   const [selectedSport, setSelectedSport] = useState('All');
   const [coaches, setCoaches] = useState([]);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     let url = 'http://localhost/eAthlete/backend/api/get_coaches.php';
@@ -20,7 +29,6 @@ function Coachers() {
 
     axios.get(url)
       .then(res => {
-        console.log("Server response:", res.data);
 
         if (Array.isArray(res.data)) {
           setCoaches(res.data);
@@ -102,7 +110,7 @@ function Coachers() {
                               alt={`${coach.FirstName} ${coach.LastName}`}
                               className="img-fluid rounded"
                             />
-                            <button
+                            <button onClick={goToLessons}
                               className="btn btn-danger position-absolute"
                               style={{
                                 bottom: "10px",
@@ -142,7 +150,7 @@ function Coachers() {
                         </div>
 
                         <div className="coach-select-wrapper mobile-only">
-                          <button
+                          <button onClick={goToLessons}
                             className="btn btn-danger mobile-btn position-absolute"
                             style={{
                               bottom: "10px",

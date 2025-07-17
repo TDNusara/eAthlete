@@ -251,9 +251,7 @@ nav{
   font-family: "Saira Condensed";
   align-items: center;
 }
-.herocol{
-  justify-items: center;
-}
+
 .headertext{
   font-size: 70px;
   font-weight: 600;
@@ -398,6 +396,7 @@ nav{
   .regbtn{
     font-size: 18px;
     margin-top: 10px;
+    display: grid;
   }
   .sptbtn{
     font-size: 18px;
@@ -561,5 +560,88 @@ nav{
   }
   .social-items{
     padding: 0%;
+  }
+}
+
+/* ------------------------------------------------Cover page ----------------------------------------------------------*/
+.cover{
+  margin-bottom: 300px;
+  width: 100%;
+}
+
+.imgText{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cover-img{
+  width: 100%;
+}
+
+.coverText{
+  position: absolute;
+  font-family: "Saira Condensed" ;
+  color: var(--white);
+
+}
+.coverHText{  
+  font-size: 80px;
+  font-weight: bold;
+  padding-left: 112px;
+}
+
+.coverPText{
+  font-size: 40px;
+  padding-left: 250px;
+}
+
+@media only screen and (max-width: 950px){
+  .coverHText{  
+    font-size: 70px;
+  }
+
+  .coverPText{
+    font-size: 30px;
+  }
+
+}
+@media only screen and (max-width: 800px){
+  .coverHText{  
+    font-size: 60px;
+    padding-left: 100px;
+  }
+
+  .coverPText{
+    font-size: 25px;
+    padding-left: 240px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .coverHText{  
+    font-size: 50px;
+  }
+
+  .coverPText{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 600px){
+  .coverHText{  
+    font-size: 45px;
+    padding-left: 50px;
+  }
+
+  .coverPText{
+    font-size: 20px;
+    padding-left: 180px;
+  }
+}
+@media only screen and (max-width: 576px){
+  .coverHText{  
+    font-size: 40px;
+  }
+  .coverPText{
+    padding-left: 100px;
   }
 }
