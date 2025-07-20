@@ -65,17 +65,17 @@ function App() {
             path="/LearnerHome"
             element={isLoggedIn ? <LHome /> : <Navigate to="/login" />}
           />
-          <Route 
-            path="/coach-home-page" 
-            element={<CoachHomePage />} 
+          <Route
+            path="/CoachHomePage"
+            element={isLoggedIn ? <CoachHomePage /> : <Navigate to="/login" />}
           />
-          <Route 
-            path="/coach-home-page/add-lessons" 
-            element={<AddLessons />} 
+          <Route
+            path="/CoachHomePage/AddLessons"
+            element={isLoggedIn ? <AddLessons /> : <Navigate to="/login" />}
           />
-          <Route 
-            path="/coach-home-page/user-profiles" 
-            element={<UserProfiles />} 
+          <Route
+            path="/CoachHomePage/UserProfiles"
+            element={ <UserProfiles/>}
           />
           <Route
             path="/About"
