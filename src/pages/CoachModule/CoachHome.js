@@ -2,6 +2,7 @@ import React from "react";
 import "./CoachHome.css";
 import HNavbar from "../../components/HNavbar";
 import Footer from "../../components/Footer";
+import { Link } from 'react-router-dom';
 
 function CoachHomePage() {
     return (
@@ -15,8 +16,8 @@ function CoachHomePage() {
                         <p>Your Ultimate Learning Journey Starts Here</p>
                     </div>
                     <div className="coach-buttons">
-                        <a href="/CoachHomePage/UserProfiles" className="coach-btn"><b>USER PROFILES</b></a>
-                        <a href="/CoachHomePage/AddLessons" className="coach-btn"><b>LESSONS</b></a>
+                        <Link to="/UserProfiles" className="coach-btn"><b>USER PROFILES</b></Link>
+                        <Link to="/AddLessons" className="coach-btn"><b>LESSONS</b></Link>
                     </div>
                 </div>
 
