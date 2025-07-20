@@ -14,10 +14,6 @@ import CoachHomePage from "./pages/CoachModule/CoachHome";
 import AddLessons from './pages/CoachModule/lessons/AddLessons';
 import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
 import LessonListPage from "./pages/Learner/LessonListPage";
-import CoachHomePage from "./pages/CoachModule/CoachHome";
-import AddLessons from './pages/CoachModule/lessons/AddLessons';
-import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
-
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
