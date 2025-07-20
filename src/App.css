@@ -21,6 +21,9 @@
     --white:#ffffff;
     --black:#000000;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: "Saira Condensed" ;
 }
@@ -643,5 +646,223 @@ nav{
   }
   .coverPText{
     padding-left: 100px;
+  }
+}
+
+/*--------------------------------------------------CONTACTS US-------------------------------------------------------------------------*/
+.contact-Sec{
+    background-color: var(--black);
+}
+
+.contactsus{
+    padding: 50px 60px 50px 60px;
+}
+.contactsus .title{
+    font-family: "Saira Condensed";
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 70px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    
+}
+.con_frame{
+    gap: 24px;
+    margin-bottom: 60px;
+}
+.cont_box{
+    border: 4px solid var(--PerfectRed);
+    border-radius: 12px;
+}
+.con_icon{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.c_icon{
+    width: 3rem;
+    height: 3rem;
+}
+.c_icon:hover{
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+  }
+.con_item{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.con_link{
+    text-decoration: none;
+    font-family: "Saira Condensed" ;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.formframe{
+    row-gap: 24px;
+}
+.f_text{
+    color: var(--PerfectRed);
+    font-size: 2rem;
+    font-family: "Saira Condensed";
+    font-weight: 500;
+}
+.f_frame1{
+    gap: 24px;
+}
+.form_icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 5px;
+}
+.f_frame2{
+    row-gap: 24px;
+}
+.submit_btn1 , .submit_btn2{
+    font-family: "Saira Condensed" ;
+    border-style: none;
+    background-color: var(--PerfectRed);
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+    justify-content: center;
+}
+.submit_btn1:hover{
+    background-color: var(--PerfectRed);
+}
+.submit_btn2:hover{
+    background-color: var(--PerfectRed);
+}
+.submit_btn2{
+    display: none;
+}
+.clear_btn{
+    font-family: "Saira Condensed" ;
+    border-style: none;
+    background-color: darkgrey;
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+}
+@media only screen and (max-width: 1050px){
+    .contactsus{
+        padding: 50px 90px 0px 90px;
+    }
+    .c_icon{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .con_link{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 990px){
+    
+    .contactsus{
+        padding: 50px 20px 50px 20px;
+    }
+    .submit_btn1{
+        display: none;
+    }
+    .submit_btn2{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 900px){
+    .contactsus{
+        padding: 40px 40px 50px 40px;
+    }
+    .contactsus .title{
+        font-size: 60px;
+    }
+    .c_icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .con_link{
+        font-size: 1rem;
+    }
+    .submit_btn1{
+        display: flex;
+    }
+    .submit_btn2{
+        display: none;
+    }
+}
+@media only screen and (max-width:650px){
+    .contactsus {
+        padding: 40px 50px 50px 50px;
+    }
+    .contactsus .title{
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+    }
+    .f_text{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:500px){
+    .contactsus .title{
+        font-size: 38px;
+    }
+}
+
+/*-----------------------------------------------------About------------------------------------------------------------------------------*/
+.above-cover{
+  width: 100%;
+}
+
+.about{
+  background-color: var(--PerfectRed);
+  position:relative;
+}
+.abu-frame{
+  padding: 80px 112px 200px 112px;
+}
+.headertext{
+  font-family: "Saira Condensed" ;
+}
+.abu-text{
+  font-family: "Saira Condensed" ;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px){
+  .abu-frame{
+    padding: 80px 100px 200px 100px;
+  }
+  .abu-text{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .abu-text{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:650px){
+  .abu-frame{
+    padding: 50px 50px 200px 50px;
+  }
+  .abu-text{
+    font-size: 15px;
+    font-weight: 400;
   }
 }

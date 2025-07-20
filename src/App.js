@@ -50,6 +50,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/GuestHome" replace />} />
           <Route path="/GuestHome" element={<GHome />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/Term" element={<Term />} />

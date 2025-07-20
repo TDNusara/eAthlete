@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import SNavbar from "../components/SNavbar";
 
 function GHome() {
+
     return(
         <div>
             <SNavbar />
