@@ -1,0 +1,24 @@
+.TopAddLesson {
+    padding: 100px 20px;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: center;
+}
+
+.AddLesson-text {
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.AddLesson-text h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+
+}
+
+.AddLesson-text h2 {
+    font-size: 3rem;
+    margin-bottom: 100px;
+}

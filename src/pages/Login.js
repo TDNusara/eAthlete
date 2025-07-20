@@ -29,7 +29,7 @@ function Login({ onLogin }) {
         if (userType === 'Learner') {
           navigate('/LearnerHome');
         } else if (userType === 'Coach') {
-          navigate('/CoachHome');
+          navigate('/CoachHomePage');
         } else if (userType === 'Seller') {
           navigate('/SellerHome');
         } else if (userType === 'Admin') {
