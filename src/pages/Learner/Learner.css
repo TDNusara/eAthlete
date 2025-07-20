@@ -24,22 +24,178 @@
 body {
     font-family: "Saira Condensed" ;
 }
+/*--------------------------------------------------hero sec ----------------------------------*/
 
-.rf_link {
-  color: white;
-  text-decoration: none;
+.coach-hero{
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.coach-frame1{
+  padding: 80px 112px 80px 112px;
+  justify-items: center;
+}
+.coach-herocol{
+    justify-items: center;
+    align-items: center;
+}
+.coachHtext1{
+  display: flex;
+  font-size: 70px;
+  font-weight: 400;
+  color:  var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px
+}
+.coachHtext2{
+  font-size: 70px;
+  font-weight: 600;
+  color:  var(--white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.coachredtext{
+  color: var(--PerfectRed);
+}
+
+@media only screen and (max-width: 1000px) {
+  .coachHtext1, .coachHtext2{
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .coach-frame1 {
+    padding: 60px 100px 60px 100px;
+
+  }
+  .coachHtext1, .coachHtext2{
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .coach-frame1 {
+    padding: 60px 50px 60px 50px;
+  }
+  
+  .coachHtext1, .coachHtext2{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .coach-frame1 {
+    padding: 50px 40px 50px 40px;
+  }
+  .coachHtext1, .coachHtext2{
+    font-size: 38px;
+  }
+}
+
+.gallery-wrapper{
+  margin-bottom: 50px;
 }
 
 .sptbtn {
   padding: 10px 20px;
-  background-color: #ff3333;
+  background-color: var(--PerfectRed);
   border: none;
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
   transition: 0.3s ease;
+  display: grid;
 }
 
 .sptbtn:hover {
-  background-color: #cc0000;
+  background-color: var(--red);
 }
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.filter-buttons .active {
+  background-color: var(--PerfectRed);
+  color: white;
+}
+
+
+.coach-select-wrapper.mobile-only {
+  display: none;
+}
+.coachDetails{
+  font-family: "Saira Condensed";
+}
+.cardHeadText{
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .btn-danger {
+    display: none !important;
+  }
+
+  .coach-select-wrapper.mobile-only {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .mobile-btn {
+    display: block !important;
+  }
+}
+
+.crd-text{
+  font-family: "Saira Condensed";
+}
+
+
+/*-----------------------------------------------Lessons---------------------------------------------------------*/
+
+.lesson-list-page {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+}
+.lesson-box {
+  border: 2px dashed #ccc;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  font-weight: bold;
+  background-color: #222;
+}
+.lesson-box.active {
+  border: 2px solid limegreen;
+  background-color: rgba(0,255,0,0.1);
+}
+

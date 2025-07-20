@@ -1,10 +1,20 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import HNavbar from "../../components/HNavbar";
 
 
 function LHome() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const user = localStorage.getItem('user');
+        if (!user) {
+            navigate('/login');  // redirect if not logged in
+        }
+    }, [navigate]);
+
+
     return(
         <div>
             <HNavbar />
