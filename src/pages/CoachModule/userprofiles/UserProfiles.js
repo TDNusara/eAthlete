@@ -11,7 +11,7 @@ function UserProfiles() {
             <div className="PageTop">
                 <PageTop 
                 title="PLAYERS"
-                topic="Under Your Coach"
+                topic="Under Your Coaching."
                 />
             </div>
             <div>
