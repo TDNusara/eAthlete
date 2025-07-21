@@ -1,13 +1,13 @@
 import React from "react";
 import "./UserProfiles.css"
-import HNavbar from "../../../components/HNavbar";
+import DNavbar from "../../../components/DNavbar";
 import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
 
 function UserProfiles() {
     return (
         <div>
-            <HNavbar />
+            <DNavbar />
             <div className="PageTop">
                 <PageTop 
                 title="PLAYERS"

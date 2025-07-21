@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-/*import SNavbar from "./components/SNavbar";
-import HNavbar from "./components/HNavbar";*/
 import GHome from "./pages/GuestHome";
 import About from "./pages/About";
 import Contact from "./pages/Contact";

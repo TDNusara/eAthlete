@@ -10,7 +10,7 @@ function LHome() {
     useEffect(() => {
         const user = localStorage.getItem('user');
         if (!user) {
-            navigate('/login');  // redirect if not logged in
+            navigate('/login'); 
         }
     }, [navigate]);
 

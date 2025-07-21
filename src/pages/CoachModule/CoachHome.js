@@ -1,13 +1,13 @@
 import React from "react";
 import "./CoachHome.css";
-import HNavbar from "../../components/HNavbar";
+import DNavbar from "../../components/DNavbar";
 import Footer from "../../components/Footer";
 import { Link } from 'react-router-dom';
 
 function CoachHomePage() {
     return (
         <div>
-            <HNavbar />
+            <DNavbar />
 
             <div className="topCoachHome">
                 <div>
