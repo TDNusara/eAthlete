@@ -866,3 +866,41 @@ nav{
     font-weight: 400;
   }
 }
+
+
+
+/*----------------------------------------------------------------------*/
+.profile-dropdown-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  justify-self: center;
+  background-color: var(--white);
+  min-width: 120px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  display: block;
+  padding: 10px;
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f1f1f1;
+  color: var(--PerfectRed);
+}

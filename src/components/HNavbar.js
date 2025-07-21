@@ -1,14 +1,39 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import profileIcon from '../assets/person-circle.png';
 
 function HNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef(null);
+  const navigate = useNavigate();
 
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
+  function toggleProfile() {
+    setProfileOpen(!profileOpen);
+  }
+
+  function handleLogout() {
+    localStorage.removeItem('user');
+    setProfileOpen(false);
+    navigate('/');
+  }
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setProfileOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav>
       {/* Mobile Header */}
@@ -19,9 +44,15 @@ function HNavbar() {
             <Link to="/LearnerHome"><img src={logo} alt="Logo" className="logo-img" /></Link>
           </div>
           <div className="right">
-            <Link to="/profile" className="profile-icon-link">
-                <img src={profileIcon} alt="Profile" className="profile-icon" />
-            </Link>
+            <div ref={profileRef}  className="profile-dropdown-wrapper" onClick={toggleProfile}>
+              <img src={profileIcon} alt="Profile" className="profile-icon" />
+              {profileOpen && (
+                <div className="profile-dropdown">
+                  <Link to="/profile" onClick={() => setProfileOpen(false)}>Profile</Link>
+                  <button onClick={handleLogout}>Logout</button>
+                </div>
+              )}
+            </div>
            </div>
         </div>
 
@@ -65,10 +96,14 @@ function HNavbar() {
               <li className="nav-item">
                 <Link to="/Contact" className="nav-link">Contact Us</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/profile" className="profile-icon-link">
-                    <img src={profileIcon} alt="Profile" className="profile-icon" />
-                </Link>
+              <li ref={profileRef}  className="nav-item profile-dropdown-wrapper" onClick={toggleProfile}>
+                <img src={profileIcon} alt="Profile" className="profile-icon" />
+                {profileOpen && (
+                  <div className="profile-dropdown">
+                    <Link to="/profile" onClick={() => setProfileOpen(false)}>Profile</Link>
+                    <button onClick={handleLogout}>Logout</button>
+                  </div>
+                )}
               </li>
             </ul>
           </div>
