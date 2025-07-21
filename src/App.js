@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import './css/Admin.css'
+import './css/LoginRegistration.css'
+
 /*import SNavbar from "./components/SNavbar";
 import HNavbar from "./components/HNavbar";*/
 import GHome from "./pages/GuestHome";
@@ -11,6 +14,26 @@ import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
 import Coachers from "./pages/Learner/Coachers";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
+import AdminPanelImported from "./pages/Admin/AdminPanel";
+import AdminStoreImported from "./pages/Admin/AdminStore";
+import AdminArticleImported from "./pages/Admin/AdminArticle";
+import AManageProfilesImported from "./pages/Admin/AManageProfiles";
+import UCreateAccImported from "./pages/CreateAcc/UCreateAcc";
+import CKarateCreateAccImported from "./pages/CreateAcc/CKarateCreateAcc";
+import CVolleyballCreateAccImported from "./pages/CreateAcc/CVolleyballCreateAcc";
+import CWorkoutCreateAccImported from "./pages/CreateAcc/CWorkoutCreateAcc";
+import CCategory from "./pages/LoginCategory/CCategory";
+import UCategory from "./pages/LoginCategory/UCategory";
+import SCreateAccImported from './pages/CreateAcc/SCreateAcc';
+import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCard";
+import AdminArticleTableImported from "./components/AdminComponents/ArticleTable";
+import AdminProfileTableImported from "./components/AdminComponents/ProfileTable";
+import AdminStoreTableImported from "./components/AdminComponents/StoreTable";
+import LCardImported from "./components/LoginComponents/LCCard";
+import LUCardImported from "./components/LoginComponents/LUCard";
+import TextFieldImported from './components/LoginComponents/TextField';
+import UKarateCreateAccImported from './pages/CreateAcc/UKarateCreateAcc';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -52,6 +75,42 @@ function App() {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/Term" element={<Term />} />
+
+
+          {/* Rout try by Vindya-start */}
+          <Route path="/UserCreateAcc" element={<UCreateAccImported />} />
+          <Route path="/CoachKCreateACC" element={<CKarateCreateAccImported />} />
+          <Route path="/CoachVCreateACC" element={<CVolleyballCreateAccImported />} />
+          <Route path="/CoachWCreateAcc" element={<CWorkoutCreateAccImported />} />
+          <Route path="/CoachCategoryLogin" element={<CCategory />} />
+          <Route path="/UserCategoryLogin" element={<UCategory />} />
+          <Route path="/SellerCreateAcc" element={<SCreateAccImported />} />
+         
+          <Route path="/LCard" element={<LCardImported />} />
+          <Route path="/LUCard" element={<LUCardImported />} />
+          <Route path="/TextField" element={< TextFieldImported/>} />
+          <Route path="/KarateCreateAcc" element={< UKarateCreateAccImported/>} />
+
+
+          {/* Rout try by Vindya-end */}
+
+          {/* Route by Vindya-start */}
+
+          <Route path="/AdminPanelUrl" element={<AdminPanelImported />} />
+
+          <Route path="/AdminStore" element={<AdminStoreImported />} />
+          <Route path="/AdminArticle" element={<AdminArticleImported />} />
+          <Route path="/AManageProfiles" element={<AManageProfilesImported />} />
+
+          <Route path="/AdminProfileTable" element={<AdminProfileTableImported />} />
+          <Route path="/AdminStoreTable" element={<AdminStoreTableImported />} />
+          <Route path="/AdminPanelCard" element={<AdminPanelCardImported />} />
+          <Route path="/AdminArticleTable" element={<AdminArticleTableImported />} />          
+
+          {/* Route by Vindya-end */}
+
+
+
 
           {/* Protected Routes */}
           <Route

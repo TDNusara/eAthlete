@@ -1,13 +1,12 @@
 import React from 'react'
+import UCreateAcc from './UCreateAcc';
 
 
 function SCreateAcc() {
   
 
   return (
-    <div>
-      <h2>Create Account-Seller</h2>
-    </div>
+    <UCreateAcc/>
  );
 }
 

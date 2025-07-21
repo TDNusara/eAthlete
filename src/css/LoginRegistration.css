@@ -1,0 +1,371 @@
+/*------------------------------------------------LCard,LUCard-------------------------------------------------------------*/
+
+.LCEmpty {
+        background-color: white;
+        margin-left: 20px;
+        max-width: 1000px;
+        max-height: 1000px;
+        aspect-ratio: 5 / 3;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+
+        padding-top: 40px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 80px;
+}
+
+
+
+.Lh {
+        font-size: 24px;
+        font-family: sans-serif;
+        text-align: center;
+        padding-bottom: 20px;
+}
+
+.SingleCard {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+}
+
+.CardSection {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+}
+
+.CardImage {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+}
+
+.CategoryBtn {
+        position: absolute;
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+
+}
+
+.Categoryheading {
+
+        position: absolute;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+
+}
+
+
+.top-right {
+        top: 100px;
+        right: 150px;
+
+}
+
+.top-left {
+        top: 100px;
+        left: 150px;
+}
+
+.bottom-right2 {
+        bottom: 150px;
+        right: 100px;
+        margin-bottom: 1px;
+}
+
+.bottom-right {
+        bottom: 100px;
+        right: 150px;
+}
+
+.bottom-left2 {
+        bottom: 150px;
+        left: 100px;
+        margin-bottom: 1px;
+
+}
+
+.CategoryBtn:hover {
+        background-color: #cc0000;
+}
+
+/*------------------------------------------------CCategory------------------------------------------------------------*/
+
+.CoachC {
+        background-color: black;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 1%;
+}
+
+.CBlank {
+        justify-content: center;
+        padding-left: 200px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+        padding-right: 200px;
+}
+
+/*----------------------------------------------UCategory----------------------------------------------------------------*/
+
+.UserC {
+        background-color: black;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 1%;
+
+
+}
+
+/*-----------------------------------------------UCreateAccount,UKarateCreateAcc,----------------------------------------------------------*/
+.FLearner {
+        background-color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+
+
+
+
+
+.FCEmpty {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        box-sizing: border-box;
+
+
+}
+
+.FLh {
+        text-align: center;
+        font-size: 24px;
+        padding-bottom: 10px;
+}
+
+.PP {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+}
+
+.form-columns {
+        display: flex;
+        gap: 100px;
+        margin-left: 100px;
+        margin-right: 50px;
+
+}
+
+
+.form-left,
+.form-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+}
+
+
+
+/*-------------------------------------------TextFields,PasswordField,CkeckBox,RedButton,-------------------------------------------------------------*/
+
+.FInput {
+        border-radius: 999px;
+        background-color: rgb(216, 212, 212);
+        padding-left: 40px;
+        padding-right: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: 'Segoe UI';
+        font-size: small;
+        border: none;
+        padding-bottom: 5px;
+        padding-top: 5px;
+
+
+}
+
+.Flabel {
+        margin-bottom: 2px;
+        font-size: 14px;
+}
+
+.FFields {
+        display: flex;
+        flex-direction: column;
+}
+
+.FCheckbox {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        margin-left: 250px;
+
+}
+
+.CNewButton {
+
+        margin-bottom: 1.5rem;
+        margin-left: 300px;
+        color: #f9f1f1;
+        background-color: rgb(244, 33, 33);
+        border-radius: 10px;
+        width: max-content;
+        padding-left: 8px;
+        padding-right: 8px;
+        border: none;
+
+}
+
+.Fbottom {
+
+        margin-bottom: 1.5rem;
+        margin-left: 270px;
+
+}
+
+.linkR {
+        color: #cc0000;
+
+}
+
+.KCheckbox {
+
+        margin-left: 100px;
+
+
+
+}
+
+
+
+/*-----------------------------------------------CheckBox----------------------------------------------------------------*/
+.check-container {
+        margin-top: 1rem;
+}
+
+.check-label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: block;
+}
+
+.check-group {
+        display: flex;
+        gap: 2rem;
+}
+
+.check-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+        cursor: pointer;
+}
+
+/*-----------------------------------------------Login Page-------------------------------------------------------------*/
+
+.FLEmpty {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+
+
+}
+
+.Login-container {
+        background-color: black;
+        padding-top: 50px;
+        padding-bottom: 100px;
+
+}
+
+.LoginParagraph {
+        font-size: small;
+
+}
+
+.btnL {
+
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        gap: 8px;
+        padding-left: 80px;
+        padding-right: 80px;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 9999px;
+        outline: none;
+        background-color: #cc0000;
+        margin-left: 10px;
+        color: white;
+        margin-bottom: 10px;
+        border: none;
+
+}
+
+
+.HLogin {
+
+        margin-left: 40px;
+
+
+}
+
+/*-------------------------------------------------CVolleyballCreateACC--------------------------------------------------*/
+.CVform-columns{
+
+         display: flex;
+        gap:100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        
+
+
+
+
+
+}
+
+.FCVEmpty {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+
+
+}
