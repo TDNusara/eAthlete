@@ -21,33 +21,6 @@ function App() {
   return (
     <Router>
       <div>
-        {/*
-        {isLoggedIn ? <HNavbar onLogout={handleLogout} /> : <SNavbar />}
-        <Routes>
-          <Route path="/" element={<Navigate to="/GuestHome" replace />} />
-          <Route path="/GuestHome" element={<GHome />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          {isLoggedIn ? (
-            <>
-              <Route path="/LearnerHome" element={<LHome />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-              <Route path="/Term" element={<Term />} />
-            </>
-          ) : (
-            <>
-              <Route path="/LearnerHome" element={<Navigate to="/login" />} />
-              <Route path="/About" element={<Navigate to="/login" />} />
-              <Route path="/Contact" element={<Navigate to="/login" />} />
-              <Route path="/PrivacyPolicy" element={<Navigate to="/PrivacyPolicy" />} />
-              <Route path="/Term" element={<Navigate to="/Term" />} />
-            </>
-          )}
-        </Routes>
-        */}
         <Routes>
           <Route path="/" element={<Navigate to="/GuestHome" replace />} />
           <Route path="/GuestHome" element={<GHome />} />
