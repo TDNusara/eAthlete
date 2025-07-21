@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-function SNavbar() {
+function GNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -69,4 +69,4 @@ function SNavbar() {
   );
 }
 
-export default SNavbar;
+export default GNavbar;

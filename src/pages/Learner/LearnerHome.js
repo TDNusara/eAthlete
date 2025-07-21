@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer2 from "../../components/Footer2";
-import HNavbar from "../../components/HNavbar";
+import Navbar from "../../components/NavbarManager";
 
 function LHome() {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function LHome() {
 
   return (
     <div className="Lbody">
-      <HNavbar />
+      <Navbar />
       <div className="section hero">
         <div className="container-fluid frame1">
           <div className="row regframe">

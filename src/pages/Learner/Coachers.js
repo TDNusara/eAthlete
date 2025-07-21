@@ -4,7 +4,7 @@ import axios from 'axios';
 import '../../App.css';
 import './Learner.css';
 import Footer2 from "../../components/Footer2";
-import HNavbar from "../../components/HNavbar";
+import Navbar from "../../components/NavbarManager";
 
 const sports = ['All', 'Workout', 'Volleyball', 'Karate'];
 
@@ -47,7 +47,7 @@ function Coachers() {
 
   return (
     <div>
-      <HNavbar />
+      <Navbar />
 
       <div className="section coach-hero">
         <div className="container-fluid coach-frame1">
