@@ -877,7 +877,7 @@ nav{
   position:relative;
 }
 .abu-frame{
-  padding: 80px 112px 200px 112px;
+  padding: 10px 112px 200px 112px;
 }
 .headertext{
   font-family: "Saira Condensed" ;
@@ -885,6 +885,8 @@ nav{
 .abouHead{
   color: var(--PerfectRed);
   text-shadow: none;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .Aframe1{
   margin-top: 10px;
@@ -894,7 +896,7 @@ nav{
 }
 .Subheadertext1{
   font-family: "Saira Condensed" ;
-  color: var(--PerfectRed);
+  color: var(--black);
   font-size: 35px;
   font-weight: 600;
   text-align: center;
@@ -923,7 +925,7 @@ nav{
 
 @media only screen and (max-width: 1000px){
   .abu-frame{
-    padding: 80px 100px 200px 100px;
+    padding: 10px 100px 200px 100px;
   }
   .Subheadertext1{
     font-size: 30px;
@@ -948,11 +950,8 @@ nav{
   }
 }
 @media only screen and (max-width:650px){
-  .headertext{
-    text-align: center;
-  }
   .abu-frame{
-    padding: 50px 50px 200px 50px;
+    padding: 10px 50px 200px 50px;
   }
   .abu-text{
     font-size: 15px;
@@ -968,4 +967,13 @@ nav{
     font-size: 16px;
   }
 }
+
+/*----------------------------------------------Term & Conditions / Privacy Policy-------------------------------------------------------*/
+.HeaderPara{
+  text-align: center;
+}
+.abu-text li{
+  line-height: 30px;
+}
+
 

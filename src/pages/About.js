@@ -1,11 +1,11 @@
 import React from "react";
 import Footer1 from "../components/Footer";
-import NavbarManager from "../components/NavbarManager";
+import Navbar from "../components/NavbarManager";
 
 function About() {
     return(
         <div>
-           <NavbarManager/>
+           <Navbar/>
            <img className="about-cover" src="/volleyball.png" alt="..."/>
            <section className="about">
               <div className="container-fluid abu-frame">
