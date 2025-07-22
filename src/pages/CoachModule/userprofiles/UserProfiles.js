@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserProfiles.css"
-import HNavbar from "../../../components/HNavbar";
+import Navbar from "../../../components/NavbarManager";
 import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
 
@@ -8,11 +8,11 @@ function UserProfiles() {
 <<<<<<< Updated upstream
     return (
         <div>
-            <HNavbar />
+            <Navbar />
             <div className="PageTop">
                 <PageTop 
                 title="PLAYERS"
-                topic="Under Your Coach"
+                topic="Under Your Coaching."
                 />
             </div>
             <div>

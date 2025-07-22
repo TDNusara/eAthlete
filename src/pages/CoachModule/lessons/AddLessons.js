@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddLessons.css";
 import Footer from "../../../components/Footer";
-import HNavbar from "../../../components/HNavbar";
+import Navbar from "../../../components/NavbarManager";
 import PageTop from "../coachcomponents/PageTop";
 import AddButton from "./lessonscomponents/AddButton";
 import LessonCard from "./lessonscomponents/LessonCard";
@@ -28,7 +28,7 @@ function AddLessons() {
 
     return (
         <div>
-            <HNavbar />
+            <Navbar />
             <div className="PageMiddle">
                 <div className="MiddleAddLesson">
                     <PageTop title="SPORT NAME" topic="Lessons" />

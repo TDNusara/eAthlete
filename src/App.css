@@ -112,6 +112,42 @@ nav{
   transform: scale(1.05);
 }
 
+.profile-dropdown-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  justify-self: center;
+  background-color: var(--white);
+  min-width: 120px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  display: block;
+  padding: 10px;
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f1f1f1;
+  color: var(--PerfectRed);
+}
+
+
 @media only screen and (max-width: 1100px) {
   .deskNavbar {
     display: none;
@@ -226,7 +262,10 @@ nav{
     font-size: 0.9rem;
   }
 }
-
+/*-------------------------------LearnerHome----------------------------------------*/
+.Lbody{
+  background-color: var(--black);
+}
 
 /*--------------------------------GuestHome-----------------------------------------*/
 .section{
@@ -243,7 +282,7 @@ nav{
   clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
 }
 
-.frame1 , .frame2 , .frame3 , .frame4{
+.frame1 , .frame2 , .frame3 , .frame4 , .Lframe3{
   padding: 140px 112px 180px 112px;
 }
 
@@ -326,8 +365,16 @@ nav{
   margin-top: -150px;
   position: relative;
 }
+
+.Lpath{
+  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+}
+
 .frame3{
   justify-items: start;
+}
+.Lframe3{
+  justify-items: end;
 }
 .volecol{
   justify-items: center;
@@ -357,7 +404,7 @@ nav{
 }
 
 @media only screen and (max-width: 800px) {
-  .frame1 , .frame2 , .frame3 , .frame4{
+  .frame1 , .frame2 , .frame3 , .frame4 ,.Lframe3{
     padding: 60px 100px 150px 100px;
 
   }
@@ -377,7 +424,7 @@ nav{
 }
 
 @media only screen and (max-width: 600px) {
-  .frame1 , .frame2 , .frame3{
+  .frame1 , .frame2 , .frame3 , .Lframe3{
     padding: 50px 50px 150px 50px;
   }
   .frame4{
@@ -410,11 +457,11 @@ nav{
   .frame1 , .frame2{
     padding: 50px 40px 150px 40px;
   }
-  .frame2 , .frame3 , .frame4{
+  .frame2 , .frame3 , .frame4 ,.Lframe3{
     justify-items: center;
     align-items: center;
   }
-  .frame3{
+  .frame3 , .Lframe3{
     padding: 60px 40px 80px 40px;
   }
   .frame4{
@@ -663,7 +710,7 @@ nav{
     font-weight: 600;
     font-size: 70px;
     color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(254, 5, 5, 0.8);
     
 }
 .con_frame{
@@ -821,48 +868,112 @@ nav{
 }
 
 /*-----------------------------------------------------About------------------------------------------------------------------------------*/
-.above-cover{
+.about-cover{
   width: 100%;
 }
 
 .about{
-  background-color: var(--PerfectRed);
+  background-color: var(--white);
   position:relative;
 }
 .abu-frame{
-  padding: 80px 112px 200px 112px;
+  padding: 10px 112px 200px 112px;
 }
 .headertext{
   font-family: "Saira Condensed" ;
 }
+.abouHead{
+  color: var(--PerfectRed);
+  text-shadow: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Aframe1{
+  margin-top: 10px;
+}
+.Aframe2 , .Aframe3{
+  margin-bottom: 30px;
+}
+.Subheadertext1{
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Subheadertext2{
+  font-family: "Saira Condensed" ;
+  color: var(--PerfectRed);
+  font-size: 25px;
+  font-weight: 600;
+}
+.Subheadertext3{
+  font-family: "Saira Condensed" ;
+  color: var(--PerfectRed);
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 10px;
+}
 .abu-text{
   font-family: "Saira Condensed" ;
-  color: var(--white);
-  font-size: 20px;
+  color: var(--black);
+  font-size: 18px;
   font-weight: 500;
   text-align: justify;
-  margin-top: 20px;
 }
 
 @media only screen and (max-width: 1000px){
   .abu-frame{
-    padding: 80px 100px 200px 100px;
+    padding: 10px 100px 200px 100px;
   }
-  .abu-text{
+  .Subheadertext1{
+    font-size: 30px;
+  }
+  .Subheadertext2{
+    font-size: 24px;
+  }
+  .Subheadertext3{
     font-size: 18px;
   }
-}
-@media only screen and (max-width: 800px){
   .abu-text{
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 800px){
+  .Subheadertext1{
+    font-size: 28px;
+  }
+  .Subheadertext2{
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
 @media only screen and (max-width:650px){
   .abu-frame{
-    padding: 50px 50px 200px 50px;
+    padding: 10px 50px 200px 50px;
   }
   .abu-text{
     font-size: 15px;
     font-weight: 400;
   }
+  .Subheadertext1{
+    font-size: 25px;
+  }
+  .Subheadertext2{
+    font-size: 18px;
+  }
+  .Subheadertext3{
+    font-size: 16px;
+  }
 }
+
+/*----------------------------------------------Term & Conditions / Privacy Policy-------------------------------------------------------*/
+.HeaderPara{
+  text-align: center;
+}
+.abu-text li{
+  line-height: 30px;
+}
+
+

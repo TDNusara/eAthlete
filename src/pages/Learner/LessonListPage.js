@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import './Learner.css';
 import Footer1 from "../../components/Footer";
-import HNavbar from "../../components/HNavbar";
+import Navbar from "../../components/NavbarManager";
 import axios from 'axios';
 
 function LessonListPage({ learnerID }) {
@@ -41,7 +41,7 @@ function LessonListPage({ learnerID }) {
 
   return (
     <div>
-      <HNavbar/>
+      <Navbar/>
       <div className="lesson-list-page" style={{ backgroundImage: `url(${getCoverImage()})` }}>
         <div className="overlay">
           <h1>{sport.SportName?.toUpperCase()}</h1>
