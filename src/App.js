@@ -13,12 +13,8 @@ import Coachers from "./pages/Learner/Coachers";
 import CoachHomePage from "./pages/CoachModule/CoachHome";
 import AddLessons from './pages/CoachModule/lessons/AddLessons';
 import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
-<<<<<<< Updated upstream
-=======
 import CreatePlan from './pages/CoachModule/userprofiles/createplan/CreatePlan';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
-import LessonBar from './pages/ProfilePage/profilepagecomponents/LessonBar';
->>>>>>> Stashed changes
 import LessonListPage from "./pages/Learner/LessonListPage";
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
@@ -79,11 +75,9 @@ function App() {
             path="/coach-home-page/add-lessons" 
             element={<AddLessons />} 
           />
-<<<<<<< Updated upstream
           <Route 
             path="/coach-home-page/user-profiles" 
             element={<UserProfiles />} 
-=======
           <Route
             path="/UserProfiles"
             element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
@@ -95,7 +89,6 @@ function App() {
           <Route
             path="/ProfilePage"
             element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" />}
->>>>>>> Stashed changes
           />
           <Route
             path="/About"
