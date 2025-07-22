@@ -36,6 +36,8 @@ function UserProfiles() {
                 </div>
                 <Footer />
             </div>
+            <Footer />
+        
         </div>
     );
 }

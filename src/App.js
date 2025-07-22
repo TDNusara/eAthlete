@@ -14,6 +14,8 @@ import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
 import CreatePlan from './pages/CoachModule/userprofiles/createplan/CreatePlan';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import LessonListPage from "./pages/Learner/LessonListPage";
+import LearnerSchedule from "./pages/Learner/LearnerSchedule";
+import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -74,8 +76,12 @@ function App() {
             element={isLoggedIn ? <LessonListPage /> : <Navigate to="/login" />}
           />
           <Route
-            path="/Cover"
-            element={isLoggedIn ? <LessonListPage /> : <Navigate to="/login" />}
+            path="/LearnerSchedule"
+            element={isLoggedIn ? <LearnerSchedule /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/KarateLessonMenu"
+            element={isLoggedIn ? <KarateLessonMenu /> : <Navigate to="/login" />}
           />
           <Route
             path="/Coachers/karate"

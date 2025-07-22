@@ -1,7 +1,5 @@
 import React from "react";
 import "./UserCard.css";
-import CreatePlan from "../createplan/CreatePlan";
-import ProfilePage from "../../../ProfilePage/ProfilePage";
 import { Link } from "react-router-dom";
 
 function UserCard(props) {
