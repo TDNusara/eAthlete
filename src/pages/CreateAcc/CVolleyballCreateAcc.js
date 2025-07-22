@@ -9,6 +9,8 @@ import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
 import DropdownField from '../../components/LoginComponents/DropdownField';
 import FileUpload from '../../components/LoginComponents/FileUpload';
+import SNavbar from '../../components/SNavbar';
+import Footer from '../../components/Footer';
 
 function CVolleyballCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -21,19 +23,14 @@ function CVolleyballCreateAcc() {
   const [Genderr, setGenderr] = useState('');
   const [Achieves, setAchieves] = useState('');
   const [Locationn, setLocationn] = useState('');
-  const [selectedFile, setSelectedFile] = useState('');
+  const [Qualification, setQualification] = useState('');
     const [years, setYears] = useState('');
-
-
-  const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-    console.log("Selected file:", e.target.files[0]);
-  };
-
 
 
   return (
     <>
+    <div>
+      <SNavbar/>
       <div class="FLearner">
         <div class="FCVEmpty">
           <h2 className='FLh'>Create An Account</h2>
@@ -55,7 +52,8 @@ function CVolleyballCreateAcc() {
             <div class="Form-right">
               <TextField label="Last Name" value={LastName} onChange={(e) => setLastName(e.target.value)} placeholder="Enter your Last Name" />
               <PhoneNum label="Phone Number" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Enter your PhoneNumber " />
-              <FileUpload label="Upload Your Certificate" onChange={handleFileChange} accept=".pdf,.jpg,.png" />
+              <TextField label="Qualification" value={Qualification} onChange={(e) => setQualification(e.target.value)} placeholder="Add Qualification" />
+
               <TextField label="Location" value={Locationn} onChange={(e) => setLocationn(e.target.value)} placeholder="Enter your District" />
               <TextField label="User Name" value={UserName} onChange={(e) => setUserName(e.target.value)} placeholder="Create a User Name" />
               <PasswordField label="Cofirm Password" value={confirmpassword} onChange={(e) => setconfirmPassword(e.target.value)} placeholder="Re-enter Password" />
@@ -67,7 +65,7 @@ function CVolleyballCreateAcc() {
           <CheckBoxAgree />
           <RedButton />
 
-          <div class="Fbottom">
+          <div class="CoachVFbottom">
             <p class="Q1">Already have an account?<Link to="/Login" className="linkR">Login</Link></p>
 
 
@@ -75,6 +73,9 @@ function CVolleyballCreateAcc() {
 
 
         </div>
+      </div>
+      <br/>
+      <Footer />
       </div>
     </>
   )

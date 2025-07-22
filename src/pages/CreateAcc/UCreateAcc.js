@@ -8,6 +8,8 @@ import PasswordField from "../../components/LoginComponents/PasswordField";
 import CheckBoxAgree from '../../components/LoginComponents/CheckBoxAgree';
 import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
+import SNavbar from '../../components/SNavbar';
+import Footer from '../../components/Footer';
 
 
 function UCreateAcc() {
@@ -21,6 +23,9 @@ function UCreateAcc() {
   const [confirmpassword, setconfirmPassword] = useState('');
 
   return (
+    <>
+    <div>
+      <SNavbar/>
     <div class="FLearner">
       <div class="FCEmpty">
         <h2 className='FLh'>Create an Account</h2>
@@ -61,7 +66,11 @@ function UCreateAcc() {
 
       </div>
     </div>
-  );
+    </div>
+    <br/><br/><br/><br/>
+    <Footer/>
+    </>
+  )
 }
 
 

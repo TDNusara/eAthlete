@@ -30,6 +30,7 @@ function UCategory() {
       
       </div>
      </div>
+     <br/>
      <Footer/>
     </div>
  );

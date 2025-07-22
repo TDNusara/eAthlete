@@ -176,9 +176,16 @@
 
 }
 
+.Fbottom {
+
+        margin-bottom: 24px;
+        margin-left: 230px;
+
+}
 
 
-/*-------------------------------------------TextFields,PasswordField,CkeckBox,RedButton,-------------------------------------------------------------*/
+
+/*-------------------------------------------TextFields,PasswordField,CkeckBoxAgree,RedButton,-------------------------------------------------------------*/
 
 .FInput {
         border-radius: 999px;
@@ -211,53 +218,44 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-bottom: 1.5rem;
-        margin-left: 200px;
+        margin-bottom: 24px;
+        margin-top: 10px;
+        margin-left: 250px;
 
 }
 
 .CNewButton {
 
-        margin-bottom: 1.5rem;
-        margin-left: 250px;
+        margin-bottom: 24px;
+        margin-left: 300px;
         color: #f9f1f1;
         background-color: rgb(244, 33, 33);
         border-radius: 10px;
         width: max-content;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         border: none;
 
 }
 
-.Fbottom {
 
-        margin-bottom: 1.5rem;
-        margin-left: 230px;
-
-}
 
 .linkR {
         color: #cc0000;
 
 }
 
-.KCheckbox {
 
-        margin-left: 100px;
-
-
-
-}
 
 
 
 /*-----------------------------------------------CheckBox----------------------------------------------------------------*/
 .check-container {
         margin-top: 1rem;
+        margin-left: 150px;
 }
 
 .check-label {
@@ -342,7 +340,7 @@
 
 }
 
-/*-------------------------------------------------CVolleyballCreateACC--------------------------------------------------*/
+/*-------------------------------------------------CVolleyballCreateACC,CKarateCreateACC,CWorkoutCreateACC--------------------------------------------------*/
 .CVform-columns{
 
          display: flex;
@@ -369,3 +367,33 @@
 
 
 }
+
+.BeltDdf{
+
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-top: 30px;
+
+}
+
+.CoachkACheckBox{
+
+        margin-left: 25px;
+
+}
+
+.CoachKRedbutton{
+        margin-left: 18px;
+}
+
+.CoachFbottom{
+        margin-left:300px ;
+
+        }
+
+        .CoachVFbottom{
+                margin-left: 270px;
+        }
+

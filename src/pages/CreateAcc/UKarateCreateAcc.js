@@ -9,6 +9,8 @@ import CheckBoxAgree from '../../components/LoginComponents/CheckBoxAgree';
 import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
 import CheckBox from '../../components/LoginComponents/CheckBox';
+import SNavbar from '../../components/SNavbar';
+import Footer from '../../components/Footer';
 
 
 function UCreateAcc() {
@@ -22,6 +24,9 @@ function UCreateAcc() {
     const [confirmpassword, setconfirmPassword] = useState('');
 
     return (
+        <>
+        <div>
+            <SNavbar/>
         <div class="FLearner">
             <div class="FCEmpty">
                 <h2 className='FLh'>Create An Account</h2>
@@ -47,9 +52,9 @@ function UCreateAcc() {
 
                 </div>
 
-                <div className='KCheckbox'>
+               
                     <CheckBox />
-                </div>
+                
 
                 <br />
 
@@ -83,6 +88,10 @@ function UCreateAcc() {
 
             </div>
         </div>
+        </div>
+        <br/>
+    <Footer/>
+        </>
     );
 }
 
