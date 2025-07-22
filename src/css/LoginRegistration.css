@@ -2,18 +2,15 @@
 
 .LCEmpty {
         background-color: white;
-        margin-left: 20px;
-        max-width: 1000px;
-        max-height: 1000px;
-        aspect-ratio: 5 / 3;
+        margin-left: 100px;
+        max-width: 500px;
+        max-height: 400px;
+       
         display: flex;
         flex-direction: column;
-        border-radius: 8px;
+        border-radius: 2px;
 
-        padding-top: 40px;
-        padding-left: 80px;
-        padding-right: 80px;
-        padding-bottom: 80px;
+       
 }
 
 
@@ -28,7 +25,7 @@
 .SingleCard {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+
 }
 
 .CardSection {
@@ -48,7 +45,7 @@
         background-color: red;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 5px 10px;
         font-weight: bold;
         border-radius: 10px;
         cursor: pointer;
@@ -61,18 +58,18 @@
         position: absolute;
         color: white;
         border: none;
-        padding: 10px 20px;
+        padding: 5px 10px;
         font-weight: bold;
         border-radius: 10px;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 15px;
 
 }
 
 
 .top-right {
-        top: 100px;
-        right: 150px;
+        top: 50px;
+        right: 100px;
 
 }
 
@@ -82,9 +79,9 @@
 }
 
 .bottom-right2 {
-        bottom: 150px;
-        right: 100px;
-        margin-bottom: 1px;
+        bottom: 70px;
+        right: 50px;
+        margin-bottom: 2px;
 }
 
 .bottom-right {
@@ -113,11 +110,15 @@
 }
 
 .CBlank {
-        justify-content: center;
-        padding-left: 200px;
-        padding-bottom: 100px;
-        padding-top: 100px;
-        padding-right: 200px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        
+        max-width: 500px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+
 }
 
 /*----------------------------------------------UCategory----------------------------------------------------------------*/
@@ -126,7 +127,7 @@
         background-color: black;
         padding-left: 200px;
         padding-right: 200px;
-        padding-bottom: 1%;
+        padding-bottom: 100px;
 
 
 }
@@ -147,7 +148,7 @@
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
-        max-width: 800px;
+        max-width: 700px;
         margin: 2rem auto;
         padding: 2rem;
         box-sizing: border-box;
@@ -170,10 +171,10 @@
         cursor: pointer;
 }
 
-.form-columns {
+.Uform-columns {
         display: flex;
         gap: 100px;
-        margin-left: 100px;
+        margin-left: 50px;
         margin-right: 50px;
 
 }
@@ -223,20 +224,23 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 1.5rem;
-        margin-left: 250px;
+        margin-left: 200px;
 
 }
 
 .CNewButton {
 
         margin-bottom: 1.5rem;
-        margin-left: 300px;
+        margin-left: 250px;
         color: #f9f1f1;
         background-color: rgb(244, 33, 33);
         border-radius: 10px;
         width: max-content;
         padding-left: 8px;
         padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
         border: none;
 
 }
@@ -244,7 +248,7 @@
 .Fbottom {
 
         margin-bottom: 1.5rem;
-        margin-left: 270px;
+        margin-left: 230px;
 
 }
 
@@ -294,7 +298,7 @@
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
-        max-width: 800px;
+        max-width: 700px;
         margin: 2rem auto;
         padding: 1.5rem;
         box-sizing: border-box;
@@ -339,6 +343,14 @@
 
         margin-left: 40px;
 
+
+}
+
+.form-columns {
+        display: flex;
+        gap: 100px;
+        margin-left: 30px;
+        margin-right: 50px;
 
 }
 

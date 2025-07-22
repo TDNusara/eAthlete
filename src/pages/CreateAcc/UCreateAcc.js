@@ -26,7 +26,7 @@ function UCreateAcc() {
         <h2 className='FLh'>Create an Account</h2>
         <div class="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
 
-        <div className="form-columns">
+        <div className="Uform-columns">
 
           <div class="Form-left">
 

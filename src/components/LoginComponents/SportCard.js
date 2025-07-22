@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function LCCard({ image }) {
+function SportCard({ image }) {
   return (
     <div className="LCEmpty">
       <h2 className="Lh"><b>Choose Your Category</b></h2>
@@ -17,4 +17,4 @@ function LCCard({ image }) {
   );
 }
 
-export default LCCard;
+export default SportCard;

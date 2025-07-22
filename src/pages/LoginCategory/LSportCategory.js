@@ -2,9 +2,9 @@ import React from 'react';
 import CVimage from "../../assets/CVolleyball.png";
 import CKimage from "../../assets/CKarate.png";
 import CWImage from "../../assets/CWorkout.png";
-import LCard from "../../components/LoginComponents/LCCard";
+import LCard from "../../components/LoginComponents/SportCard";
 
-function CCategory() {
+function LSportCategory() {
 
   const Categories = [{ title: "VolleyBall", src: CVimage, position: "top-right" },
   { title: "Karate", src: CKimage, position: "top-left" },
@@ -24,5 +24,5 @@ function CCategory() {
 
 
 
-export default CCategory;
+export default LSportCategory;
 

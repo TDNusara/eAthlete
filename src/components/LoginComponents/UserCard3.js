@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 
-function LUCard({ image }) {
+function UserCard3({ image3 }) {
   return (
     <div className="LCEmpty">
-      <h2 className="Lh"><b>Choose Your Category</b></h2>
+     
       <div className="SingleCard">
-        {image.map((item, index) => (
+        {image3.map((item, index) => (
           <div key={index} className="CardSection">
             <img src={item.src} alt={item.title} className="CardImage" />
             <h3 className={`Categoryheading ${item.position2}`}>I AM {item.title}</h3>
-            <button className={`CategoryBtn ${item.position1}`}>START</button>
+            <Link to="/SellerCreateAcc"><button className={`CategoryBtn ${item.position1}`}>START</button></Link>
           </div>
         ))}
       </div>
@@ -18,4 +19,4 @@ function LUCard({ image }) {
   );
 }
 
-export default LUCard;
+export default UserCard3;

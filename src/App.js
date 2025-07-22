@@ -23,15 +23,16 @@ import UCreateAccImported from "./pages/CreateAcc/UCreateAcc";
 import CKarateCreateAccImported from "./pages/CreateAcc/CKarateCreateAcc";
 import CVolleyballCreateAccImported from "./pages/CreateAcc/CVolleyballCreateAcc";
 import CWorkoutCreateAccImported from "./pages/CreateAcc/CWorkoutCreateAcc";
-import CCategory from "./pages/LoginCategory/CCategory";
+import CSportCategory from "./pages/LoginCategory/CSportCategory";
+import LSportCategory from "./pages/LoginCategory/LSportCategory";
 import UCategory from "./pages/LoginCategory/UCategory";
 import SCreateAccImported from './pages/CreateAcc/SCreateAcc';
 import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCard";
 import AdminArticleTableImported from "./components/AdminComponents/ArticleTable";
 import AdminProfileTableImported from "./components/AdminComponents/ProfileTable";
 import AdminStoreTableImported from "./components/AdminComponents/StoreTable";
-import LCardImported from "./components/LoginComponents/LCCard";
-import LUCardImported from "./components/LoginComponents/LUCard";
+import SportCardImported from "./components/LoginComponents/SportCard";
+import UserCardImported1 from "./components/LoginComponents/UserCard1";
 import TextFieldImported from './components/LoginComponents/TextField';
 import UKarateCreateAccImported from './pages/CreateAcc/UKarateCreateAcc';
 
@@ -82,12 +83,14 @@ function App() {
           <Route path="/CoachKCreateACC" element={<CKarateCreateAccImported />} />
           <Route path="/CoachVCreateACC" element={<CVolleyballCreateAccImported />} />
           <Route path="/CoachWCreateAcc" element={<CWorkoutCreateAccImported />} />
-          <Route path="/CoachCategoryLogin" element={<CCategory />} />
+          <Route path="/CoachSportCategoryLogin" element={<CSportCategory />} />
+          <Route path="/LearnerSportCategoryLogin" element={<LSportCategory />} />
+
           <Route path="/UserCategoryLogin" element={<UCategory />} />
           <Route path="/SellerCreateAcc" element={<SCreateAccImported />} />
          
-          <Route path="/LCard" element={<LCardImported />} />
-          <Route path="/LUCard" element={<LUCardImported />} />
+          <Route path="/SportCard" element={<SportCardImported />} />
+          <Route path="/UserCard1" element={<UserCardImported1 />} />
           <Route path="/TextField" element={< TextFieldImported/>} />
           <Route path="/KarateCreateAcc" element={< UKarateCreateAccImported/>} />
 

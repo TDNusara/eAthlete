@@ -36,7 +36,7 @@ function Login({ onLogin }) {
               <button className="btnL" onClick={handleSubmit}>Login</button>
               
             <br/>
-              <p>Don't have an account?<Link to="/HomePage" className="linkR">Signup</Link></p>
+              <p>Don't have an account?<Link to="/SignUp" className="linkR">Signup</Link></p>
             </div>
           </div>
         </div>
