@@ -7,17 +7,14 @@ import call from '../assets/call icon.png';
 import whtsp from '../assets/whatsapp icon.png';
 import tel from '../assets/telegram icon.png';
 import Footer2 from "../components/Footer2";
-import HNavbar from "../components/HNavbar";
-import SNavbar from "../components/SNavbar";
+import Navbar from "../components/NavbarManager";
 
 
 function Contact() {
 
-  const user = JSON.parse(localStorage.getItem('user'));
-
   return (
     <div>
-       {user ? <HNavbar /> : <SNavbar />}
+       <Navbar/>
        <section className="contact-Sec" id="contactsus">
             <div className="container contactsus">
                 <div className="row">

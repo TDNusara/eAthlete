@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserProfiles.css"
-import DNavbar from "../../../components/DNavbar";
+import Navbar from "../../../components/NavbarManager";
 import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
 import UserCard from "./userprofilescomponents/UserCard";
@@ -23,7 +23,7 @@ function UserProfiles() {
         <div className="FullPage">
             <HNavbar />
         <div>
-            <DNavbar />
+            <Navbar />
             <div className="PageTop">
                 <PageTop 
                     title="PLAYERS"
