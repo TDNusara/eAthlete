@@ -4,7 +4,7 @@ import Navbar from "../../../components/NavbarManager";
 import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
 import UserCard from "./userprofilescomponents/UserCard";
-import userdp from "../coachimages/userdp.png";
+import userdp from "./createplan/createplanimages/profilephoto.jpg";
 
 function UserProfiles() {
     const players = [
@@ -36,8 +36,6 @@ function UserProfiles() {
                 </div>
                 <Footer />
             </div>
-            <Footer />
-        
         </div>
     );
 }

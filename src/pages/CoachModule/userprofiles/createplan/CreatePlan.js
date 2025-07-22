@@ -29,7 +29,7 @@ function CreatePlan() {
       </div>
 
       <div className="planForm">
-        <h2 className="pageTitle">Create the Plan</h2>
+        <h2 className="pageTitle">Create a Plan</h2>
 
         <DaySelectionTab activeDay={activeDay} setActiveDay={setActiveDay} />
 
