@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 import SNavbar from '../../components/SNavbar';
 import Footer from '../../components/Footer';
 
-
 function UCreateAcc() {
   const [FirstName, setFirstName] = useState('');
   const [LastName, setLastName] = useState('');
@@ -24,56 +23,115 @@ function UCreateAcc() {
 
   return (
     <>
-    <div>
-      <SNavbar/>
-    <div class="FLearner">
-      <div class="FCEmpty">
-        <h2 className='FLh'>Create an Account</h2>
-        <div class="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
+      <SNavbar />
+      <div className="FLearner">
+        <div className="FCVEmpty">
 
-        <div className="Uform-columns">
+          <form className="form-container">
 
-          <div class="Form-left">
+            <h2 className='FLh'>Create An Account</h2><br />
+            <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
+            <br /><br />
 
-            <TextField label="First Name" value={FirstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Enter your First Name" />
-            <DatePicker label="Date Of Birth" value={Date} onChange={(e) => setDate(e.target.value)} placeholder="YYYY-MM-DD" />
-            <EmailL label="Email" value={Email} onChange={(e) => setEmail(e.target.value)} placeholder="Example@gmail.com" />
-            <PasswordField label="New Password" value={newpassword} onChange={(e) => setnewPassword(e.target.value)} placeholder="Enter new Password" />
+            <div className="form-row">
+              <div className="form-group">
+                <TextField
+                  label="First Name"
+                  value={FirstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="Enter your First Name"
+                />
+              </div>
+              <div className="form-group">
+                <TextField
+                  label="Last Name"
+                  value={LastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  placeholder="Enter your Last Name"
+                />
+              </div>
+            </div>
 
+            <div className="form-row">
+              <div className="form-group">
+                <DatePicker
+                  label="Date Of Birth"
+                  value={Date}
+                  onChange={(e) => setDate(e.target.value)}
+                  placeholder="YYYY-MM-DD"
+                />
+              </div>
+              <div className="form-group">
+                <PhoneNum
+                  label="Phone Number"
+                  value={PhoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  placeholder="Enter your Phone Number"
+                />
+              </div>
+            </div>
 
-          </div>
+            <div className="form-row">
+              <div className="form-group">
+                <EmailL
+                  label="Email"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Example@gmail.com"
+                />
+              </div>
+              <div className="form-group">
+                <TextField
+                  label="User Name"
+                  value={UserName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder="Create a User Name"
+                />
+              </div>
+            </div>
 
-          <div class="Form-right">
+            <div className="form-row">
+              <div className="form-group">
+                <PasswordField
+                  label="New Password"
+                  value={newpassword}
+                  onChange={(e) => setnewPassword(e.target.value)}
+                  placeholder="Enter new Password"
+                />
+              </div>
+              <div className="form-group">
+                <PasswordField
+                  label="Confirm Password"
+                  value={confirmpassword}
+                  onChange={(e) => setconfirmPassword(e.target.value)}
+                  placeholder="Re-enter Password"
+                />
+              </div>
+            </div>
 
+            <div className="form-footer">
+              <CheckBoxAgree />
+            </div>
 
-            <TextField label="Last Name" value={LastName} onChange={(e) => setLastName(e.target.value)} placeholder="Enter your Last Name" />
-            <PhoneNum label="Phone Number" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Enter your PhoneNumber " />
-            <TextField label="User Name" value={UserName} onChange={(e) => setUserName(e.target.value)} placeholder="Create a User Name" />
-            <PasswordField label="Cofirm Password" value={confirmpassword} onChange={(e) => setconfirmPassword(e.target.value)} placeholder="Re-enter Password" />
+            <div className="form-row">
+              <RedButton type="submit" />
+            </div>
 
-          </div>
+            <br />
+            <div className="form-footer">
+              <p>
+                Already have an account? <Link to="/Login" className="linkR">Login</Link>
+              </p>
+            </div>
+
+          </form>
 
         </div>
-
-        
-          <CheckBoxAgree/>
-          <RedButton/>
-          <div class="Fbottom">
-          <p class="Q1">Already have an account?<Link to="/Login" className="linkR">Login</Link></p>
-
-
-          </div>
-
       </div>
-    </div>
-    </div>
-    <br/><br/><br/><br/>
-    <Footer/>
+      <br /><br /><br /><br />
+      <Footer />
     </>
-  )
+  );
 }
 
-
-
 export default UCreateAcc;
-
