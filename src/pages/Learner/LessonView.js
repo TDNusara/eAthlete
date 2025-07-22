@@ -3,7 +3,7 @@ import Footer1 from "../../components/Footer";
 import Navbar from "../../components/NavbarManager";
 import Cover from "../../components/cover";
 
-function KarateLessonMenu({ onLogin }) {
+function LessonView({ onLogin }) {
   
   return (
     <div>
@@ -19,4 +19,4 @@ function KarateLessonMenu({ onLogin }) {
   );
 }
 
-export default KarateLessonMenu;
+export default LessonView;

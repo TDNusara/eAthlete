@@ -16,6 +16,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import LessonListPage from "./pages/Learner/LessonListPage";
 import LearnerSchedule from "./pages/Learner/LearnerSchedule";
 import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
+import LessonView from "./pages/Learner/LessonView";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -82,6 +83,10 @@ function App() {
           <Route
             path="/KarateLessonMenu"
             element={isLoggedIn ? <KarateLessonMenu /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/LessonView"
+            element={isLoggedIn ? <LessonView /> : <Navigate to="/login" />}
           />
           <Route
             path="/Coachers/karate"

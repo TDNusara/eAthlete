@@ -25,6 +25,9 @@ body {
     font-family: "Saira Condensed" ;
 }
 
+.f-farme{
+  margin-top: -120px;
+}
 
 
 /*--------------------------------------------------Coach hero sec ----------------------------------*/
@@ -173,35 +176,6 @@ body {
   font-family: "Saira Condensed";
 }
 
-
-/*-----------------------------------------------Lessons---------------------------------------------------------*/
-
-.lesson-list-page {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
-}
-.overlay {
-  background-color: rgba(0, 0, 0, 0.65);
-  height: 100%;
-  padding: 40px;
-  text-align: center;
-}
-.lesson-box {
-  border: 2px dashed #ccc;
-  margin: 10px auto;
-  padding: 10px;
-  width: 300px;
-  font-weight: bold;
-  background-color: #222;
-}
-.lesson-box.active {
-  border: 2px solid limegreen;
-  background-color: rgba(0,255,0,0.1);
-}
-
 /*-------------------------------------------------------------Learner Schedule--------------------------------------------------------------*/
 
 .lessonSchedule{
@@ -254,9 +228,7 @@ body {
   transition: 0.3s ease;
   width: 100%;
 }
-.f-farme{
-  margin-top: -120px;
-}
+
 @media only screen and (max-width: 1000px){
   .les-btn{
     padding: 8px 250px;
