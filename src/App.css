@@ -268,6 +268,10 @@ nav{
 }
 
 /*--------------------------------GuestHome-----------------------------------------*/
+
+.Gbody{
+  background-color: var(--black);
+}
 .section{
   width: 100%;
   display: block;
@@ -485,7 +489,6 @@ nav{
   color: white;
   padding: 200px 112px 60px 112px;
   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -150px;
   position: a;
   bottom: 0;
   left: 0;
@@ -615,7 +618,6 @@ nav{
 
 /* ------------------------------------------------Cover page ----------------------------------------------------------*/
 .cover{
-  margin-bottom: 300px;
   width: 100%;
 }
 
@@ -877,7 +879,7 @@ nav{
   position:relative;
 }
 .abu-frame{
-  padding: 10px 112px 200px 112px;
+  padding: 10px 112px 100px 112px;
 }
 .headertext{
   font-family: "Saira Condensed" ;
@@ -925,7 +927,7 @@ nav{
 
 @media only screen and (max-width: 1000px){
   .abu-frame{
-    padding: 10px 100px 200px 100px;
+    padding: 10px 100px 100px 100px;
   }
   .Subheadertext1{
     font-size: 30px;
@@ -951,7 +953,7 @@ nav{
 }
 @media only screen and (max-width:650px){
   .abu-frame{
-    padding: 10px 50px 200px 50px;
+    padding: 10px 50px 80px 50px;
   }
   .abu-text{
     font-size: 15px;
