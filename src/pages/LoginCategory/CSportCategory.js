@@ -2,20 +2,26 @@ import React from 'react';
 import CVimage from "../../assets/CVolleyball.png";
 import CKimage from "../../assets/CKarate.png";
 import CWImage from "../../assets/CWorkout.png";
-import LCard from "../../components/LoginComponents/SportCard";
+import CCard1 from "../../components/LoginComponents/CoachCard1";
+import CCard2 from "../../components/LoginComponents/CoachCard2";
+import CCard3 from "../../components/LoginComponents/CoachCard3";
+
 
 function CSportCategory() {
 
-  const Categories = [{ title: "VolleyBall", src: CVimage, position: "top-right" },
-  { title: "Karate", src: CKimage, position: "top-left" },
-  { title: "Workout", src: CWImage, position: "bottom-right" }
-  ];
+  const Categories1 = [{ title: "VolleyBall", src: CVimage, position: "top-right" }];
+  const Categories2 =[{ title: "Karate", src: CKimage, position: "top-left" }];
+  const Categories3=[{ title: "Workout", src: CWImage, position: "bottom-right" }];
+  
 
   return (
-    <div class="CoachC">
-      <div class="CBlank">
+    <div class="UserC">
+      <div class="UEmpty">
+          <h2 className="Lh"><b>Choose Your Category</b></h2>
+        <CCard1 image1={Categories1} />
+         <CCard2 image2={Categories2} />
+         <CCard3 image3={Categories3} />
 
-        <LCard image={Categories} />
 
       </div>
     </div>
@@ -23,6 +29,4 @@ function CSportCategory() {
 }
 
 
-
-export default CSportCategory;
-
+export default CSportCategory ;

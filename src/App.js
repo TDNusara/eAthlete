@@ -31,7 +31,7 @@ import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCard"
 import AdminArticleTableImported from "./components/AdminComponents/ArticleTable";
 import AdminProfileTableImported from "./components/AdminComponents/ProfileTable";
 import AdminStoreTableImported from "./components/AdminComponents/StoreTable";
-import SportCardImported from "./components/LoginComponents/SportCard";
+import SportCardImported from "./components/LoginComponents/SportCard1";
 import UserCardImported1 from "./components/LoginComponents/UserCard1";
 import TextFieldImported from './components/LoginComponents/TextField';
 import UKarateCreateAccImported from './pages/CreateAcc/UKarateCreateAcc';

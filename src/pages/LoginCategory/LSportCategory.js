@@ -2,20 +2,26 @@ import React from 'react';
 import CVimage from "../../assets/CVolleyball.png";
 import CKimage from "../../assets/CKarate.png";
 import CWImage from "../../assets/CWorkout.png";
-import LCard from "../../components/LoginComponents/SportCard";
+import LCard1 from "../../components/LoginComponents/SportCard1";
+import LCard2 from "../../components/LoginComponents/SportCard2";
+import LCard3 from "../../components/LoginComponents/Sportcard3";
+
 
 function LSportCategory() {
 
-  const Categories = [{ title: "VolleyBall", src: CVimage, position: "top-right" },
-  { title: "Karate", src: CKimage, position: "top-left" },
-  { title: "Workout", src: CWImage, position: "bottom-right" }
-  ];
+  const Categories1 = [{ title: "VolleyBall", src: CVimage, position: "top-right" }];
+  const Categories2 =[{ title: "Karate", src: CKimage, position: "top-left" }];
+  const Categories3=[{ title: "Workout", src: CWImage, position: "bottom-right" }];
+  
 
   return (
-    <div class="CoachC">
-      <div class="CBlank">
+    <div class="UserC">
+      <div class="UEmpty">
+          <h2 className="Lh"><b>Choose Your Category</b></h2>
+        <LCard1 image1={Categories1} />
+         <LCard2 image2={Categories2} />
+         <LCard3 image3={Categories3} />
 
-        <LCard image={Categories} />
 
       </div>
     </div>

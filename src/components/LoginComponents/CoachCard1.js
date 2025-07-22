@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 
-function SportCard({ image }) {
+function CoachCard1({ image1 }) {
   return (
     <div className="LCEmpty">
-      <h2 className="Lh"><b>Choose Your Category</b></h2>
+      
       <div className="SingleCard">
-        {image.map((item, index) => (
+        {image1.map((item, index) => (
           <div key={index} className="CardSection">
             <img src={item.src} alt={item.title} className="CardImage" />
-            <button className={`CategoryBtn ${item.position}`}>{item.title}</button>
+            <Link to="/CoachVCreateACC"><button className={`CategoryBtn ${item.position}`}>{item.title}</button></Link>
           </div>
         ))}
       </div>
@@ -17,4 +18,4 @@ function SportCard({ image }) {
   );
 }
 
-export default SportCard;
+export default CoachCard1;
