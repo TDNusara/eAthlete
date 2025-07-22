@@ -3,6 +3,8 @@ import "./UserProfiles.css"
 import Navbar from "../../../components/NavbarManager";
 import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
+import UserCard from "./userprofilescomponents/UserCard";
+import userdp from "../coachimages/userdp.png";
 
 function UserProfiles() {
     const players = [
@@ -19,7 +21,7 @@ function UserProfiles() {
 
     return (
         <div className="FullPage">
-            <DNavbar />
+            <Navbar />
             <div>
                 <div className="PageTop">
                     <PageTop
