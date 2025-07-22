@@ -5,22 +5,6 @@ import PageTop from "../coachcomponents/PageTop";
 import Footer from "../../../components/Footer";
 
 function UserProfiles() {
-<<<<<<< Updated upstream
-    return (
-        <div>
-            <Navbar />
-            <div className="PageTop">
-                <PageTop 
-                title="PLAYERS"
-                topic="Under Your Coaching."
-                />
-            </div>
-            <div>
-                
-            </div>
-            <Footer />
-        
-=======
     const players = [
         { name: "C.Ronaldo", image: userdp },
         { name: "L.Messi", image: userdp },
@@ -50,7 +34,6 @@ function UserProfiles() {
                 </div>
                 <Footer />
             </div>
->>>>>>> Stashed changes
         </div>
     );
 }
