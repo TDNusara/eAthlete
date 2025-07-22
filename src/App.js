@@ -45,9 +45,6 @@ function App() {
             path="/AddLessons"
             element={isLoggedIn ? <AddLessons /> : <Navigate to="/login" />}
           />
-          <Route 
-            path="/coach-home-page/user-profiles" 
-            element={<UserProfiles />} 
           <Route
             path="/UserProfiles"
             element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
@@ -59,6 +56,7 @@ function App() {
           <Route
             path="/ProfilePage"
             element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" />}
+          />
           <Route
             path="/UserProfiles"
             element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}

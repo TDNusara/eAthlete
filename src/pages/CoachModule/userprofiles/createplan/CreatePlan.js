@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CreatePlan.css";
-import DNavbar from "../../../../components/DNavbar";
+import NavbarManager from "../../../../components/NavbarManager";
 import Footer from "../../../../components/Footer";
 import DaySelectionTab from "./DaySelectionTab";
 import LessonForm from "./LessonForm";
@@ -12,7 +12,7 @@ function CreatePlan() {
 
   return (
     <div>
-      <DNavbar />
+      <NavbarManager />
 
       <div className="pageTop">
         <div className="playerInfo">

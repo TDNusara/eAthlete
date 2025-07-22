@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ProfilePage.css";
-import DNavbar from "../../components/DNavbar";
+import NavbarManager from "../../components/NavbarManager";
 import Footer from "../../components/Footer";
 import LessonBar from "./profilepagecomponents/LessonBar";
 import DaySelectionTab from "../CoachModule/userprofiles/createplan/DaySelectionTab";
@@ -53,7 +53,7 @@ function ProfilePage() {
 
   return (
     <div>
-      <DNavbar />
+      <NavbarManager />
 
       <div className="profileTop">
         <div className="profileInfo">
