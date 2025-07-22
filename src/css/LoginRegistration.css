@@ -1,17 +1,6 @@
 /*------------------------------------------------LCard,LUCard-------------------------------------------------------------*/
 
-.LCEmpty {
-        background-color: white;
-        margin-left: 100px;
-        max-width: 500px;
-        max-height: 400px;
-       
-        display: flex;
-        flex-direction: column;
-        border-radius: 2px;
 
-       
-}
 
 
 
@@ -25,7 +14,7 @@
 .SingleCard {
         display: flex;
         flex-direction: column;
-
+        margin-bottom: 4px;
 }
 
 .CardSection {
@@ -45,7 +34,7 @@
         background-color: red;
         color: white;
         border: none;
-        padding: 5px 10px;
+        padding: 10px 20px;
         font-weight: bold;
         border-radius: 10px;
         cursor: pointer;
@@ -62,35 +51,35 @@
         font-weight: bold;
         border-radius: 10px;
         cursor: pointer;
-        font-size: 15px;
+        font-size: 18px;
 
 }
 
 
 .top-right {
-        top: 50px;
-        right: 100px;
+        top: 90px;
+        right: 120px;
 
 }
 
 .top-left {
-        top: 100px;
-        left: 150px;
+        top: 80px;
+        left: 120px;
 }
 
 .bottom-right2 {
-        bottom: 70px;
-        right: 50px;
+        bottom: 90px;
+        right: 100px;
         margin-bottom: 2px;
 }
 
 .bottom-right {
-        bottom: 100px;
-        right: 150px;
+        bottom: 40px;
+        right: 120px;
 }
 
 .bottom-left2 {
-        bottom: 150px;
+        bottom: 100px;
         left: 100px;
         margin-bottom: 1px;
 
@@ -109,27 +98,26 @@
         padding-bottom: 1%;
 }
 
-.CBlank {
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        
-        max-width: 500px;
-        margin: 2rem auto;
-        padding: 1.5rem;
-        box-sizing: border-box;
-
-}
 
 /*----------------------------------------------UCategory----------------------------------------------------------------*/
 
 .UserC {
-        background-color: black;
-        padding-left: 200px;
-        padding-right: 200px;
+         background-color: black;
+        padding-top: 50px;
         padding-bottom: 100px;
+        
 
+}
 
+.UEmpty {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 2rem;
+        box-sizing: border-box;
 }
 
 /*-----------------------------------------------UCreateAccount,UKarateCreateAcc,----------------------------------------------------------*/

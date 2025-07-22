@@ -17,12 +17,13 @@ function UCategory() {
   return (
     <div class="UserC">
        
-      <div class="Cblanck">
-     
-        
-      <LUCard1 class="user-container" image1={UCategories1}/>
-      <LUCard2 class="user-container" image2={UCategories2}/>
-      <LUCard3 class="user-container" image3={UCategories3}/>
+      <div class="UEmpty">
+          <h2 class="Lh">Choose Your Category</h2>
+        <LUCard1 class="user-container" image1={UCategories1}/>
+        <LUCard2 class="user-container" image2={UCategories2}/>
+        <LUCard3 class="user-container" image3={UCategories3}/>
+      
+      
 
      </div>
     </div>
