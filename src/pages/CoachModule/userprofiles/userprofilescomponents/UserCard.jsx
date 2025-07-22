@@ -1,6 +1,7 @@
 import React from "react";
 import "./UserCard.css";
-import CreatePlan from "../CreatePlan";
+import CreatePlan from "../createplan/CreatePlan";
+import ProfilePage from "../../../ProfilePage/ProfilePage";
 import { Link } from "react-router-dom";
 
 function UserCard(props) {
@@ -10,7 +11,7 @@ function UserCard(props) {
             <h3 className="card-name">{props.name}</h3>
             <div className="card-buttons">
                 <Link to={"/CreatePlan"} className="card-button" >Create Plans</Link>
-                <Link to={"/UserProfile"} className="card-button" >View Profile</Link>
+                <Link to={"/ProfilePage"} className="card-button" >View Profile</Link>
             </div>
         </div>
     );

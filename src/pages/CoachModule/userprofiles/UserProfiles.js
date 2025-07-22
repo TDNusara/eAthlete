@@ -16,26 +16,26 @@ function UserProfiles() {
         { name: "L.Messi", image: userdp },
         { name: "K.Mbappe", image: userdp },
         { name: "Neymar JR", image: userdp },
-        { name: "Rocky de Man", image: userdp},
+        { name: "Rocky de Man", image: userdp },
     ];
 
     return (
         <div className="FullPage">
-            <HNavbar />
-        <div>
             <Navbar />
-            <div className="PageTop">
-                <PageTop 
-                    title="PLAYERS"
-                    topic="Under Your Coaching."
-                />
+            <div>
+                <div className="PageTop">
+                    <PageTop
+                        title="PLAYERS"
+                        topic="Under Your Coaching."
+                    />
+                </div>
+                <div className="CardsContainer">
+                    {players.map((player, index) => (
+                        <UserCard key={index} name={player.name} image={player.image} />
+                    ))}
+                </div>
+                <Footer />
             </div>
-            <div className="CardsContainer">
-                {players.map((player, index) => (
-                    <UserCard key={index} name={player.name} image={player.image} />
-                ))}
-            </div>
-            <Footer />
         </div>
     );
 }

@@ -11,8 +11,8 @@ import Coachers from "./pages/Learner/Coachers";
 import CoachHomePage from "./pages/CoachModule/CoachHome";
 import AddLessons from './pages/CoachModule/lessons/AddLessons';
 import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
-import CreatePlan from './pages/CoachModule/userprofiles/CreatePlan';
-import UserProfile from './pages/UserProfile';
+import CreatePlan from './pages/CoachModule/userprofiles/createplan/CreatePlan';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 import LessonListPage from "./pages/Learner/LessonListPage";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
@@ -44,7 +44,7 @@ function App() {
           <Route
             path="/AddLessons"
             element={isLoggedIn ? <AddLessons /> : <Navigate to="/login" />}
-          />
+            />
           <Route
             path="/UserProfiles"
             element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
@@ -54,8 +54,8 @@ function App() {
             element={isLoggedIn ? <CreatePlan /> : <Navigate to="/login" />}
           />
           <Route
-            path="/UserProfile"
-            element={isLoggedIn ? <UserProfile /> : <Navigate to="/login" />}
+            path="/ProfilePage"
+            element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" />}
           />
           <Route
             path="/About"
