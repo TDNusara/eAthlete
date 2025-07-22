@@ -11,6 +11,8 @@ import Coachers from "./pages/Learner/Coachers";
 import CoachHomePage from "./pages/CoachModule/CoachHome";
 import AddLessons from './pages/CoachModule/lessons/AddLessons';
 import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
+import CreatePlan from './pages/CoachModule/userprofiles/createplan/CreatePlan';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 import LessonListPage from "./pages/Learner/LessonListPage";
 import LearnerSchedule from "./pages/Learner/LearnerSchedule";
 import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
@@ -45,6 +47,20 @@ function App() {
             path="/AddLessons"
             element={isLoggedIn ? <AddLessons /> : <Navigate to="/login" />}
           />
+          <Route 
+            path="/coach-home-page/user-profiles" 
+            element={<UserProfiles />} 
+          <Route
+            path="/UserProfiles"
+            element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/CreatePlan"
+            element={isLoggedIn ? <CreatePlan /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/ProfilePage"
+            element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" />}
           <Route
             path="/UserProfiles"
             element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
