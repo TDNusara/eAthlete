@@ -9,8 +9,6 @@ import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
 import DropdownField from '../../components/LoginComponents/DropdownField';
 import FileUpload from '../../components/LoginComponents/FileUpload';
-import SNavbar from '../../components/SNavbar';
-import Footer from '../../components/Footer';
 
 function CVolleyballCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -23,59 +21,166 @@ function CVolleyballCreateAcc() {
   const [Genderr, setGenderr] = useState('');
   const [Achieves, setAchieves] = useState('');
   const [Locationn, setLocationn] = useState('');
-  const [Qualification, setQualification] = useState('');
-    const [years, setYears] = useState('');
+  const [selectedFile, setSelectedFile] = useState('');
+  const [years, setYears] = useState('');
+
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+    console.log("Selected file:", e.target.files[0]);
+  };
+
 
 
   return (
     <>
-    <div>
-      <SNavbar/>
       <div class="FLearner">
         <div class="FCVEmpty">
-          <h2 className='FLh'>Create An Account</h2>
-          <div class="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
 
-          <div className="CVform-columns">
+          <form className="form-container">
 
-            <div class="Form-left">
+            <h2 className='FLh'>Create An Account</h2><br />
+            <div class="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
+            <br />
+            <br />
 
-              <TextField label="First Name" value={FirstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Enter your First Name" />
-              <DropdownField label="Gender" value={Genderr} onChange={(e) => setGenderr(e.target.value)} options={["Female", "Male",]} />
-              <TextField label="Achievement" value={Achieves} onChange={(e) => setAchieves(e.target.value)} placeholder="Enter your Achievements" />
-              <DropdownField label="Years of Experience" value={years} onChange={(e) => setYears(e.target.value)} options={["1", "2", "3", "or more"]} />
-              <EmailL label="Email" value={Email} onChange={(e) => setEmail(e.target.value)} placeholder="Example@gmail.com" />
-              <PasswordField label="New Password" value={newpassword} onChange={(e) => setnewPassword(e.target.value)} placeholder="Enter new Password" />
-
+            <div className="form-row">
+              <div className="form-group">
+                <TextField
+                  label="First Name"
+                  value={FirstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="Enter your First Name"
+                />
+              </div>
+              <div className="form-group">
+                <TextField
+                  label="Last Name"
+                  value={LastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  placeholder="Enter your Last Name"
+                />
+              </div>
             </div>
 
-            <div class="Form-right">
-              <TextField label="Last Name" value={LastName} onChange={(e) => setLastName(e.target.value)} placeholder="Enter your Last Name" />
-              <PhoneNum label="Phone Number" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Enter your PhoneNumber " />
-              <TextField label="Qualification" value={Qualification} onChange={(e) => setQualification(e.target.value)} placeholder="Add Qualification" />
-
-              <TextField label="Location" value={Locationn} onChange={(e) => setLocationn(e.target.value)} placeholder="Enter your District" />
-              <TextField label="User Name" value={UserName} onChange={(e) => setUserName(e.target.value)} placeholder="Create a User Name" />
-              <PasswordField label="Cofirm Password" value={confirmpassword} onChange={(e) => setconfirmPassword(e.target.value)} placeholder="Re-enter Password" />
-
+            <div className="form-row">
+              <div className="form-group">
+                <DropdownField
+                  label="Gender"
+                  value={Genderr}
+                  onChange={(e) => setGenderr(e.target.value)}
+                  options={["Female", "Male"]}
+                />
+              </div>
+              <div className="form-group">
+                <PhoneNum
+                  label="Phone Number"
+                  value={PhoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  placeholder="Enter your Phone Number"
+                />
+              </div>
             </div>
 
-          </div>
+            <div className="form-row">
+              <div className="form-group">
+                <TextField
+                  label="Achievement"
+                  value={Achieves}
+                  onChange={(e) => setAchieves(e.target.value)}
+                  placeholder="Enter your Achievements"
+                />
+              </div>
+              <div className="form-group">
+                <DropdownField
+                  label="Years of Experience"
+                  value={years}
+                  onChange={(e) => setYears(e.target.value)}
+                  options={["1", "2", "3", "or more"]}
+                />
+              </div>
+            </div>
 
-          <CheckBoxAgree />
-          <RedButton />
+            <div className="form-row">
+              <div className="form-group">
+                <TextField
+                  label="Location"
+                  value={Locationn}
+                  onChange={(e) => setLocationn(e.target.value)}
+                  placeholder="Enter your District"
+                />
+              </div>
+              <div className="form-group">
+                <FileUpload
+                  label="Upload Your Certificate"
+                  onChange={handleFileChange}
+                  accept=".pdf,.jpg,.png"
+                />
+              </div>
+            </div>
 
-          <div class="CoachVFbottom">
-            <p class="Q1">Already have an account?<Link to="/Login" className="linkR">Login</Link></p>
+            <div className="form-row">
+              <div className="form-group">
+                <EmailL
+                  label="Email"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Example@gmail.com"
+                />
+              </div>
+              <div className="form-group">
+                <TextField
+                  label="User Name"
+                  value={UserName}
+                  onChange={(e) => setUserName(e.target.value)}
+                  placeholder="Create a User Name"
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
+              <div className="form-group">
+                <PasswordField
+                  label="New Password"
+                  value={newpassword}
+                  onChange={(e) => setnewPassword(e.target.value)}
+                  placeholder="Enter new Password"
+                />
+              </div>
+              <div className="form-group">
+                <PasswordField
+                  label="Confirm Password"
+                  value={confirmpassword}
+                  onChange={(e) => setconfirmPassword(e.target.value)}
+                  placeholder="Re-enter Password"
+                />
+              </div>
+            </div>
+
+            <div className="form-footer">
+              <CheckBoxAgree />
+            </div>
+
+            <div className="form-row">
+              <RedButton type="submit" />
+            </div>
+
+            <br />
+            <div className="form-footer">
+              <p>
+                Already have an account? <Link to="/Login" className="linkR">Login</Link>
+              </p>
+            </div>
 
 
-          </div>
+          </form>
+
+
+
+
 
 
         </div>
-      </div>
-      <br/>
-      <Footer />
       </div>
     </>
   )
