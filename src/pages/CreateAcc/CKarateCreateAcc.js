@@ -24,8 +24,8 @@ function CKarateCreateAcc() {
   const [Achieves, setAchieves] = useState('');
   const [Locationn, setLocationn] = useState('');
   const [selectedFile, setSelectedFile] = useState('');
-    const [years, setYears] = useState('');
-      const [bcolour, setBColour] = useState('');
+  const [years, setYears] = useState('');
+  const [bcolour, setBColour] = useState('');
 
 
   const handleFileChange = (e) => {
@@ -50,40 +50,41 @@ function CKarateCreateAcc() {
               <DropdownField label="Gender" value={Genderr} onChange={(e) => setGenderr(e.target.value)} options={["Female", "Male",]} />
               <TextField label="Achievement" value={Achieves} onChange={(e) => setAchieves(e.target.value)} placeholder="Enter your Achievements" />
               <DropdownField label="Years of Experience" value={years} onChange={(e) => setYears(e.target.value)} options={["1", "2", "3", "or more"]} />
-              
+
             </div>
-            
+
             <div class="Form-right">
               <TextField label="Last Name" value={LastName} onChange={(e) => setLastName(e.target.value)} placeholder="Enter your Last Name" />
               <PhoneNum label="Phone Number" value={PhoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Enter your PhoneNumber " />
               <FileUpload label="Upload Your Certificate" onChange={handleFileChange} accept=".pdf,.jpg,.png" />
               <TextField label="Location" value={Locationn} onChange={(e) => setLocationn(e.target.value)} placeholder="Enter your District" />
-              
-            </div> 
-               
+
+            </div>
+
 
           </div>
 
           <div class="BeltDdf">
-            <DropdownField label="select Belt Colour" value={bcolour} onChange={(e) => setBColour(e.target.value)} options={["Black","White","Red"]} />
-             </div>
+            <DropdownField label="select Belt Colour" value={bcolour} onChange={(e) => setBColour(e.target.value)} options={["Black", "White", "Red"]} />
+          </div>
 
-             <div className='KCheckbox'>
-                    <CoachCheckBox />
-                </div>
-                <br/>
-                <div className="CVform-columns">
+          <div className='KCheckbox'>
+            <CoachCheckBox />
+          </div>
+          <br />
+          
+          <div className="CVform-columns">
 
             <div class="Form-left">
 
-              
+
               <EmailL label="Email" value={Email} onChange={(e) => setEmail(e.target.value)} placeholder="Example@gmail.com" />
               <PasswordField label="New Password" value={newpassword} onChange={(e) => setnewPassword(e.target.value)} placeholder="Enter new Password" />
 
             </div>
 
             <div class="Form-right">
-              
+
               <TextField label="User Name" value={UserName} onChange={(e) => setUserName(e.target.value)} placeholder="Create a User Name" />
               <PasswordField label="Cofirm Password" value={confirmpassword} onChange={(e) => setconfirmPassword(e.target.value)} placeholder="Re-enter Password" />
 

@@ -5,6 +5,8 @@ import Sellerimg from "../../assets/SellerCategory.png";
 import LUCard1 from "../../components/LoginComponents/UserCard1";
 import LUCard2 from "../../components/LoginComponents/UserCard2";
 import LUCard3 from "../../components/LoginComponents/UserCard3.js";
+import SNavbar from "../../components/SNavbar";
+import Footer from "../../components/Footer";
 
 function UCategory() {
     
@@ -15,6 +17,8 @@ function UCategory() {
   
 
   return (
+    <div>
+      <SNavbar/>
     <div class="UserC">
        
       <div class="UEmpty">
@@ -24,8 +28,9 @@ function UCategory() {
         <LUCard3 class="user-container" image3={UCategories3}/>
       
       
-
+      </div>
      </div>
+     <Footer/>
     </div>
  );
 }

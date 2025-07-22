@@ -5,6 +5,9 @@ import LoginImg from "../assets/Login.png";
 import TextField from '../components/LoginComponents/TextField';
 import PasswordField from '../components/LoginComponents/PasswordField';
 import { Link } from 'react-router-dom';
+import SNavbar from "../components/SNavbar";
+import Footer from "../components/Footer";
+
 
 function Login({ onLogin }) {
   const navigate = useNavigate();
@@ -19,7 +22,10 @@ function Login({ onLogin }) {
 
   return (
     <>
+    <div>
+      <SNavbar/>
       <div className="Login-container">
+        
         <div className="FLEmpty">
           <div className="form-columns">
             <div class="Form-left">
@@ -41,7 +47,8 @@ function Login({ onLogin }) {
           </div>
         </div>
       </div>
-
+      <Footer />
+    </div>
     </>
   );
 }
