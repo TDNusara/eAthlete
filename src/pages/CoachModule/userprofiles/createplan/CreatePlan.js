@@ -5,7 +5,7 @@ import Footer from "../../../../components/Footer";
 import DaySelectionTab from "./DaySelectionTab";
 import LessonForm from "./LessonForm";
 
-import ProfilePhoto from "./createplanimages/profilephoto.jpg";
+import ProfilePhoto from "./createplanimages/profilephoto.jpg"
 
 function CreatePlan() {
   const [activeDay, setActiveDay] = useState("DAY 01");

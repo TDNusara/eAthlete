@@ -13,7 +13,11 @@ function Coachers() {
   const navigate = useNavigate();
 
   const goToLessons = () => {
-    navigate('/LessonListPage');
+    if(selectedSport === 'Karate'){
+       navigate('/KarateLessonMenu');
+    }else{
+       navigate('/LearnerSchedule');
+    }  
   };
 
   const [selectedSport, setSelectedSport] = useState('All');
