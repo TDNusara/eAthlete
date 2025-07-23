@@ -17,6 +17,7 @@
     --red:#ff0000;
     --PerfectRed:#FF3636;
     --black_300:#c2c2c2;
+    --black_500:#4f4f4f;
     --black_700:#2B2B2B;
     --white:#ffffff;
     --black:#000000;
@@ -329,5 +330,114 @@ body {
     padding: 8px 100px;
     font-size: 16px;
     font-weight: 500;
+  }
+}
+
+/*-------------------------------------------LessonView-----------------------------------------------------------------------*/
+.lonview{
+  background-color: var(--black_700);
+  font-family: "Saira Condensed";
+  color: var(--white);
+}
+.main-frame{
+  display: grid;
+  justify-self: center;
+}
+.dayNum{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Mframe{
+  max-width: 1000px;
+  margin-bottom: 100px;
+  background-color: var(--black_500);
+  padding: 15px;
+  border-radius: 5px;
+}
+.lesFrame1{
+  padding: 10px;
+}
+.lesNum{
+  font-size: 28px;
+  font-weight: 600;
+}
+.lesTitle{
+  font-size: 25px;
+  font-weight: 500;
+}
+.lesFrame3{
+  display: grid;
+}
+.lesDis{
+  font-size: 20px;
+  font-weight: 500;
+}
+.lesDisCon{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+.cmpt-btn{
+  margin: 5px;
+  display: flex;
+  align-items: end;
+}
+.preview{
+    display: flex;
+    justify-content: center;
+  }
+@media only screen and (max-width: 1000px){
+  .dayNum{
+    font-size: 28px;
+  }
+  .lesNum{
+    font-size: 26px;
+  }
+  .lesTitle{
+    font-size: 24px;
+  }
+  .previewImg{
+    width: 400px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .dayNum{
+    font-size: 26px;
+  }
+  .lesNum{
+    font-size: 24px;
+  }
+  .lesTitle{
+    font-size: 22px;
+  }
+  .lesDis{
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width:650px){
+  .dayNum{
+    font-size: 24px;
+  }
+  .lesNum{
+    font-size: 22px;
+  }
+  .lesTitle{
+    font-size: 20px;
+  }
+  .lesDisCon{
+    font-size: 12px;
+  }
+  .preview{
+    display: flex;
+    justify-content: center;
+  }
+  .previewImg{
+    width: 300px;
+    height: 200px;
   }
 }

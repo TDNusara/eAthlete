@@ -1,4 +1,4 @@
-.card {
+.UserCard {
     background-color: #fff;
     padding: 10px;
     margin: 15px;
@@ -9,25 +9,25 @@
     font-family: 'Saira Condensed', sans-serif;
 }
 
-.card-image {
+.cardImage {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.card-name {
+.cardName {
     margin: 10px 0;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.card-buttons {
+.cardButtons {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
 }
 
-.card-button {
+.cardButton {
     background-color:#FF3636 ;
     color: white;
     border: 1px solid white;
@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-.card-button:hover {
+.cardButton:hover {
     background-color: black;
     color: #FF3636;
 }

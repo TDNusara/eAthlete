@@ -2,8 +2,10 @@ import React from 'react';
 import Footer1 from "../../components/Footer";
 import Navbar from "../../components/NavbarManager";
 import Cover from "../../components/cover";
+import { useNavigate } from 'react-router-dom';
 
 function Schedule({ onLogin }) {
+  const navigate = useNavigate();
   
   return (
     <div>
@@ -25,26 +27,24 @@ function Schedule({ onLogin }) {
 
           <div className='container-fluid SM-frame lessonsLink'>
             <div className='row'>
-              <div className='col lesson-btn'style={{backgroundColor:"green"}}><button className='les-btn'style={{backgroundColor:"green"}}>Lesson 01</button></div>
+              <div className='col lesson-btn'style={{backgroundColor:"green"}}><button className='les-btn'style={{backgroundColor:"green"}} onClick={() => navigate('/LessonView')}>Lesson 01</button></div>
             </div>
             <div className='row'>
-              <div className='col lesson-btn'><button className='les-btn'>Lesson 02</button></div>
+              <div className='col lesson-btn'><button className='les-btn' onClick={() => navigate('/LessonView')}>LESSON 02</button></div>
             </div>
             <div className='row'>
-              <div className='col lesson-btn'><button className='les-btn'>Lesson 03</button></div>
+              <div className='col lesson-btn'><button className='les-btn' onClick={() => navigate('/LessonView')}>LESSON 03</button></div>
             </div>
             <div className='row'>
-              <div className='col lesson-btn'><button className='les-btn'>Lesson 04</button></div>
+              <div className='col lesson-btn'><button className='les-btn' onClick={() => navigate('/LessonView')}>LESSON 04</button></div>
             </div>
             <div className='row'>
-              <div className='col lesson-btn'><button className='les-btn'>Lesson 05</button></div>
+              <div className='col lesson-btn'><button className='les-btn' onClick={() => navigate('/LessonView')}>LESSON 05</button></div>
             </div>
           </div>
         </div>
       </div>
-      <div className='f-farme'>
-        <Footer1 />
-      </div>
+      <Footer1 />
     </div>
   );
 }

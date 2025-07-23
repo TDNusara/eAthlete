@@ -59,7 +59,7 @@ function GNavbar() {
                 <Link to="/Contact" className="nav-link">Contact Us</Link>
               </li>
               <li className="nav-item">
-                <button type="button" class="signin "><Link to="/Login" className="nav-btn">Sign In</Link></button>
+                <button type="button" className="signin "><Link to="/Login" className="nav-btn">Sign In</Link></button>
               </li>
             </ul>
           </div>
