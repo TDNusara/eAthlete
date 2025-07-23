@@ -9,7 +9,7 @@ import ProfilePhoto from "../CoachModule/userprofiles/createplan/createplanimage
 
 function ProfilePage() {
   const [activeDay, setActiveDay] = useState("DAY 01");
-  
+
   const weeklyLessons = {
     "DAY 01": [
       { number: 1, completed: true },
@@ -51,6 +51,11 @@ function ProfilePage() {
 
   const currentLessons = weeklyLessons[activeDay] || [];
 
+  const allLessons = Object.values(weeklyLessons).flat();
+  const totalLessons = allLessons.length;
+  const completedLessons = allLessons.filter((l) => l.completed).length;
+  const progressPercent = Math.round((completedLessons / totalLessons) * 100);
+
   return (
     <div>
       <NavbarManager />
@@ -76,8 +81,18 @@ function ProfilePage() {
               </div>
             </div>
           </div>
+          <div className="progressBarTab">
+            <div className="progressBar">
+              <div className="progressFill" style={{ width: `${progressPercent}%` }}></div>
+            </div>
+            <div className="progressLabel">
+              Completed: {completedLessons}/{totalLessons} ({progressPercent}%)
+            </div>
+          </div>
         </div>
       </div>
+
+
 
       <div className="ProfileMiddle">
         <DaySelectionTab activeDay={activeDay} setActiveDay={setActiveDay} />

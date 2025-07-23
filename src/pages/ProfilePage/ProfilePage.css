@@ -41,3 +41,30 @@
     display: block;
     justify-items: center;
 }
+
+.progressBarTab {
+    color: white;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.progressLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progressBar {
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background-color: #4FBF26;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
