@@ -1,21 +1,22 @@
 .lesson-card {
     background-color: #2a2a2a;
-    border-radius: 10px;
-    padding: 7px;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-radius: 20px;
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
     box-sizing: border-box;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 .lesson-box {
     border: 2px dashed white;
     border-radius: 10px;
     text-align: center;
     color: white;
-    width: 95%;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .lesson-box h3 {
