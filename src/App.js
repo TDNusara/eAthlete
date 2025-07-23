@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+
 import './css/Admin.css'
 import './css/LoginRegistration.css'
 
@@ -13,6 +14,15 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term from "./pages/TermConditions";
 import LHome from "./pages/Learner/LearnerHome";
 import Coachers from "./pages/Learner/Coachers";
+import CoachHomePage from "./pages/CoachModule/CoachHome";
+import AddLessons from './pages/CoachModule/lessons/AddLessons';
+import UserProfiles from './pages/CoachModule/userprofiles/UserProfiles';
+import CreatePlan from './pages/CoachModule/userprofiles/createplan/CreatePlan';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import LessonListPage from "./pages/Learner/LessonListPage";
+import LearnerSchedule from "./pages/Learner/LearnerSchedule";
+import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
+import LessonView from "./pages/Learner/LessonView";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import AdminPanelImported from "./pages/Admin/AdminPanel";
@@ -43,36 +53,11 @@ function App() {
   return (
     <Router>
       <div>
-        {/*
-        {isLoggedIn ? <HNavbar onLogout={handleLogout} /> : <SNavbar />}
         <Routes>
           <Route path="/" element={<Navigate to="/GuestHome" replace />} />
           <Route path="/GuestHome" element={<GHome />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          {isLoggedIn ? (
-            <>
-              <Route path="/LearnerHome" element={<LHome />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-              <Route path="/Term" element={<Term />} />
-            </>
-          ) : (
-            <>
-              <Route path="/LearnerHome" element={<Navigate to="/login" />} />
-              <Route path="/About" element={<Navigate to="/login" />} />
-              <Route path="/Contact" element={<Navigate to="/login" />} />
-              <Route path="/PrivacyPolicy" element={<Navigate to="/PrivacyPolicy" />} />
-              <Route path="/Term" element={<Navigate to="/Term" />} />
-            </>
-          )}
-        </Routes>
-        */}
-        <Routes>
-          <Route path="/" element={<Navigate to="/GuestHome" replace />} />
-          <Route path="/GuestHome" element={<GHome />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/Term" element={<Term />} />
@@ -121,6 +106,27 @@ function App() {
             element={isLoggedIn ? <LHome /> : <Navigate to="/login" />}
           />
           <Route
+            path="/CoachHomePage"
+            element={isLoggedIn ? <CoachHomePage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/AddLessons"
+            element={isLoggedIn ? <AddLessons /> : <Navigate to="/login" />}
+          />
+
+          <Route
+            path="/UserProfiles"
+            element={isLoggedIn ? <UserProfiles /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/CreatePlan"
+            element={isLoggedIn ? <CreatePlan /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/ProfilePage"
+            element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" />}
+          />
+          <Route
             path="/About"
             element={isLoggedIn ? <About /> : <Navigate to="/login" />}
           />
@@ -131,6 +137,22 @@ function App() {
           <Route
             path="/Coachers"
             element={isLoggedIn ? <Coachers /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/LessonListPage"
+            element={isLoggedIn ? <LessonListPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/LearnerSchedule"
+            element={isLoggedIn ? <LearnerSchedule /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/KarateLessonMenu"
+            element={isLoggedIn ? <KarateLessonMenu /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/LessonView"
+            element={isLoggedIn ? <LessonView /> : <Navigate to="/login" />}
           />
           <Route
             path="/Coachers/karate"

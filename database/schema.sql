@@ -10,6 +10,7 @@ CREATE TABLE User (
     UserType ENUM('Learner', 'Coach', 'Seller', 'Admin'),
     Bio TEXT,
     District VARCHAR(50),
+    Phone VARCHAR(20),
     DPlink VARCHAR(500),
     Status BOOLEAN DEFAULT TRUE
 ) ENGINE=InnoDB;

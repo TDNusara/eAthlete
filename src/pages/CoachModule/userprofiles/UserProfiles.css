@@ -1,0 +1,19 @@
+.PageTop {
+    background-image: url("/src/pages/CoachModule/coachimages/UserProfilesTop.png");
+    background-position: right;
+}
+
+.CardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 175px;
+    padding-right: 175px;
+    background-color: #1c1c1c;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+
+.FullPage {
+    background-color: #1c1c1c;
+}

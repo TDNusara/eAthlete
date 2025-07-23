@@ -16,6 +16,7 @@ if ($sport && in_array($sport, $allowed_sports)) {
     $stmt = $conn->prepare("
         SELECT c.CoachID, c.Qualification, c.Experience, c.Style,
                u.FirstName, u.LastName, u.Email, u.UserType,
+               u.District, u.Phone, u.Bio, u.DPlink,
                s.SportName
         FROM Coach c
         JOIN User u ON c.CoachID = u.UserID
@@ -27,6 +28,7 @@ if ($sport && in_array($sport, $allowed_sports)) {
     $stmt = $conn->prepare("
         SELECT c.CoachID, c.Qualification, c.Experience, c.Style,
                u.FirstName, u.LastName, u.Email, u.UserType,
+               u.District, u.Phone, u.Bio, u.DPlink,
                s.SportName
         FROM Coach c
         JOIN User u ON c.CoachID = u.UserID

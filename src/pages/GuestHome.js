@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import Footer from "../components/Footer";
-import SNavbar from "../components/SNavbar";
+import { Link } from "react-router-dom";
+import Footer2 from "../components/Footer2";
+import GNavbar from "../components/GNavbar";
 
 function GHome() {
+
     return(
-        <div>
-            <SNavbar />
+        <div className="Gbody">
+            <GNavbar />
             <div className="section hero">
                 <div className="container-fluid frame1">
                     <div className="row regframe">
@@ -49,7 +50,7 @@ function GHome() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer2 />
         </div>
     );
 }
