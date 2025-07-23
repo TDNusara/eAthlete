@@ -1,13 +1,12 @@
 import React from 'react'
+import CVolleyballCreateAcc from './CVolleyballCreateAcc';
 
 
 function CWorkoutCreateAcc() {
   
 
   return (
-    <div>
-      <h2>Create Account-Workout Coach</h2>
-    </div>
+    <CVolleyballCreateAcc/>
  );
 }
 
