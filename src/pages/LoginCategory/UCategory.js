@@ -22,7 +22,7 @@ function UCategory() {
     <div class="UserC">
        
       <div class="UEmpty">
-          <h2 class="Lh">Choose Your Category</h2>
+           <h2 className="Lh"><b>Choose Your Category</b></h2>
         <LUCard1 class="user-container" image1={UCategories1}/>
         <LUCard2 class="user-container" image2={UCategories2}/>
         <LUCard3 class="user-container" image3={UCategories3}/>

@@ -111,12 +111,12 @@
 
 .UEmpty {
         background-color: white;
-        border-radius: 12px;
+        border-radius: 60px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 700px;
         margin: 2rem auto;
-        padding: 2rem;
+        padding: 50px;
         box-sizing: border-box;
 }
 
@@ -304,15 +304,13 @@
 
 .FLEmpty {
         background-color: white;
-        border-radius: 12px;
+        border-radius: 60px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 700px;
-        margin: 2rem auto;
-        padding: 1.5rem;
+        margin: 32px auto;
         box-sizing: border-box;
-
-
+        padding:50px;
 }
 
 .Login-container {
@@ -357,11 +355,34 @@
 
 .form-columns {
         display: flex;
-        gap: 100px;
-        margin-left: 30px;
-        margin-right: 50px;
+       
+}
+
+.Form-left{
+
+        padding-left:20px ;
+        
+}
+
+.Form-right{
+
+        padding-left: 60px;
+        padding-right: 60px;
+       
+                justify-content: center;
 
 }
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .form-columns {
+    flex: 1 1 100%;
+  }
+  
+
+  
+}
+
 
 /*-------------------------------------------------CVolleyballCreateACC,CKarateCreateACC,CWorkoutCreateACC--------------------------------------------------*/
 .CVform-columns{
