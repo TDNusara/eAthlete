@@ -1,0 +1,86 @@
+.topCoachHome {
+    padding: 40px 20px;
+    background-color: #000;
+    background-image: url("coachimages/CoachHomeImage.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: center;
+}
+
+.coachHome-text {
+    margin-left: 100px;
+    text-align: left;
+}
+
+.coachHome-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+
+}
+
+.coachHome-text p {
+    font-size: 1.2rem;
+    margin-bottom: 100px;
+}
+
+.coach-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto 200px auto;
+}
+
+.coach-btn {
+  background-color: #FF3636;
+  border: 3px dashed #ffffff;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 250px;
+  text-align: center;
+}
+
+.coach-btn:hover {
+  background-color: #fff;
+  color: #FF3636;
+  border: 3px solid #FF3636;
+}
+
+@media (max-width: 768px) {
+  .coach-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .coach-btn {
+    width: 60%; 
+    font-size: 1.2rem;
+  }
+
+  .coachHome-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+
+.coachHome-text p {
+    font-size: 0.7rem;
+    margin-bottom: 100px;
+}
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.highlight {
+    color: #FF3636;
+}

@@ -17,6 +17,7 @@
     --red:#ff0000;
     --PerfectRed:#FF3636;
     --black_300:#c2c2c2;
+    --black_500:#4f4f4f;
     --black_700:#2B2B2B;
     --white:#ffffff;
     --black:#000000;
@@ -24,7 +25,13 @@
 body {
     font-family: "Saira Condensed" ;
 }
-/*--------------------------------------------------hero sec ----------------------------------*/
+
+.f-farme{
+  margin-top: -120px;
+}
+
+
+/*--------------------------------------------------Coach hero sec ----------------------------------*/
 
 .coach-hero{
   width: 100%;
@@ -111,6 +118,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   transition: 0.3s ease;
+  display: grid;
 }
 
 .sptbtn:hover {
@@ -167,4 +175,269 @@ body {
 
 .crd-text{
   font-family: "Saira Condensed";
+}
+
+/*-------------------------------------------------------------Learner Schedule--------------------------------------------------------------*/
+
+.lessonSchedule{
+  background-image: url(../../assets/lessonBackground.png);
+}
+.SM-frame{
+  padding: 20px 112px 80px 112px;
+}
+.days-btn{
+  row-gap: 8px;
+  display: flex;
+  justify-content: center;
+  column-gap: 0;
+}
+.day-btn{
+  padding: 0%;
+}
+
+.D-btn{
+  font-family: "Saira Condensed";
+  color: var(--white);
+  padding: 10px 20px;
+  background-color: var(--black_700);
+  border: 2px solid var(--black);
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.lessonsLink{
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+  padding-bottom: 200px;
+}
+.lesson-btn{
+  background-color: var(--black_700);
+  padding: 10px;
+  border-radius: 24px;
+}
+.les-btn{
+  font-family: "Saira Condensed";
+  color: var(--white);
+  padding: 8px 280px;
+  background-color: var(--black_700);
+  border: 2px dashed var(--white);
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px){
+  .les-btn{
+    padding: 8px 250px;
+    font-size: 20px;
+  }
+  .lessonsLink{
+    padding-bottom: 250px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .SM-frame{
+    padding: 20px 100px 80px 100px;
+  }
+  .les-btn{
+    padding: 8px 200px;
+    font-size: 18px;
+  }
+  .lessonsLink{
+    padding-bottom: 280px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .les-btn{
+    padding: 8px 180px;
+  }
+}
+@media only screen and (max-width:650px){
+  .SM-frame{
+    padding: 20px 40px 80px 40px;
+  }
+  .les-btn{
+    padding: 8px 100px;
+    font-size: 16px;
+    font-weight: 500;
+  }.lessonsLink{
+    padding-bottom: 150px;
+  }
+}
+
+/*----------------------------------------------------------KarateLessonMenu--------------------------------------------------------*/
+
+.karateLesMenuSec{
+  background-color: var(--white);
+}
+.KM-frame{
+  padding: 50px 112px 150px 112px;
+}
+.KarateMenu{
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+}
+.KMenu-btn{
+  background-color: var(--PerfectRed);
+  padding: 10px;
+  border-radius: 24px;
+}
+.KM-btn{
+  font-family: "Saira Condensed";
+  color: var(--white);
+  padding: 8px 280px;
+  background-color: var(--PerfectRed);
+  border: 2px dashed var(--white);
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  width: 100%;
+}
+.f-farme{
+  margin-top: -120px;
+}
+@media only screen and (max-width: 1000px){
+  .KM-btn{
+    padding: 8px 250px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .KM-frame{
+    padding: 50px 100px 150px 100px;
+  }
+  .KM-btn{
+    padding: 8px 200px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .KM-btn{
+    padding: 8px 180px;
+  }
+}
+@media only screen and (max-width:650px){
+  .KM-frame{
+    padding: 40px 40px 150px 40px;
+  }
+  .KM-btn{
+    padding: 8px 100px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+/*-------------------------------------------LessonView-----------------------------------------------------------------------*/
+.lonview{
+  background-color: var(--black_700);
+  font-family: "Saira Condensed";
+  color: var(--white);
+}
+.main-frame{
+  display: grid;
+  justify-self: center;
+}
+.dayNum{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Mframe{
+  max-width: 1000px;
+  margin-bottom: 100px;
+  background-color: var(--black_500);
+  padding: 15px;
+  border-radius: 5px;
+}
+.lesFrame1{
+  padding: 10px;
+}
+.lesNum{
+  font-size: 28px;
+  font-weight: 600;
+}
+.lesTitle{
+  font-size: 25px;
+  font-weight: 500;
+}
+.lesFrame3{
+  display: grid;
+}
+.lesDis{
+  font-size: 20px;
+  font-weight: 500;
+}
+.lesDisCon{
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+.cmpt-btn{
+  margin: 5px;
+  display: flex;
+  align-items: end;
+}
+.preview{
+    display: flex;
+    justify-content: center;
+  }
+@media only screen and (max-width: 1000px){
+  .dayNum{
+    font-size: 28px;
+  }
+  .lesNum{
+    font-size: 26px;
+  }
+  .lesTitle{
+    font-size: 24px;
+  }
+  .previewImg{
+    width: 400px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .dayNum{
+    font-size: 26px;
+  }
+  .lesNum{
+    font-size: 24px;
+  }
+  .lesTitle{
+    font-size: 22px;
+  }
+  .lesDis{
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width:650px){
+  .dayNum{
+    font-size: 24px;
+  }
+  .lesNum{
+    font-size: 22px;
+  }
+  .lesTitle{
+    font-size: 20px;
+  }
+  .lesDisCon{
+    font-size: 12px;
+  }
+  .preview{
+    display: flex;
+    justify-content: center;
+  }
+  .previewImg{
+    width: 300px;
+    height: 200px;
+  }
 }

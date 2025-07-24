@@ -21,6 +21,9 @@
     --white:#ffffff;
     --black:#000000;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: "Saira Condensed" ;
 }
@@ -108,6 +111,42 @@ nav{
   border: 2px solid var(--PerfectRed);
   transform: scale(1.05);
 }
+
+.profile-dropdown-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  justify-self: center;
+  background-color: var(--white);
+  min-width: 120px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  display: block;
+  padding: 10px;
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  text-align: left;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f1f1f1;
+  color: var(--PerfectRed);
+}
+
 
 @media only screen and (max-width: 1100px) {
   .deskNavbar {
@@ -223,9 +262,16 @@ nav{
     font-size: 0.9rem;
   }
 }
-
+/*-------------------------------LearnerHome----------------------------------------*/
+.Lbody{
+  background-color: var(--black);
+}
 
 /*--------------------------------GuestHome-----------------------------------------*/
+
+.Gbody{
+  background-color: var(--black);
+}
 .section{
   width: 100%;
   display: block;
@@ -240,7 +286,7 @@ nav{
   clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 100%);
 }
 
-.frame1 , .frame2 , .frame3 , .frame4{
+.frame1 , .frame2 , .frame3 , .frame4 , .Lframe3{
   padding: 140px 112px 180px 112px;
 }
 
@@ -251,9 +297,7 @@ nav{
   font-family: "Saira Condensed";
   align-items: center;
 }
-.herocol{
-  justify-items: center;
-}
+
 .headertext{
   font-size: 70px;
   font-weight: 600;
@@ -325,8 +369,16 @@ nav{
   margin-top: -150px;
   position: relative;
 }
+
+.Lpath{
+  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+}
+
 .frame3{
   justify-items: start;
+}
+.Lframe3{
+  justify-items: end;
 }
 .volecol{
   justify-items: center;
@@ -356,7 +408,7 @@ nav{
 }
 
 @media only screen and (max-width: 800px) {
-  .frame1 , .frame2 , .frame3 , .frame4{
+  .frame1 , .frame2 , .frame3 , .frame4 ,.Lframe3{
     padding: 60px 100px 150px 100px;
 
   }
@@ -376,7 +428,7 @@ nav{
 }
 
 @media only screen and (max-width: 600px) {
-  .frame1 , .frame2 , .frame3{
+  .frame1 , .frame2 , .frame3 , .Lframe3{
     padding: 50px 50px 150px 50px;
   }
   .frame4{
@@ -398,6 +450,7 @@ nav{
   .regbtn{
     font-size: 18px;
     margin-top: 10px;
+    display: grid;
   }
   .sptbtn{
     font-size: 18px;
@@ -408,11 +461,11 @@ nav{
   .frame1 , .frame2{
     padding: 50px 40px 150px 40px;
   }
-  .frame2 , .frame3 , .frame4{
+  .frame2 , .frame3 , .frame4 ,.Lframe3{
     justify-items: center;
     align-items: center;
   }
-  .frame3{
+  .frame3 , .Lframe3{
     padding: 60px 40px 80px 40px;
   }
   .frame4{
@@ -436,11 +489,11 @@ nav{
   color: white;
   padding: 200px 112px 60px 112px;
   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -150px;
   position: a;
   bottom: 0;
   left: 0;
   right: 0;
+  margin-top: -150px;
 }
 .footer2 {
   background-color: #000000;
@@ -563,3 +616,367 @@ nav{
     padding: 0%;
   }
 }
+
+/* ------------------------------------------------Cover page ----------------------------------------------------------*/
+.cover{
+  width: 100%;
+}
+
+.imgText{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cover-img{
+  width: 100%;
+}
+
+.coverText{
+  position: absolute;
+  font-family: "Saira Condensed" ;
+  color: var(--white);
+
+}
+.coverHText{  
+  font-size: 80px;
+  font-weight: bold;
+  padding-left: 112px;
+}
+
+.coverPText{
+  font-size: 40px;
+  padding-left: 250px;
+}
+
+@media only screen and (max-width: 950px){
+  .coverHText{  
+    font-size: 70px;
+  }
+
+  .coverPText{
+    font-size: 30px;
+  }
+
+}
+@media only screen and (max-width: 800px){
+  .coverHText{  
+    font-size: 60px;
+    padding-left: 100px;
+  }
+
+  .coverPText{
+    font-size: 25px;
+    padding-left: 240px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .coverHText{  
+    font-size: 50px;
+  }
+
+  .coverPText{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 600px){
+  .coverHText{  
+    font-size: 45px;
+    padding-left: 50px;
+  }
+
+  .coverPText{
+    font-size: 20px;
+    padding-left: 180px;
+  }
+}
+@media only screen and (max-width: 576px){
+  .coverHText{  
+    font-size: 40px;
+  }
+  .coverPText{
+    padding-left: 100px;
+  }
+}
+
+/*--------------------------------------------------CONTACTS US-------------------------------------------------------------------------*/
+.contact-Sec{
+    background-color: var(--black);
+}
+
+.contactsus{
+    padding: 50px 60px 50px 60px;
+}
+.contactsus .title{
+    font-family: "Saira Condensed";
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 70px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(254, 5, 5, 0.8);
+    
+}
+.con_frame{
+    gap: 24px;
+    margin-bottom: 60px;
+}
+.cont_box{
+    border: 4px solid var(--PerfectRed);
+    border-radius: 12px;
+}
+.con_icon{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.c_icon{
+    width: 3rem;
+    height: 3rem;
+}
+.c_icon:hover{
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+  }
+.con_item{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.con_link{
+    text-decoration: none;
+    font-family: "Saira Condensed" ;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.formframe{
+    row-gap: 24px;
+}
+.f_text{
+    color: var(--PerfectRed);
+    font-size: 2rem;
+    font-family: "Saira Condensed";
+    font-weight: 500;
+}
+.f_frame1{
+    gap: 24px;
+}
+.form_icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 5px;
+}
+.f_frame2{
+    row-gap: 24px;
+}
+.submit_btn1 , .submit_btn2{
+    font-family: "Saira Condensed" ;
+    border-style: none;
+    background-color: var(--PerfectRed);
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+    justify-content: center;
+}
+.submit_btn1:hover{
+    background-color: var(--PerfectRed);
+}
+.submit_btn2:hover{
+    background-color: var(--PerfectRed);
+}
+.submit_btn2{
+    display: none;
+}
+.clear_btn{
+    font-family: "Saira Condensed" ;
+    border-style: none;
+    background-color: darkgrey;
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+}
+@media only screen and (max-width: 1050px){
+    .contactsus{
+        padding: 50px 90px 0px 90px;
+    }
+    .c_icon{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .con_link{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 990px){
+    
+    .contactsus{
+        padding: 50px 20px 50px 20px;
+    }
+    .submit_btn1{
+        display: none;
+    }
+    .submit_btn2{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 900px){
+    .contactsus{
+        padding: 40px 40px 50px 40px;
+    }
+    .contactsus .title{
+        font-size: 60px;
+    }
+    .c_icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .con_link{
+        font-size: 1rem;
+    }
+    .submit_btn1{
+        display: flex;
+    }
+    .submit_btn2{
+        display: none;
+    }
+}
+@media only screen and (max-width:650px){
+    .contactsus {
+        padding: 40px 50px 50px 50px;
+    }
+    .contactsus .title{
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+    }
+    .f_text{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width:500px){
+    .contactsus .title{
+        font-size: 38px;
+    }
+}
+
+/*-----------------------------------------------------About------------------------------------------------------------------------------*/
+.about-cover{
+  width: 100%;
+}
+
+.about{
+  background-color: var(--white);
+  position:relative;
+}
+.abu-frame{
+  padding: 10px 112px 200px 112px;
+}
+.headertext{
+  font-family: "Saira Condensed" ;
+}
+.abouHead{
+  color: var(--PerfectRed);
+  text-shadow: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Aframe1{
+  margin-top: 10px;
+}
+.Aframe2 , .Aframe3{
+  margin-bottom: 30px;
+}
+.Subheadertext1{
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Subheadertext2{
+  font-family: "Saira Condensed" ;
+  color: var(--PerfectRed);
+  font-size: 25px;
+  font-weight: 600;
+}
+.Subheadertext3{
+  font-family: "Saira Condensed" ;
+  color: var(--PerfectRed);
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.abu-text{
+  font-family: "Saira Condensed" ;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1000px){
+  .abu-frame{
+    padding: 10px 100px 150px 100px;
+  }
+  .Subheadertext1{
+    font-size: 30px;
+  }
+  .Subheadertext2{
+    font-size: 24px;
+  }
+  .Subheadertext3{
+    font-size: 18px;
+  }
+  .abu-text{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 800px){
+  .Subheadertext1{
+    font-size: 28px;
+  }
+  .Subheadertext2{
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width:650px){
+  .abu-frame{
+    padding: 10px 50px 120px 50px;
+  }
+  .abu-text{
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .Subheadertext1{
+    font-size: 25px;
+  }
+  .Subheadertext2{
+    font-size: 18px;
+  }
+  .Subheadertext3{
+    font-size: 16px;
+  }
+}
+
+/*----------------------------------------------Term & Conditions / Privacy Policy-------------------------------------------------------*/
+.HeaderPara{
+  text-align: center;
+}
+.abu-text li{
+  line-height: 30px;
+}
+
+
