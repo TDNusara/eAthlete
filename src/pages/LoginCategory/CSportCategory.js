@@ -7,7 +7,7 @@ import CCard2 from "../../components/LoginComponents/CoachCard2";
 import CCard3 from "../../components/LoginComponents/CoachCard3";
 import Navbar from "../../components/NavbarManager";
 import Footer2 from "../../components/Footer2";
-
+import { Link } from 'react-router-dom';
 
 
 function CSportCategory() {
@@ -27,7 +27,8 @@ function CSportCategory() {
         <CCard1 image1={Categories1} />
          <CCard2 image2={Categories2} />
          <CCard3 image3={Categories3} />
-
+<button className="btnL"><Link to="/UserCategoryLogin">Back</Link></button>
+            <button className="btnL"><Link to="#">Close</Link></button>
 
       </div>
     </div>

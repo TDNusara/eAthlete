@@ -31,7 +31,7 @@ function AdminPanel() {
           <AdminCard image={AStoreCardImg} count={8} topic="Sellers" />
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0px', margin: '50px' }}>
+        <div className="ABContainer" style={{ display: 'flex', justifyContent: 'center', gap: '0px', margin: '50px' }}>
           <Link to="/AdminArticle">
             <button className="AB1">Article</button>
           </Link>
@@ -41,6 +41,10 @@ function AdminPanel() {
           <Link to="/AManageProfiles">
             <button className="AB1">User Profiles</button>
           </Link>
+           <Link to="/AddUsers">
+            <button className="AB1">Add Users</button>
+          </Link>
+
           
 
         </div>

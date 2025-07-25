@@ -86,6 +86,10 @@ function Login({ onLogin }) {
             <br/>
               <p>Don't have an account?<Link to="/SignUp" className="linkR">Signup</Link></p>
             </div>
+            <div className='LButtons'>
+            <button className="btnL"><Link to="/GuestHome">Back</Link></button>
+            <button className="btnL"><Link to="#">Close</Link></button>
+            </div>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import LUCard2 from "../../components/LoginComponents/UserCard2.js";
 import LUCard3 from "../../components/LoginComponents/UserCard3.js";
 import Navbar from "../../components/NavbarManager";
 import Footer2 from "../../components/Footer2";
+import { Link } from 'react-router-dom';
 
 function UCategory() {
     
@@ -27,7 +28,8 @@ function UCategory() {
         <LUCard1 class="user-container" image1={UCategories1}/>
         <LUCard2 class="user-container" image2={UCategories2}/>
         <LUCard3 class="user-container" image3={UCategories3}/>
-      
+         <button className="btnL"><Link to="/Login">Back</Link></button>
+            <button className="btnL"><Link to="#">Close</Link></button>
       
       </div>
      </div>

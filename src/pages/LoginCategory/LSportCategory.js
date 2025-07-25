@@ -7,7 +7,7 @@ import LCard2 from "../../components/LoginComponents/SportCard2";
 import LCard3 from "../../components/LoginComponents/Sportcard3";
 import Navbar from "../../components/NavbarManager";
 import Footer2 from "../../components/Footer2";
-
+import { Link } from 'react-router-dom';
 
 function LSportCategory() {
 
@@ -27,7 +27,8 @@ function LSportCategory() {
          <LCard2 image2={Categories2} />
          <LCard3 image3={Categories3} />
 
-
+        <button className="btnL"><Link to="/UserCategoryLogin">Back</Link></button>
+            <button className="btnL"><Link to="#">Close</Link></button>
       </div>
     </div>
          <Footer2/>

@@ -2,6 +2,8 @@ import React from 'react'
 
 
 import ProfileTable from '../../components/AdminComponents/ProfileTable';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function AManageProfiles() {
   
@@ -34,7 +36,7 @@ const profilesS = [
   return (
     <div>
     
-
+      <Navbar/>
     <div className='AMPBody'>
       <br /><br />
         <h2 className='AMPTopic'> Coaches</h2>
@@ -53,10 +55,10 @@ const profilesS = [
         <ProfileTable heading="BusinessId" profiles={profilesS} />
         <br /><br />
 
-        <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br />
 </div>
 
-     
+    <Footer2/> 
 
     </div>
  );
