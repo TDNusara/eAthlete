@@ -5,8 +5,9 @@ import CWImage from "../../assets/CWorkout.png";
 import CCard1 from "../../components/LoginComponents/CoachCard1";
 import CCard2 from "../../components/LoginComponents/CoachCard2";
 import CCard3 from "../../components/LoginComponents/CoachCard3";
-import SNavbar from "../../components/SNavbar";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/NavbarManager";
+import Footer2 from "../../components/Footer2";
+
 
 
 function CSportCategory() {
@@ -17,8 +18,9 @@ function CSportCategory() {
   
 
   return (
+    <>
     <div>
-        <SNavbar/>
+      <Navbar/>  
     <div class="UserC">
       <div class="UEmpty">
           <h2 className="Lh"><b>Choose Your Category</b></h2>
@@ -29,8 +31,9 @@ function CSportCategory() {
 
       </div>
     </div>
-    <Footer/>
+    <Footer2/>
     </div>
+    </>
   );
 }
 

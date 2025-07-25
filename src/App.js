@@ -23,6 +23,7 @@ import LessonListPage from "./pages/Learner/LessonListPage";
 import LearnerSchedule from "./pages/Learner/LearnerSchedule";
 import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
 import LessonView from "./pages/Learner/LessonView";
+import SignUp from "./pages/SignUp";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import AdminPanelImported from "./pages/Admin/AdminPanel";
@@ -61,7 +62,7 @@ function App() {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/Term" element={<Term />} />
-
+          <Route path="/SignUp" element={<SignUp/>} />
 
           {/* Rout try by Vindya-start */}
           <Route path="/UserCreateAcc" element={<UCreateAccImported />} />

@@ -120,6 +120,56 @@
         box-sizing: border-box;
 }
 
+@media only screen and (max-width: 767px) {
+  .UEmpty {
+    padding: 30px 20px;
+    border-radius: 30px;
+    max-width: 95%;
+  }
+
+  .SingleCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .CardImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .CategoryBtn {
+    font-size: 12px;
+    padding: 8px 14px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .Categoryheading {
+    font-size: 16px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+    color: black;
+  }
+
+  
+}
+
+
+
+
+
 /*-----------------------------------------------UCreateAccount,UKarateCreateAcc,----------------------------------------------------------*/
 .FLearner {
         background-color: black;
@@ -190,7 +240,7 @@
   margin: 0 auto;
 }
 
-.form-group {
+.Cform-group {
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
@@ -204,7 +254,7 @@
 
 /* Mobile view */
 @media (max-width: 600px) {
-  .form-group {
+  .Cform-group {
     flex: 1 1 100%;
   }
 

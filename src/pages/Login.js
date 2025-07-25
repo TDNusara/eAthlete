@@ -7,8 +7,8 @@ import LoginImg from "../assets/Login.png";
 import TextField from '../components/LoginComponents/TextField';
 import PasswordField from '../components/LoginComponents/PasswordField';
 import { Link } from 'react-router-dom';
-import SNavbar from "../components/SNavbar";
-import Footer from "../components/Footer";
+import Footer2 from "../components/Footer2";
+import Navbar from "../components/NavbarManager";
 
 
 function Login({ onLogin }) {
@@ -61,10 +61,11 @@ function Login({ onLogin }) {
 
 
   return (
-
-   /* <>
+    <>
     <div>
-      <SNavbar/>
+    <Navbar/>
+    
+    
       <div className="Login-container">
         
         <div className="FLEmpty">
@@ -88,36 +89,11 @@ function Login({ onLogin }) {
           </div>
         </div>
       </div>
-       <br/>
-      <Footer />*/
-
-    <div style={{ maxWidth: '300px', margin: 'auto' }}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-          placeholder="Username"
-          required
-          style={{ display: 'block', width: '100%', marginBottom: 10 }}
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-          style={{ display: 'block', width: '100%', marginBottom: 10 }}
-        />
-        <button type="submit" disabled={loading} style={{ width: '100%' }}>
-          {loading ? 'Logging in...' : 'Login'}
-        </button>
-      </form>
-      {error && <p style={{ color: 'red', marginTop: 10 }}>{error}</p>}
-
-    </div>
-   // </>
+      
+   </div>
+   
+   <Footer2/>
+   </>
   );
 }
 

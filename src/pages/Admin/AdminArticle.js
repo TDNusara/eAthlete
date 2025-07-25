@@ -1,6 +1,7 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+
 import ArticleTable from '../../components/AdminComponents/ArticleTable';
 
 function AdminArticle() {
@@ -29,7 +30,7 @@ function AdminArticle() {
 
   return (
     <div>
-    <SNavbar/>
+    <Navbar/>
 
     <div className='AMPBody'>
       <br /><br />
@@ -40,7 +41,7 @@ function AdminArticle() {
         <br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-      <Footer />
+      <Footer2 />
 
     </div>
  );

@@ -1,6 +1,6 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+
+
 import ProfileTable from '../../components/AdminComponents/ProfileTable';
 
 function AManageProfiles() {
@@ -33,12 +33,12 @@ const profilesS = [
 
   return (
     <div>
-    <SNavbar/>
+    
 
     <div className='AMPBody'>
       <br /><br />
         <h2 className='AMPTopic'> Coaches</h2>
-        <ProfileTable heading="Sport" profiles={profilesC} paragraph="Coaches"/>
+        <ProfileTable heading="Sport" profiles={profilesC} />
         
         <br /><br />
 
@@ -50,13 +50,13 @@ const profilesS = [
         <br /><br />
 
         <h2 className='AMPTopic'> Sellers</h2>
-        <ProfileTable heading="BusinessId" profiles={profilesS} paragraph="Sellers"/>
+        <ProfileTable heading="BusinessId" profiles={profilesS} />
         <br /><br />
 
         <br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-      <Footer />
+     
 
     </div>
  );

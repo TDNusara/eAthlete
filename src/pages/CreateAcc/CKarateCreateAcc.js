@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import DropdownField from '../../components/LoginComponents/DropdownField';
 import FileUpload from '../../components/LoginComponents/FileUpload';
 import CoachCheckBox from '../../components/LoginComponents/CoachCheckBox';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function CKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -33,6 +35,8 @@ function CKarateCreateAcc() {
 
   return (
     <>
+    <div>
+      <Navbar/>
       <div className="FLearner">
         <div className="FCVEmpty">
           <form className="form-container">
@@ -41,7 +45,7 @@ function CKarateCreateAcc() {
             <br /><br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="First Name"
                   value={FirstName}
@@ -49,7 +53,7 @@ function CKarateCreateAcc() {
                   placeholder="Enter your First Name"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Last Name"
                   value={LastName}
@@ -60,7 +64,7 @@ function CKarateCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <DropdownField
                   label="Gender"
                   value={Genderr}
@@ -68,7 +72,7 @@ function CKarateCreateAcc() {
                   options={["Female", "Male"]}
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PhoneNum
                   label="Phone Number"
                   value={PhoneNumber}
@@ -79,7 +83,7 @@ function CKarateCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Achievement"
                   value={Achieves}
@@ -87,7 +91,7 @@ function CKarateCreateAcc() {
                   placeholder="Enter your Achievements"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <DropdownField
                   label="Years of Experience"
                   value={years}
@@ -98,7 +102,7 @@ function CKarateCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Location"
                   value={Locationn}
@@ -106,7 +110,7 @@ function CKarateCreateAcc() {
                   placeholder="Enter your District"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <FileUpload
                   label="Upload Your Certificate"
                   onChange={handleFileChange}
@@ -116,7 +120,7 @@ function CKarateCreateAcc() {
             </div>
 
             <div className="form-row" style={{ justifyContent: 'center' }}>
-  <div className="form-group" style={{ flex: '0 0 auto' }}>
+  <div className="Cform-group" style={{ flex: '0 0 auto' }}>
     <DropdownField
       label="Select Belt Colour"
       value={bcolour}
@@ -127,14 +131,14 @@ function CKarateCreateAcc() {
 </div>
 
 <div className="form-row" style={{ justifyContent: 'center' }}>
-  <div className="form-group" style={{ flex: '0 0 auto', maxWidth: '500px' }}>
+  <div className="Cform-group" style={{ flex: '0 0 auto', maxWidth: '500px' }}>
     <CoachCheckBox />
   </div>
 </div>
 <br/>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <EmailL
                   label="Email"
                   value={Email}
@@ -142,7 +146,7 @@ function CKarateCreateAcc() {
                   placeholder="Example@gmail.com"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="User Name"
                   value={UserName}
@@ -153,7 +157,7 @@ function CKarateCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="New Password"
                   value={newpassword}
@@ -161,7 +165,7 @@ function CKarateCreateAcc() {
                   placeholder="Enter new Password"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="Confirm Password"
                   value={confirmpassword}
@@ -188,6 +192,9 @@ function CKarateCreateAcc() {
           </form>
         </div>
       </div>
+    
+    <Footer2/>
+    </div>
     </>
   );
 }

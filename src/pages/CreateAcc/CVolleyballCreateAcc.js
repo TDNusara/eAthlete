@@ -9,6 +9,8 @@ import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
 import DropdownField from '../../components/LoginComponents/DropdownField';
 import FileUpload from '../../components/LoginComponents/FileUpload';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function CVolleyballCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -34,6 +36,8 @@ function CVolleyballCreateAcc() {
 
   return (
     <>
+    <div>
+      <Navbar/>
       <div class="FLearner">
         <div class="FCVEmpty">
 
@@ -45,7 +49,7 @@ function CVolleyballCreateAcc() {
             <br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="First Name"
                   value={FirstName}
@@ -53,7 +57,7 @@ function CVolleyballCreateAcc() {
                   placeholder="Enter your First Name"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Last Name"
                   value={LastName}
@@ -64,7 +68,7 @@ function CVolleyballCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <DropdownField
                   label="Gender"
                   value={Genderr}
@@ -72,7 +76,7 @@ function CVolleyballCreateAcc() {
                   options={["Female", "Male"]}
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PhoneNum
                   label="Phone Number"
                   value={PhoneNumber}
@@ -83,7 +87,7 @@ function CVolleyballCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Achievement"
                   value={Achieves}
@@ -91,7 +95,7 @@ function CVolleyballCreateAcc() {
                   placeholder="Enter your Achievements"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <DropdownField
                   label="Years of Experience"
                   value={years}
@@ -102,7 +106,7 @@ function CVolleyballCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Location"
                   value={Locationn}
@@ -110,7 +114,7 @@ function CVolleyballCreateAcc() {
                   placeholder="Enter your District"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <FileUpload
                   label="Upload Your Certificate"
                   onChange={handleFileChange}
@@ -120,7 +124,7 @@ function CVolleyballCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <EmailL
                   label="Email"
                   value={Email}
@@ -128,7 +132,7 @@ function CVolleyballCreateAcc() {
                   placeholder="Example@gmail.com"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="User Name"
                   value={UserName}
@@ -139,7 +143,7 @@ function CVolleyballCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="New Password"
                   value={newpassword}
@@ -147,7 +151,7 @@ function CVolleyballCreateAcc() {
                   placeholder="Enter new Password"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="Confirm Password"
                   value={confirmpassword}
@@ -181,6 +185,8 @@ function CVolleyballCreateAcc() {
 
 
         </div>
+      </div>
+       <Footer2/>
       </div>
     </>
   )

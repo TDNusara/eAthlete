@@ -8,8 +8,9 @@ import PasswordField from "../../components/LoginComponents/PasswordField";
 import CheckBoxAgree from '../../components/LoginComponents/CheckBoxAgree';
 import RedButton from '../../components/LoginComponents/RedButton';
 import { Link } from 'react-router-dom';
-import SNavbar from '../../components/SNavbar';
-import Footer from '../../components/Footer';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+
 
 function UCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -23,7 +24,8 @@ function UCreateAcc() {
 
   return (
     <>
-      <SNavbar />
+      <div>
+        <Navbar/>
       <div className="FLearner">
         <div className="FCVEmpty">
 
@@ -34,7 +36,7 @@ function UCreateAcc() {
             <br /><br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="First Name"
                   value={FirstName}
@@ -42,7 +44,7 @@ function UCreateAcc() {
                   placeholder="Enter your First Name"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Last Name"
                   value={LastName}
@@ -53,7 +55,7 @@ function UCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <DatePicker
                   label="Date Of Birth"
                   value={Date}
@@ -61,7 +63,7 @@ function UCreateAcc() {
                   placeholder="YYYY-MM-DD"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PhoneNum
                   label="Phone Number"
                   value={PhoneNumber}
@@ -72,7 +74,7 @@ function UCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <EmailL
                   label="Email"
                   value={Email}
@@ -80,7 +82,7 @@ function UCreateAcc() {
                   placeholder="Example@gmail.com"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="User Name"
                   value={UserName}
@@ -91,7 +93,7 @@ function UCreateAcc() {
             </div>
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="New Password"
                   value={newpassword}
@@ -99,7 +101,7 @@ function UCreateAcc() {
                   placeholder="Enter new Password"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <PasswordField
                   label="Confirm Password"
                   value={confirmpassword}
@@ -128,8 +130,8 @@ function UCreateAcc() {
 
         </div>
       </div>
-      <br /><br /><br /><br />
-      <Footer />
+      <Footer2/>
+      </div>
     </>
   );
 }

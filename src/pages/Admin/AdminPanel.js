@@ -1,5 +1,5 @@
 
-import SNavbar from "../../components/SNavbar";
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AdminCard from "../../components/AdminComponents/AdminPanelCard";
@@ -8,7 +8,10 @@ import AStoreCardImg from "../../assets/AdminStoreCard.png";
 import ACoachCardImg from "../../assets/AdminCoachCard.png";
 import ALearnerCardImg from "../../assets/AdminLearnerCard.png";
 
-import Footer from "../../components/Footer";
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+
+
 
 
 
@@ -17,7 +20,7 @@ function AdminPanel() {
 
   return (
     <div>
-      <SNavbar />
+      <Navbar/>
       <div className="Amid">
 
         <h2 className='A'> Users</h2>
@@ -38,6 +41,8 @@ function AdminPanel() {
           <Link to="/AManageProfiles">
             <button className="AB1">User Profiles</button>
           </Link>
+          
+
         </div>
 
         <br />
@@ -51,8 +56,8 @@ function AdminPanel() {
       </div>
 
 
-
-      <Footer />
+      <Footer2/>
+     
 
     </div>
   );

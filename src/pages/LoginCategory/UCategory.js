@@ -2,11 +2,11 @@ import React from 'react';
 import Learnerimg from "../../assets/LearnerCategory.png";
 import coachimg from "../../assets/CKarate.png";
 import Sellerimg from "../../assets/SellerCategory.png";
-import LUCard1 from "../../components/LoginComponents/UserCard1";
-import LUCard2 from "../../components/LoginComponents/UserCard2";
+import LUCard1 from "../../components/LoginComponents/UserCard1.js";
+import LUCard2 from "../../components/LoginComponents/UserCard2.js";
 import LUCard3 from "../../components/LoginComponents/UserCard3.js";
-import SNavbar from "../../components/SNavbar";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/NavbarManager";
+import Footer2 from "../../components/Footer2";
 
 function UCategory() {
     
@@ -17,10 +17,11 @@ function UCategory() {
   
 
   return (
+    <>
     <div>
-      <SNavbar/>
+       <Navbar/>
     <div class="UserC">
-       
+      
       <div class="UEmpty">
            <h2 className="Lh"><b>Choose Your Category</b></h2>
         <LUCard1 class="user-container" image1={UCategories1}/>
@@ -30,9 +31,10 @@ function UCategory() {
       
       </div>
      </div>
-     <br/>
-     <Footer/>
+     
+     <Footer2/>
     </div>
+    </>
  );
 }
 

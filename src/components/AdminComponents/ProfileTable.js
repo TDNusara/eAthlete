@@ -26,7 +26,7 @@ function ProfileTable(props) {
 
 
       </table>
-          <p>These are the whole{props.paragraph}</p>
+          
     </>
 
   )

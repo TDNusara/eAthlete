@@ -9,8 +9,8 @@ import CheckBoxAgree from '../../components/LoginComponents/CheckBoxAgree';
 import RedButton from '../../components/LoginComponents/RedButton';
 import CheckBox from '../../components/LoginComponents/CheckBox';
 import { Link } from 'react-router-dom';
-import SNavbar from '../../components/SNavbar';
-import Footer from '../../components/Footer';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function UKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -24,7 +24,8 @@ function UKarateCreateAcc() {
 
   return (
     <>
-      <SNavbar />
+     <div>
+      <Navbar/>
       <div className="FLearner">
         <div className="FCVEmpty">
 
@@ -35,7 +36,7 @@ function UKarateCreateAcc() {
             <br /><br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="First Name"
                   value={FirstName}
@@ -49,7 +50,7 @@ function UKarateCreateAcc() {
                   placeholder="YYYY-MM-DD"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Last Name"
                   value={LastName}
@@ -72,7 +73,7 @@ function UKarateCreateAcc() {
             <br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <EmailL
                   label="Email"
                   value={Email}
@@ -86,7 +87,7 @@ function UKarateCreateAcc() {
                   placeholder="Enter new Password"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="User Name"
                   value={UserName}
@@ -123,8 +124,8 @@ function UKarateCreateAcc() {
 
         </div>
       </div>
-      <br />
-      <Footer />
+      </div>
+      <Footer2/>
     </>
   );
 }

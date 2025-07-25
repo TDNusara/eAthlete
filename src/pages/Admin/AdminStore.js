@@ -1,6 +1,8 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+
 import StoreTable from '../../components/AdminComponents/StoreTable';
 
 function AdminStore() {
@@ -11,7 +13,7 @@ function AdminStore() {
   return (
     
     <div>
-    <SNavbar/>
+    <Navbar/>
 
         <div className='AMPBody'>
 
@@ -23,7 +25,7 @@ function AdminStore() {
         </div>
         <br/><br/><br/><br/><br/><br/><br/><br/>
 
-    <Footer/>
+    <Footer2/>
     </div>
     
  );
