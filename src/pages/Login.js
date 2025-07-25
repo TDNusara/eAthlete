@@ -80,15 +80,17 @@ function Login({ onLogin }) {
               <TextField label="Username" value={Uname} onChange={(e) => setUName(e.target.value)} placeholder="Enter your Username" /><br/>
               <PasswordField label="Password" value={Pword} onChange={(e) => setPWord(e.target.value)} placeholder="Enter your Password" />
               <p className='LoginParagraph'><Link to="/HomePage" className="linkB">Forgot Password?</Link></p><br/>
-              
+              <div 
+      style={{
+        justifyContent: 'center',   // centers horizontally
+        alignItems: 'center',       // centers vertically
+      }}>
               <button className="btnL" onClick={handleSubmit}>Login</button>
+              <button className="btnL"><Link to="#">Reset</Link></button>
+</div>
               
             <br/>
               <p>Don't have an account?<Link to="/SignUp" className="linkR">Signup</Link></p>
-            </div>
-            <div className='LButtons'>
-            <button className="btnL"><Link to="/GuestHome">Back</Link></button>
-            <button className="btnL"><Link to="#">Close</Link></button>
             </div>
           </div>
         </div>

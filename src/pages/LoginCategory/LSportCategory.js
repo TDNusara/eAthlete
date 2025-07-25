@@ -26,9 +26,11 @@ function LSportCategory() {
         <LCard1 image1={Categories1} />
          <LCard2 image2={Categories2} />
          <LCard3 image3={Categories3} />
+         <div className='btnGroup'>
+                  <button className="btnL"><Link to="/UserCategoryLogin">Back To Sign Up</Link></button>
+         </div>
 
-        <button className="btnL"><Link to="/UserCategoryLogin">Back</Link></button>
-            <button className="btnL"><Link to="#">Close</Link></button>
+            {/* <button className="btnL"><Link to="#">Close</Link></button> */}
       </div>
     </div>
          <Footer2/>

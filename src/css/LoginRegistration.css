@@ -116,7 +116,7 @@
         width: 100%;
         max-width: 700px;
         margin: 2rem auto;
-        padding: 50px;
+        padding: 40px;
         box-sizing: border-box;
 }
 
@@ -381,17 +381,26 @@
         justify-content: center;
         height: 40px;
         gap: 8px;
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
         transition: all 0.3s;
         cursor: pointer;
         border-radius: 9999px;
         outline: none;
         background-color: #cc0000;
-        margin-left: 10px;
         color: white;
         margin-bottom: 10px;
         border: none;
+
+}
+
+.btnGroup{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 25px;
 
 }
 

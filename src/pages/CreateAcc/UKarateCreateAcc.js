@@ -109,9 +109,13 @@ function UKarateCreateAcc() {
               <CheckBoxAgree />
             </div>
 
-            <div className="form-row">
-              <RedButton type="submit" />
-            </div>
+              <div className="form-row">
+                
+                <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link>
+                <RedButton type="submit" title="Create New Account"/>
+                <button className="btnL" type="reset"> Reset</button>
+              </div>
+
 
             <br />
             <div className="form-footer">
