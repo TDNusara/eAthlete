@@ -56,6 +56,13 @@ function Login({ onLogin }) {
       setLoading(false);
     }
   };
+
+  const handleReset = () => {
+  setUName('');
+  setPWord('');
+ 
+};
+
   const [Uname, setUName] = useState('');
   const [Pword, setPWord] = useState('');
 
@@ -81,12 +88,12 @@ function Login({ onLogin }) {
               <PasswordField label="Password" value={Pword} onChange={(e) => setPWord(e.target.value)} placeholder="Enter your Password" />
               <p className='LoginParagraph'><Link to="/HomePage" className="linkB">Forgot Password?</Link></p><br/>
               <div 
-      style={{
-        justifyContent: 'center',   // centers horizontally
-        alignItems: 'center',       // centers vertically
-      }}>
+              style={{
+                  justifyContent: 'center',   // centers horizontally
+                  alignItems: 'center',       // centers vertically
+                     }}>
               <button className="btnL" onClick={handleSubmit}>Login</button>
-              <button className="btnL"><Link to="#">Reset</Link></button>
+            <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 </div>
               
             <br/>
