@@ -30,20 +30,20 @@ function CKarateCreateAcc() {
   const [bcolour, setBColour] = useState('');
 
   const handleReset = () => {
-  setFirstName('');
-  setLastName('');
-  setPhoneNumber('');
-  setEmail('');
-  setUserName('');
-  setnewPassword('');
-  setconfirmPassword('');
-  setGenderr('');
-  setAchieves('');
-  setLocationn('');
-  setSelectedFile('');
-  setYears('');
-  console.log("Form has been reset!");
-};
+    setFirstName('');
+    setLastName('');
+    setPhoneNumber('');
+    setEmail('');
+    setUserName('');
+    setnewPassword('');
+    setconfirmPassword('');
+    setGenderr('');
+    setAchieves('');
+    setLocationn('');
+    setSelectedFile('');
+    setYears('');
+    console.log("Form has been reset!");
+  };
 
 
   const handleFileChange = (e) => {
@@ -58,7 +58,20 @@ function CKarateCreateAcc() {
         <div className="FLearner">
           <div className="FCVEmpty">
             <form className="form-container">
-              <h2 className='FLh'>Create An Account</h2><br />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <Link to={"/CoachSportCategoryLogin"}><BackButton /></Link>
+                </div>
+                <div style={{ flex: 1, textAlign: 'center' }}>
+              <br />
+                  <h2 className='FLh'>Create An Account</h2>
+                </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>
+                  <BackButton />
+                </div>
+              </div>
+              <br />
+
               <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
               <br /><br />
 
@@ -198,9 +211,7 @@ function CKarateCreateAcc() {
               </div>
 
               <div className="btnGroup">
-                
-                <BackButton />
-                <RedButton type="submit" title="Create New Account"/>
+                <RedButton type="submit" title="Create New Account" />
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 
               </div>

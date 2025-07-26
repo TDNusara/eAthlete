@@ -43,8 +43,13 @@ function UCreateAcc() {
         <div className="FCVEmpty">
 
           <form className="form-container">
+            <div>
+              <div></div>
+              <div>            <h2 className='FLh'>Create An Account</h2><br />
+</div>
+              <div></div>
+            </div>
 
-            <h2 className='FLh'>Create An Account</h2><br />
             <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
             <br /><br />
 

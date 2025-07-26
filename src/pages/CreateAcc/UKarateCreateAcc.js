@@ -23,127 +23,131 @@ function UKarateCreateAcc() {
   const [confirmpassword, setconfirmPassword] = useState('');
 
   const handleReset = () => {
-  setFirstName('');
-  setLastName('');
-  setDate('');
-  setPhoneNumber('');
-  setEmail('');
-  setUserName('');
-  setnewPassword('');
-  setconfirmPassword('');
-  console.log("Form reset");
-};
+    setFirstName('');
+    setLastName('');
+    setDate('');
+    setPhoneNumber('');
+    setEmail('');
+    setUserName('');
+    setnewPassword('');
+    setconfirmPassword('');
+    console.log("Form reset");
+  };
 
 
   return (
     <>
-     <div>
-      <Navbar/>
-      <div className="FLearner">
-        <div className="FCVEmpty">
+      <div>
+        <Navbar />
+        <div className="FLearner">
+          <div className="FCVEmpty">
 
-          <form className="form-container">
+            <form className="form-container">
 
-            <h2 className='FLh'>Create An Account</h2><br />
-            <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
-            <br /><br />
+              <div></div>
+              <div><h2 className='FLh'>Create An Account</h2><br /></div>
+              <div></div>
 
-            <div className="form-row">
-              <div className="Cform-group">
-                <TextField
-                  label="First Name"
-                  value={FirstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  placeholder="Enter your First Name"
-                />
-                <DatePicker
-                  label="Date Of Birth"
-                  value={Date}
-                  onChange={(e) => setDate(e.target.value)}
-                  placeholder="YYYY-MM-DD"
-                />
+
+              <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
+              <br /><br />
+
+              <div className="form-row">
+                <div className="Cform-group">
+                  <TextField
+                    label="First Name"
+                    value={FirstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="Enter your First Name"
+                  />
+                  <DatePicker
+                    label="Date Of Birth"
+                    value={Date}
+                    onChange={(e) => setDate(e.target.value)}
+                    placeholder="YYYY-MM-DD"
+                  />
+                </div>
+                <div className="Cform-group">
+                  <TextField
+                    label="Last Name"
+                    value={LastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Enter your Last Name"
+                  />
+                  <PhoneNum
+                    label="Phone Number"
+                    value={PhoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    placeholder="Enter your Phone Number"
+                  />
+                </div>
               </div>
-              <div className="Cform-group">
-                <TextField
-                  label="Last Name"
-                  value={LastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  placeholder="Enter your Last Name"
-                />
-                <PhoneNum
-                  label="Phone Number"
-                  value={PhoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  placeholder="Enter your Phone Number"
-                />
+
+              <div className="form-footer">
+                <CheckBox />
               </div>
-            </div>
 
-            <div className="form-footer">
-              <CheckBox />
-            </div>
+              <br />
 
-            <br />
-
-            <div className="form-row">
-              <div className="Cform-group">
-                <EmailL
-                  label="Email"
-                  value={Email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Example@gmail.com"
-                />
-                <PasswordField
-                  label="New Password"
-                  value={newpassword}
-                  onChange={(e) => setnewPassword(e.target.value)}
-                  placeholder="Enter new Password"
-                />
+              <div className="form-row">
+                <div className="Cform-group">
+                  <EmailL
+                    label="Email"
+                    value={Email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Example@gmail.com"
+                  />
+                  <PasswordField
+                    label="New Password"
+                    value={newpassword}
+                    onChange={(e) => setnewPassword(e.target.value)}
+                    placeholder="Enter new Password"
+                  />
+                </div>
+                <div className="Cform-group">
+                  <TextField
+                    label="User Name"
+                    value={UserName}
+                    onChange={(e) => setUserName(e.target.value)}
+                    placeholder="Create a User Name"
+                  />
+                  <PasswordField
+                    label="Confirm Password"
+                    value={confirmpassword}
+                    onChange={(e) => setconfirmPassword(e.target.value)}
+                    placeholder="Re-enter Password"
+                  />
+                </div>
               </div>
-              <div className="Cform-group">
-                <TextField
-                  label="User Name"
-                  value={UserName}
-                  onChange={(e) => setUserName(e.target.value)}
-                  placeholder="Create a User Name"
-                />
-                <PasswordField
-                  label="Confirm Password"
-                  value={confirmpassword}
-                  onChange={(e) => setconfirmPassword(e.target.value)}
-                  placeholder="Re-enter Password"
-                />
+
+              <br />
+
+              <div className="form-footer">
+                <CheckBoxAgree />
               </div>
-            </div>
-
-            <br />
-
-            <div className="form-footer">
-              <CheckBoxAgree />
-            </div>
 
               <div className="btnGroup">
-                
+
                 {/* <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link> */}
-                <RedButton type="submit" title="Create New Account"/>
+                <RedButton type="submit" title="Create New Account" />
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 
               </div>
 
 
-            <br />
-            <div className="form-footer">
-              <p>
-                Already have an account? <Link to="/Login" className="linkR">Login</Link>
-              </p>
-            </div>
+              <br />
+              <div className="form-footer">
+                <p>
+                  Already have an account? <Link to="/Login" className="linkR">Login</Link>
+                </p>
+              </div>
 
-          </form>
+            </form>
 
+          </div>
         </div>
       </div>
-      </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 }
