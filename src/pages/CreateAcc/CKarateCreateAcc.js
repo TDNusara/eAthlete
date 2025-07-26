@@ -201,6 +201,7 @@ function CKarateCreateAcc() {
                 
                 <BackButton />
                 <RedButton type="submit" title="Create New Account"/>
+                
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 
               </div>
