@@ -124,7 +124,7 @@ function UKarateCreateAcc() {
 
               <div className="btnGroup">
                 
-                <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link>
+                {/* <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link> */}
                 <RedButton type="submit" title="Create New Account"/>
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 

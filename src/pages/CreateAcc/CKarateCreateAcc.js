@@ -12,6 +12,7 @@ import FileUpload from '../../components/LoginComponents/FileUpload';
 import CoachCheckBox from '../../components/LoginComponents/CoachCheckBox';
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
+import BackButton from '../../components/LoginComponents/BackButton';
 
 function CKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -198,7 +199,7 @@ function CKarateCreateAcc() {
 
               <div className="btnGroup">
                 
-                {/* <button className="btnL"><Link to="/CoachSportCategoryLogin">Back</Link></button> */}
+                <BackButton />
                 <RedButton type="submit" title="Create New Account"/>
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 
