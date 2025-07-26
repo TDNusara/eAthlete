@@ -30,6 +30,27 @@ function CKarateCreateAcc() {
   const [years, setYears] = useState('');
   const [bcolour, setBColour] = useState('');
 
+const handleSubmit = (e) => {
+  e.preventDefault(); // Prevent form refresh
+
+  const formData = {
+    firstName: FirstName,
+    lastName: LastName,
+    gender: Genderr,
+    phoneNumber: PhoneNumber,
+    achievements: Achieves,
+    yearsOfExperience: years,
+    location: Locationn,
+    beltColour: bcolour,
+    email: Email,
+    userName: UserName,
+    newPassword: newpassword,
+    confirmPassword: confirmpassword,
+    certificateFile: selectedFile ? selectedFile.name : null,
+  };
+
+  console.log("Submitted Form Data from karate coach create Account:", formData);
+};
   const handleReset = () => {
     setFirstName('');
     setLastName('');
@@ -58,7 +79,7 @@ function CKarateCreateAcc() {
         <Navbar />
         <div className="FLearner">
           <div className="FCVEmpty">
-            <form className="form-container">
+            <form className="form-container" onSubmit={handleSubmit}>
 
 
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
@@ -67,7 +88,7 @@ function CKarateCreateAcc() {
                 </div>
                 <div style={{ flex: 1, textAlign: 'center' }}>
                   <h2 className='FLh'>Create An Account</h2>
-                  <h2 className='FLh'>karate Cotch</h2>
+                  
                 </div>
                 <div style={{ flex: 1, textAlign: 'right' }}>
                   <CloseButton />

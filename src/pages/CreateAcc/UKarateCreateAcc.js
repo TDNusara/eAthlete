@@ -11,6 +11,8 @@ import CheckBox from '../../components/LoginComponents/CheckBox';
 import { Link } from 'react-router-dom';
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
+import BackButton from '../../components/LoginComponents/BackButton';
+import CloseButton from '../../components/LoginComponents/CloseButton';
 
 function UKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -21,6 +23,24 @@ function UKarateCreateAcc() {
   const [UserName, setUserName] = useState('');
   const [newpassword, setnewPassword] = useState('');
   const [confirmpassword, setconfirmPassword] = useState('');
+
+  const handleSubmit = (e) => {
+  e.preventDefault(); // Prevent form refresh
+
+   const formData = {
+    firstName: FirstName,
+    lastName: LastName,
+    date:Date,
+    phoneNumber: PhoneNumber,
+    email: Email,
+    userName: UserName,
+    newPassword: newpassword,
+    confirmPassword: confirmpassword,
+    
+    };
+
+  console.log("Submitted Form Data from karate User create Account:", formData);
+  };
 
   const handleReset = () => {
     setFirstName('');
@@ -42,10 +62,23 @@ function UKarateCreateAcc() {
         <div className="FLearner">
           <div className="FCVEmpty">
 
-            <form className="form-container">
+            <form className="form-container" onSubmit={handleSubmit}>
+
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <Link to={"/LearnerSportCategoryLogin"}><BackButton /></Link>
+                </div>
+              <div style={{ flex: 1, textAlign: 'center' }}>
+                  <h2 className='FLh'>Create An Account</h2>
+                  
+                </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>
+                  <CloseButton />
+                </div>
+                </div>
 
               <div></div>
-              <div><h2 className='FLh'>Create An Account</h2><br /></div>
+              
               <div></div>
 
 
