@@ -13,6 +13,7 @@ import CoachCheckBox from '../../components/LoginComponents/CoachCheckBox';
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
 import BackButton from '../../components/LoginComponents/BackButton';
+import CloseButton from '../../components/LoginComponents/CloseButton';
 
 function CKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -58,6 +59,8 @@ function CKarateCreateAcc() {
         <div className="FLearner">
           <div className="FCVEmpty">
             <form className="form-container">
+
+
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
                 <div style={{ flex: 1, textAlign: 'left' }}>
                   <Link to={"/CoachSportCategoryLogin"}><BackButton /></Link>
@@ -67,9 +70,10 @@ function CKarateCreateAcc() {
                   <h2 className='FLh'>Create An Account</h2>
                 </div>
                 <div style={{ flex: 1, textAlign: 'right' }}>
-                  <BackButton />
+                  <CloseButton />
                 </div>
               </div>
+
               <br />
 
               <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
@@ -211,16 +215,8 @@ function CKarateCreateAcc() {
               </div>
 
               <div className="btnGroup">
-
-                <RedButton type="submit" title="Create New Account" />
-
-                
-                <BackButton />
-                <RedButton type="submit" title="Create New Account"/>
-                
-
+                <RedButton type="submit" title="Create New Account"/>            
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
-
               </div>
 
               <br />
