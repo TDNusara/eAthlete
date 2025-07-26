@@ -9,8 +9,8 @@ import CheckBoxAgree from '../../components/LoginComponents/CheckBoxAgree';
 import RedButton from '../../components/LoginComponents/RedButton';
 import CheckBox from '../../components/LoginComponents/CheckBox';
 import { Link } from 'react-router-dom';
-import SNavbar from '../../components/SNavbar';
-import Footer from '../../components/Footer';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function UKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -22,9 +22,23 @@ function UKarateCreateAcc() {
   const [newpassword, setnewPassword] = useState('');
   const [confirmpassword, setconfirmPassword] = useState('');
 
+  const handleReset = () => {
+  setFirstName('');
+  setLastName('');
+  setDate('');
+  setPhoneNumber('');
+  setEmail('');
+  setUserName('');
+  setnewPassword('');
+  setconfirmPassword('');
+  console.log("Form reset");
+};
+
+
   return (
     <>
-      <SNavbar />
+     <div>
+      <Navbar/>
       <div className="FLearner">
         <div className="FCVEmpty">
 
@@ -35,7 +49,7 @@ function UKarateCreateAcc() {
             <br /><br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="First Name"
                   value={FirstName}
@@ -49,7 +63,7 @@ function UKarateCreateAcc() {
                   placeholder="YYYY-MM-DD"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="Last Name"
                   value={LastName}
@@ -72,7 +86,7 @@ function UKarateCreateAcc() {
             <br />
 
             <div className="form-row">
-              <div className="form-group">
+              <div className="Cform-group">
                 <EmailL
                   label="Email"
                   value={Email}
@@ -86,7 +100,7 @@ function UKarateCreateAcc() {
                   placeholder="Enter new Password"
                 />
               </div>
-              <div className="form-group">
+              <div className="Cform-group">
                 <TextField
                   label="User Name"
                   value={UserName}
@@ -108,9 +122,14 @@ function UKarateCreateAcc() {
               <CheckBoxAgree />
             </div>
 
-            <div className="form-row">
-              <RedButton type="submit" />
-            </div>
+              <div className="btnGroup">
+                
+                <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link>
+                <RedButton type="submit" title="Create New Account"/>
+                <button className="btnL" type="button" onClick={handleReset}>Reset</button>
+
+              </div>
+
 
             <br />
             <div className="form-footer">
@@ -123,8 +142,8 @@ function UKarateCreateAcc() {
 
         </div>
       </div>
-      <br />
-      <Footer />
+      </div>
+      <Footer2/>
     </>
   );
 }

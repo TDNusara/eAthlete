@@ -1,6 +1,8 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+
 import StoreTable from '../../components/AdminComponents/StoreTable';
 
 function AdminStore() {
@@ -11,7 +13,7 @@ function AdminStore() {
   return (
     
     <div>
-    <SNavbar/>
+    <Navbar/>
 
         <div className='AMPBody'>
 
@@ -19,11 +21,14 @@ function AdminStore() {
 
         <h2 className="ASTopic">Listing</h2>
         <StoreTable/>
+         <div className='btnGroup'>
+                  <button className="btnL"><Link to="/AdminPanelUrl">Back To Admin Panel</Link></button>
+         </div>
 
         </div>
         <br/><br/><br/><br/><br/><br/><br/><br/>
 
-    <Footer/>
+    <Footer2/>
     </div>
     
  );

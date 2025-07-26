@@ -5,8 +5,9 @@ import CWImage from "../../assets/CWorkout.png";
 import CCard1 from "../../components/LoginComponents/CoachCard1";
 import CCard2 from "../../components/LoginComponents/CoachCard2";
 import CCard3 from "../../components/LoginComponents/CoachCard3";
-import SNavbar from "../../components/SNavbar";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/NavbarManager";
+import Footer2 from "../../components/Footer2";
+import { Link } from 'react-router-dom';
 
 
 function CSportCategory() {
@@ -17,20 +18,23 @@ function CSportCategory() {
   
 
   return (
+    <>
     <div>
-        <SNavbar/>
+      <Navbar/>  
     <div class="UserC">
       <div class="UEmpty">
           <h2 className="Lh"><b>Choose Your Category</b></h2>
         <CCard1 image1={Categories1} />
          <CCard2 image2={Categories2} />
          <CCard3 image3={Categories3} />
-
-
+ <div className='btnGroup'>
+                  <button className="btnL"><Link to="/UserCategoryLogin">Back To Sign Up</Link></button>
+         </div>
       </div>
     </div>
-    <Footer/>
+    <Footer2/>
     </div>
+    </>
   );
 }
 

@@ -1,7 +1,99 @@
-/*------------------------------------------------LCard,LUCard-------------------------------------------------------------*/
+/*---------------------------------------------Login page---------------------------------------------------------------*/
+
+.FLEmpty {
+        background-color: white;
+        border-radius: 60px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
+        margin: 32px auto;
+        box-sizing: border-box;
+        padding:50px;
+}
+
+.Login-container {
+        background-color: black;
+        padding-top: 60px;
+        padding-bottom: 100px;
+
+}
+
+.LoginParagraph {
+        font-size: small;
+
+}
+
+.btnL {
+
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        gap: 8px;
+        padding-left: 50px;
+        padding-right: 50px;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 9999px;
+        outline: none;
+        background-color: #cc0000;
+        color: white;
+        margin-bottom: 10px;
+        border: none;
+
+}
+
+.btnGroup{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 25px;
+
+}
 
 
 
+
+.HLogin {                                               /*heading of Login*/
+
+        margin-left: 40px;
+
+
+}
+
+.form-columns {
+        display: flex;
+       
+}
+
+.Form-left{
+
+        padding-left:20px ;
+        
+}
+
+.Form-right{
+
+        padding-left: 60px;
+        padding-right: 60px;
+        justify-content: center;
+
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .form-columns {
+    flex: 1 1 100%;
+  }
+  
+
+  
+}
+
+
+
+/*------------------------------------------------UCategory,SportCategory(LCard,LUCard)-------------------------------------------------------------*/
 
 
 .Lh {
@@ -111,14 +203,64 @@
 
 .UEmpty {
         background-color: white;
-        border-radius: 12px;
+        border-radius: 60px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 700px;
         margin: 2rem auto;
-        padding: 2rem;
+        padding: 40px;
         box-sizing: border-box;
 }
+
+@media only screen and (max-width: 767px) {
+  .UEmpty {
+    padding: 30px 20px;
+    border-radius: 30px;
+    max-width: 95%;
+  }
+
+  .SingleCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .CardImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .CategoryBtn {
+    font-size: 12px;
+    padding: 8px 14px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .Categoryheading {
+    font-size: 16px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+    color: black;
+  }
+
+  
+}
+
+
+
+
 
 /*-----------------------------------------------UCreateAccount,UKarateCreateAcc,----------------------------------------------------------*/
 .FLearner {
@@ -190,7 +332,7 @@
   margin: 0 auto;
 }
 
-.form-group {
+.Cform-group {
   flex: 1 1 45%;
   display: flex;
   flex-direction: column;
@@ -204,7 +346,7 @@
 
 /* Mobile view */
 @media (max-width: 600px) {
-  .form-group {
+  .Cform-group {
     flex: 1 1 100%;
   }
 
@@ -300,68 +442,8 @@
         cursor: pointer;
 }
 
-/*-----------------------------------------------Login Page-------------------------------------------------------------*/
-
-.FLEmpty {
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 700px;
-        margin: 2rem auto;
-        padding: 1.5rem;
-        box-sizing: border-box;
 
 
-}
-
-.Login-container {
-        background-color: black;
-        padding-top: 60px;
-        padding-bottom: 100px;
-
-}
-
-.LoginParagraph {
-        font-size: small;
-
-}
-
-.btnL {
-
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        gap: 8px;
-        padding-left: 80px;
-        padding-right: 80px;
-        transition: all 0.3s;
-        cursor: pointer;
-        border-radius: 9999px;
-        outline: none;
-        background-color: #cc0000;
-        margin-left: 10px;
-        color: white;
-        margin-bottom: 10px;
-        border: none;
-
-}
-
-
-.HLogin {
-
-        margin-left: 40px;
-
-
-}
-
-.form-columns {
-        display: flex;
-        gap: 100px;
-        margin-left: 30px;
-        margin-right: 50px;
-
-}
 
 /*-------------------------------------------------CVolleyballCreateACC,CKarateCreateACC,CWorkoutCreateACC--------------------------------------------------*/
 .CVform-columns{

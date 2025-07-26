@@ -5,9 +5,9 @@ import CWImage from "../../assets/CWorkout.png";
 import LCard1 from "../../components/LoginComponents/SportCard1";
 import LCard2 from "../../components/LoginComponents/SportCard2";
 import LCard3 from "../../components/LoginComponents/Sportcard3";
-import SNavbar from "../../components/SNavbar";
-import Footer from "../../components/Footer";
-
+import Navbar from "../../components/NavbarManager";
+import Footer2 from "../../components/Footer2";
+import { Link } from 'react-router-dom';
 
 function LSportCategory() {
 
@@ -17,21 +17,26 @@ function LSportCategory() {
   
 
   return (
+    <>
     <div>
-      <SNavbar/>
+       <Navbar/>
     <div class="UserC">
       <div class="UEmpty">
-          <h2 className="Lh"><b>Choose Your Category</b></h2>
+          <h2 className="Lh"><b>Choose Your Sport</b></h2>
         <LCard1 image1={Categories1} />
          <LCard2 image2={Categories2} />
          <LCard3 image3={Categories3} />
+         <div className='btnGroup'>
+                  <button className="btnL"><Link to="/UserCategoryLogin">Back To Sign Up</Link></button>
+         </div>
 
-
+            {/* <button className="btnL"><Link to="#">Close</Link></button> */}
       </div>
     </div>
-         <Footer/>
+         <Footer2/>
 
     </div>
+    </>
   );
 }
 

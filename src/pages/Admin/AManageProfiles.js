@@ -1,7 +1,9 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
+
 import ProfileTable from '../../components/AdminComponents/ProfileTable';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
 
 function AManageProfiles() {
   
@@ -33,12 +35,12 @@ const profilesS = [
 
   return (
     <div>
-    <SNavbar/>
-
+    
+      <Navbar/>
     <div className='AMPBody'>
       <br /><br />
         <h2 className='AMPTopic'> Coaches</h2>
-        <ProfileTable heading="Sport" profiles={profilesC} paragraph="Coaches"/>
+        <ProfileTable heading="Sport" profiles={profilesC} />
         
         <br /><br />
 
@@ -50,13 +52,15 @@ const profilesS = [
         <br /><br />
 
         <h2 className='AMPTopic'> Sellers</h2>
-        <ProfileTable heading="BusinessId" profiles={profilesS} paragraph="Sellers"/>
+        <ProfileTable heading="BusinessId" profiles={profilesS} />
         <br /><br />
-
-        <br /><br /><br /><br /><br /><br /><br /><br />
+         <div className='btnGroup'>
+                  <button className="btnL"><Link to="/AdminPanelUrl">Back To Admin Panel</Link></button>
+         </div>
+        <br /><br /><br /><br />
 </div>
 
-      <Footer />
+    <Footer2/> 
 
     </div>
  );

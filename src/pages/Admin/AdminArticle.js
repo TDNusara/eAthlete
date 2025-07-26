@@ -1,6 +1,7 @@
 import React from 'react'
-import SNavbar from "../../components/SNavbar";
-import Footer from '../../components/Footer';
+import Footer2 from "../../components/Footer2";
+import Navbar from "../../components/NavbarManager";
+import { Link } from 'react-router-dom';
 import ArticleTable from '../../components/AdminComponents/ArticleTable';
 
 function AdminArticle() {
@@ -29,18 +30,20 @@ function AdminArticle() {
 
   return (
     <div>
-    <SNavbar/>
+    <Navbar/>
 
     <div className='AMPBody'>
       <br /><br />
       <h2 class = 'AArticle'>Articles</h2>
       <ArticleTable articles={articles} />
         <br /><br />
-
+                  <div className='btnGroup'>
+                  <button className="btnL"><Link to="/AdminPanelUrl">Back To Admin Panel</Link></button>
+         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-      <Footer />
+      <Footer2 />
 
     </div>
  );

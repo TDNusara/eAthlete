@@ -23,6 +23,7 @@ import LessonListPage from "./pages/Learner/LessonListPage";
 import LearnerSchedule from "./pages/Learner/LearnerSchedule";
 import KarateLessonMenu from "./pages/Learner/KarateLessonMenu";
 import LessonView from "./pages/Learner/LessonView";
+import SignUp from "./pages/SignUp";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import AdminPanelImported from "./pages/Admin/AdminPanel";
@@ -41,10 +42,12 @@ import AdminPanelCardImported from "./components/AdminComponents/AdminPanelCard"
 import AdminArticleTableImported from "./components/AdminComponents/ArticleTable";
 import AdminProfileTableImported from "./components/AdminComponents/ProfileTable";
 import AdminStoreTableImported from "./components/AdminComponents/StoreTable";
+import AAddUsers from './pages/Admin/AAddUsers';
 import SportCardImported from "./components/LoginComponents/SportCard1";
 import UserCardImported1 from "./components/LoginComponents/UserCard1";
 import TextFieldImported from './components/LoginComponents/TextField';
 import UKarateCreateAccImported from './pages/CreateAcc/UKarateCreateAcc';
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -61,7 +64,7 @@ function App() {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/Term" element={<Term />} />
-
+          <Route path="/SignUp" element={<SignUp/>} />
 
           {/* Rout try by Vindya-start */}
           <Route path="/UserCreateAcc" element={<UCreateAccImported />} />
@@ -94,6 +97,8 @@ function App() {
           <Route path="/AdminStoreTable" element={<AdminStoreTableImported />} />
           <Route path="/AdminPanelCard" element={<AdminPanelCardImported />} />
           <Route path="/AdminArticleTable" element={<AdminArticleTableImported />} />          
+          <Route path="/AddUsers" element={< AAddUsers/>} /> 
+
 
           {/* Route by Vindya-end */}
 

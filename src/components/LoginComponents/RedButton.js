@@ -1,11 +1,11 @@
 import React from "react";
 
-function RedButton() {
+function RedButton(props) {
 
     return (
         <>
 
-            <button className = "CNewButton">Create New Account</button>
+            <button className = "btnL">{props.title}</button>
 
         </>
 
