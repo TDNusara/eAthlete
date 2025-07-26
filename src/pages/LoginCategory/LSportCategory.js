@@ -22,7 +22,7 @@ function LSportCategory() {
        <Navbar/>
     <div class="UserC">
       <div class="UEmpty">
-          <h2 className="Lh"><b>Choose Your Category</b></h2>
+          <h2 className="Lh"><b>Choose Your Sport</b></h2>
         <LCard1 image1={Categories1} />
          <LCard2 image2={Categories2} />
          <LCard3 image3={Categories3} />

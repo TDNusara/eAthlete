@@ -24,13 +24,13 @@ function UCategory() {
     <div class="UserC">
       
       <div class="UEmpty">
-           <h2 className="Lh"><b>Choose Your Category</b></h2>
+           <h2 className="Lh"><b>Choose Your User Type</b></h2>
         <LUCard1 class="user-container" image1={UCategories1}/>
         <LUCard2 class="user-container" image2={UCategories2}/>
         <LUCard3 class="user-container" image3={UCategories3}/>
-         {/* <button className="btnL"><Link to="/Login">Back</Link></button>
-            <button className="btnL"><Link to="#">Close</Link></button> */}
-      
+         <div className='btnGroup'>
+                          <button className="btnL"><Link to="/Login">Back To Sign In</Link></button>
+                 </div>
       </div>
      </div>
      

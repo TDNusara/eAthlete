@@ -10,7 +10,7 @@ function PasswordField(props) {
                 <label className="FLabel">{props.label}</label>
                 <input
 
-                    type={props.Password || "password"}
+                    type={props.type || "password"}
                     value={props.value}
                     onChange={props.onChange}
                     placeholder={props.placeholder}

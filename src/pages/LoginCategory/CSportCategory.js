@@ -27,9 +27,9 @@ function CSportCategory() {
         <CCard1 image1={Categories1} />
          <CCard2 image2={Categories2} />
          <CCard3 image3={Categories3} />
-{/* <button className="btnL"><Link to="/UserCategoryLogin">Back</Link></button>
-            <button className="btnL"><Link to="#">Close</Link></button> */}
-
+ <div className='btnGroup'>
+                  <button className="btnL"><Link to="/UserCategoryLogin">Back To Sign Up</Link></button>
+         </div>
       </div>
     </div>
     <Footer2/>

@@ -28,6 +28,23 @@ function CKarateCreateAcc() {
   const [years, setYears] = useState('');
   const [bcolour, setBColour] = useState('');
 
+  const handleReset = () => {
+  setFirstName('');
+  setLastName('');
+  setPhoneNumber('');
+  setEmail('');
+  setUserName('');
+  setnewPassword('');
+  setconfirmPassword('');
+  setGenderr('');
+  setAchieves('');
+  setLocationn('');
+  setSelectedFile('');
+  setYears('');
+  console.log("Form has been reset!");
+};
+
+
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
     console.log("Selected file:", e.target.files[0]);
@@ -179,11 +196,12 @@ function CKarateCreateAcc() {
                 <CheckBoxAgree />
               </div>
 
-              <div className="form-row">
+              <div className="btnGroup">
                 
                 <button className="btnL"><Link to="/CoachSportCategoryLogin">Back</Link></button>
                 <RedButton type="submit" title="Create New Account"/>
-                <button className="btnL" type="reset"> Reset</button>
+                <button className="btnL" type="button" onClick={handleReset}>Reset</button>
+
               </div>
 
               <br />

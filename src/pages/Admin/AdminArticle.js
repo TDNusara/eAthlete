@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
-
+import { Link } from 'react-router-dom';
 import ArticleTable from '../../components/AdminComponents/ArticleTable';
 
 function AdminArticle() {
@@ -37,7 +37,9 @@ function AdminArticle() {
       <h2 class = 'AArticle'>Articles</h2>
       <ArticleTable articles={articles} />
         <br /><br />
-
+                  <div className='btnGroup'>
+                  <button className="btnL"><Link to="/AdminPanelUrl">Back To Admin Panel</Link></button>
+         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 

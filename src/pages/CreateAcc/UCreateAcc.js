@@ -22,6 +22,19 @@ function UCreateAcc() {
   const [newpassword, setnewPassword] = useState('');
   const [confirmpassword, setconfirmPassword] = useState('');
 
+  const handleReset = () => {
+  setFirstName('');
+  setLastName('');
+  setDate('');
+  setPhoneNumber('');
+  setEmail('');
+  setUserName('');
+  setnewPassword('');
+  setconfirmPassword('');
+  console.log("Form reset");
+};
+
+
   return (
     <>
       <div>
@@ -116,11 +129,11 @@ function UCreateAcc() {
             </div>
 
 
-                <div className='btnGroup'>
+                <div className="btnGroup">
                 
                 <Link to="/LearnerSportCategoryLogin"><button className="btnL">Back</button></Link>
                 <RedButton type="submit" title="Create New Account"/>
-                <button className="btnL" type="reset"> Reset</button>
+                <button className="btnL" type="button" onClick={handleReset}> Reset</button>
                 </div>
 
 
