@@ -66,8 +66,8 @@ function CKarateCreateAcc() {
                   <Link to={"/CoachSportCategoryLogin"}><BackButton /></Link>
                 </div>
                 <div style={{ flex: 1, textAlign: 'center' }}>
-              <br />
                   <h2 className='FLh'>Create An Account</h2>
+                  <h2 className='FLh'>karate Cotch</h2>
                 </div>
                 <div style={{ flex: 1, textAlign: 'right' }}>
                   <CloseButton />
