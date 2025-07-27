@@ -12,6 +12,8 @@ import FileUpload from '../../components/LoginComponents/FileUpload';
 import CoachCheckBox from '../../components/LoginComponents/CoachCheckBox';
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
+import BackButton from '../../components/LoginComponents/BackButton';
+import CloseButton from '../../components/LoginComponents/CloseButton';
 
 function CKarateCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -28,21 +30,42 @@ function CKarateCreateAcc() {
   const [years, setYears] = useState('');
   const [bcolour, setBColour] = useState('');
 
-  const handleReset = () => {
-  setFirstName('');
-  setLastName('');
-  setPhoneNumber('');
-  setEmail('');
-  setUserName('');
-  setnewPassword('');
-  setconfirmPassword('');
-  setGenderr('');
-  setAchieves('');
-  setLocationn('');
-  setSelectedFile('');
-  setYears('');
-  console.log("Form has been reset!");
+const handleSubmit = (e) => {
+  e.preventDefault(); // Prevent form refresh
+
+  const formData = {
+    firstName: FirstName,
+    lastName: LastName,
+    gender: Genderr,
+    phoneNumber: PhoneNumber,
+    achievements: Achieves,
+    yearsOfExperience: years,
+    location: Locationn,
+    beltColour: bcolour,
+    email: Email,
+    userName: UserName,
+    newPassword: newpassword,
+    confirmPassword: confirmpassword,
+    certificateFile: selectedFile ? selectedFile.name : null,
+  };
+
+  console.log("Submitted Form Data from karate coach create Account:", formData);
 };
+  const handleReset = () => {
+    setFirstName('');
+    setLastName('');
+    setPhoneNumber('');
+    setEmail('');
+    setUserName('');
+    setnewPassword('');
+    setconfirmPassword('');
+    setGenderr('');
+    setAchieves('');
+    setLocationn('');
+    setSelectedFile('');
+    setYears('');
+    console.log("Form has been reset!");
+  };
 
 
   const handleFileChange = (e) => {
@@ -56,8 +79,24 @@ function CKarateCreateAcc() {
         <Navbar />
         <div className="FLearner">
           <div className="FCVEmpty">
-            <form className="form-container">
-              <h2 className='FLh'>Create An Account</h2><br />
+            <form className="form-container" onSubmit={handleSubmit}>
+
+
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <Link to={"/CoachSportCategoryLogin"}><BackButton /></Link>
+                </div>
+                <div style={{ flex: 1, textAlign: 'center' }}>
+                  <h2 className='FLh'>Create An Account</h2>
+                  
+                </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>
+                  <CloseButton />
+                </div>
+              </div>
+
+              <br />
+
               <div className="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
               <br /><br />
 
@@ -197,11 +236,8 @@ function CKarateCreateAcc() {
               </div>
 
               <div className="btnGroup">
-                
-                <button className="btnL"><Link to="/CoachSportCategoryLogin">Back</Link></button>
-                <RedButton type="submit" title="Create New Account"/>
+                <RedButton type="submit" title="Create New Account"/>            
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
-
               </div>
 
               <br />

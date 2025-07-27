@@ -11,6 +11,8 @@ import DropdownField from '../../components/LoginComponents/DropdownField';
 import FileUpload from '../../components/LoginComponents/FileUpload';
 import Footer2 from "../../components/Footer2";
 import Navbar from "../../components/NavbarManager";
+import BackButton from '../../components/LoginComponents/BackButton';
+import CloseButton from '../../components/LoginComponents/CloseButton';
 
 function CVolleyballCreateAcc() {
   const [FirstName, setFirstName] = useState('');
@@ -25,6 +27,34 @@ function CVolleyballCreateAcc() {
   const [Locationn, setLocationn] = useState('');
   const [selectedFile, setSelectedFile] = useState('');
   const [years, setYears] = useState('');
+
+  const handleSubmit = (e) => {
+  e.preventDefault(); // Prevent form refresh
+
+  const formData = {
+    firstName: FirstName,
+    lastName: LastName,
+    phoneNumber: PhoneNumber,
+    email: Email,
+    userName: UserName,
+    newPassword: newpassword,
+    confirmPassword: confirmpassword,
+    gender: Genderr,
+    achievements: Achieves,
+    location: Locationn,
+     certificateFile: selectedFile ? selectedFile.name : null,
+    yearsOfExperience: years, 
+    
+    
+    
+    
+  
+  
+   
+  };
+
+  console.log("Submitted Form Data from Volleyball coach create Account:", formData);
+};
 
   const handleReset = () => {
   setFirstName('');
@@ -57,9 +87,24 @@ function CVolleyballCreateAcc() {
         <div class="FLearner">
           <div class="FCVEmpty">
 
-            <form className="form-container">
+            <form className="form-container" onSubmit={handleSubmit}>
 
-              <h2 className='FLh'>Create An Account</h2><br />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                <div style={{ flex: 1, textAlign: 'left' }}>
+                  <Link to={"/CoachSportCategoryLogin"}><BackButton /></Link>
+                </div>
+                <div style={{ flex: 1, textAlign: 'center' }}>
+                  <h2 className='FLh'>Create An Account</h2>
+                  
+                </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>
+                  <CloseButton />
+                </div>
+
+
+                </div>
+
+              
               <div class="PP"><img src={ProfilePhoto} alt="PPhoto" /></div>
               <br />
               <br />
@@ -183,7 +228,7 @@ function CVolleyballCreateAcc() {
 
               <div className="btnGroup">
 
-                <button className="btnL"><Link to="/CoachSportCategoryLogin">Back</Link></button>
+                {/* <button className="btnL"><Link to="/CoachSportCategoryLogin">Back</Link></button> */}
                 <RedButton type="submit" title="Create New Account" />
                 <button className="btnL" type="button" onClick={handleReset}>Reset</button>
 
