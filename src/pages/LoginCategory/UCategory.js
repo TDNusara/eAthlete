@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom';
 function UCategory() {
 
 
-   const UCategories1 = [{ title: "LEARNER", src: Learnerimg, position1: "top-right", position2: "bottom-right2" }];
-   const UCategories2 = [{ title: "COACH", src: coachimg, position1: "top-left", position2: "bottom-left2" }];
-   const UCategories3 = [{ title: "SELLER", src: Sellerimg, position1: "bottom-right", position2: "bottom-right2" }];
+   const UCategories1 = [{ title: "LEARNER", src: Learnerimg}];
+   const UCategories2 = [{ title: "COACH", src: coachimg }];
+   const UCategories3 = [{ title: "SELLER", src: Sellerimg }];
 
 
    return (
