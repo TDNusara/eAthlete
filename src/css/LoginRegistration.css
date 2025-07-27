@@ -95,7 +95,6 @@
 
 /*------------------------------------------------UCategory,SportCategory(LCard,LUCard)-------------------------------------------------------------*/
 
-
 .Lh {
         font-size: 24px;
         font-family: sans-serif;
@@ -110,19 +109,36 @@
 }
 
 .CardSection {
-        position: relative;
-        overflow: hidden;
-        border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .CardImage {
-        width: 100%;
-        display: block;
-        border-radius: 20px;
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.CardRow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+}
+
+.CardHalf {
+  width: 48%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .CategoryBtn {
-        position: absolute;
         background-color: red;
         color: white;
         border: none;
@@ -131,54 +147,58 @@
         border-radius: 10px;
         cursor: pointer;
         font-size: 14px;
-
 }
 
 .Categoryheading {
-
-        position: absolute;
         color: white;
         border: none;
-        padding: 5px 10px;
         font-weight: bold;
-        border-radius: 10px;
         cursor: pointer;
         font-size: 18px;
-
 }
 
-
-.top-right {
-        top: 90px;
-        right: 120px;
-
-}
-
-.top-left {
-        top: 80px;
-        left: 120px;
-}
-
-.bottom-right2 {
-        bottom: 90px;
-        right: 100px;
-        margin-bottom: 2px;
-}
-
-.bottom-right {
-        bottom: 40px;
-        right: 120px;
-}
-
-.bottom-left2 {
-        bottom: 100px;
-        left: 100px;
-        margin-bottom: 1px;
-
-}
 
 .CategoryBtn:hover {
         background-color: #cc0000;
+}
+
+@media (max-width: 767px) {
+  .CardRow {
+    width: 90%;
+  }
+
+  .CardHalf {
+    width: 100%;
+  }
+  
+  .SingleCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .CardImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .CategoryBtn {
+    font-size: 12px;
+    padding: 8px 14px;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .Categoryheading {
+    font-size: 16px;
+    transform: none;
+    color: white;
+  }
+
 }
 
 /*------------------------------------------------CCategory------------------------------------------------------------*/
@@ -214,48 +234,9 @@
 
 @media only screen and (max-width: 767px) {
   .UEmpty {
-    padding: 30px 20px;
     border-radius: 30px;
     max-width: 95%;
   }
-
-  .SingleCard {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .CardImage {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-
-  .CategoryBtn {
-    font-size: 12px;
-    padding: 8px 14px;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin-top: 10px;
-  }
-
-  .Categoryheading {
-    font-size: 16px;
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin-top: 10px;
-    color: black;
-  }
-
-  
 }
 
 

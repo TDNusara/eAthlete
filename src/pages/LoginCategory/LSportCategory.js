@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 
 function LSportCategory() {
 
-  const Categories1 = [{ title: "VolleyBall", src: CVimage, position: "top-right" }];
-  const Categories2 =[{ title: "Karate", src: CKimage, position: "top-left" }];
-  const Categories3=[{ title: "Workout", src: CWImage, position: "bottom-right" }];
+  const Categories1 = [{ title: "VolleyBall", src: CVimage,}];
+  const Categories2 =[{ title: "Karate", src: CKimage,}];
+  const Categories3=[{ title: "Workout", src: CWImage,}];
   
 
   return (

@@ -10,7 +10,13 @@ function SportCard2({ image2 }) {
         {image2.map((item, index) => (
           <div key={index} className="CardSection">
             <img src={item.src} alt={item.title} className="CardImage" />
-            <Link to="/KarateCreateAcc"><button className={`CategoryBtn ${item.position}`}>{item.title}</button></Link>
+                        <div className="CardRow">
+              <div className="CardHalf">
+                <Link to="/KarateCreateAcc"><button className="CategoryBtn">{item.title}</button></Link>
+                </div>
+              <div className="CardHalf">
+              </div>
+            </div>
           </div>
         ))}
       </div>
