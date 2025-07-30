@@ -3,14 +3,17 @@ import axios from 'axios';
 import '../../App.css';
 import './Learner.css';
 import Footer2 from "../../components/Footer2";
-import HNavbar from "../../components/HNavbar";
+import Navbar from "../../components/NavbarManager";
 
 const sports = ['All', 'Workout', 'Volleyball', 'Karate'];
 
+
 function Coachers() {
+
   const [selectedSport, setSelectedSport] = useState('All');
   const [coaches, setCoaches] = useState([]);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     let url = 'http://localhost/eAthlete/backend/api/get_coaches.php';
@@ -20,7 +23,6 @@ function Coachers() {
 
     axios.get(url)
       .then(res => {
-        console.log("Server response:", res.data);
 
         if (Array.isArray(res.data)) {
           setCoaches(res.data);
@@ -39,7 +41,7 @@ function Coachers() {
 
   return (
     <div>
-      <HNavbar />
+      <Navbar />
 
       <div className="section coach-hero">
         <div className="container-fluid coach-frame1">
@@ -102,17 +104,6 @@ function Coachers() {
                               alt={`${coach.FirstName} ${coach.LastName}`}
                               className="img-fluid rounded"
                             />
-                            <button
-                              className="btn btn-danger position-absolute"
-                              style={{
-                                bottom: "10px",
-                                left: "50%",
-                                transform: "translateX(-50%)",
-                                fontWeight: "bold",
-                              }}
-                            >
-                              SELECT
-                            </button>
                           </div>
                           <h5 className="crd-text mt-3 fw-bold text-dark">
                             {coach.FirstName?.toUpperCase()} {coach.LastName?.toUpperCase()}
@@ -139,20 +130,6 @@ function Coachers() {
                           <p className='coachDetails'>
                             <span className='cardHeadText'>BIO:</span> {coach.Bio || 'N/A'}
                           </p>
-                        </div>
-
-                        <div className="coach-select-wrapper mobile-only">
-                          <button
-                            className="btn btn-danger mobile-btn position-absolute"
-                            style={{
-                              bottom: "10px",
-                              left: "50%",
-                              transform: "translateX(-50%)",
-                              fontWeight: "bold",
-                            }}
-                          >
-                            SELECT
-                          </button>
                         </div>
                       </div>
                     </div>

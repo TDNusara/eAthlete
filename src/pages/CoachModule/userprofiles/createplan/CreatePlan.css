@@ -1,0 +1,211 @@
+.CreatePlanPageTop {
+  display: flex;
+  align-items: center;
+  background: url("../createplan/createplanimages/profilebg.png") no-repeat center;
+  background-size: cover;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.PlayerInfo {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.PlayerPhoto {
+  width: 140px;
+  height: 140px;
+  border: 4px solid white;
+  border-radius: 50%;
+}
+
+.PlayerData {
+  margin-left: 20px;
+  color: white;
+  text-align: center;
+}
+
+.PlayerDataShow {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.PlanForm {
+  padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Saira Condensed', sans-serif;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.PageTitle {
+  text-align: center;
+  margin-top: 25px;
+  color: #FF3636;
+}
+
+.DayTabs {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DayTab {
+  background: #fff;
+  border: 2px solid #333;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.DayTab.active {
+  background: #333;
+  color: white;
+}
+
+.LessonForm {
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.LessonFormDashBox {
+  border: 2px dashed white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.LessonDayTitle {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.LessonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.LessonCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+}
+
+.LessonCheckbox span,
+.LessonCheckbox label {
+  font-weight: bold;
+}
+
+.LessonCheckbox select {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  min-width: 100px;
+}
+
+.SubmitButton {
+  background-color: #FF3636;
+  color: white;
+  padding: 12px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 30px auto 100px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.SubmitButton:hover {
+  background-color: red;
+}
+
+
+
+@media (max-width: 800px) {
+  .PlayerInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .PlayerData {
+    margin-left: 0;
+  }
+
+  .LessonRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .LessonCheckbox {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .LessonCheckbox select {
+    width: 100%;
+  }
+
+  .SubmitButton {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .PlayerPhoto {
+    width: 110px;
+    height: 110px;
+  }
+
+  .DayTab {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .SubmitButton {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .LessonForm {
+    font-size: 1rem;
+  }
+
+  .LessonCheckbox label,
+  .LessonCheckbox span {
+    font-size: 0.95rem;
+  }
+
+  .LessonCheckbox select {
+    font-size: 0.9rem;
+  }
+}

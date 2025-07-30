@@ -1,19 +1,20 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import Footer from "../components/Footer";
-import SNavbar from "../components/SNavbar";
+import { Link } from "react-router-dom";
+import Footer2 from "../components/Footer2";
+import GNavbar from "../components/GNavbar";
 
 function GHome() {
+
     return(
-        <div>
-            <SNavbar />
+        <div className="Gbody">
+            <GNavbar />
             <div className="section hero">
                 <div className="container-fluid frame1">
                     <div className="row regframe">
                         <div className="col-sm-12 herocol">
                             <h1 className="headertext">ZERO TO <span className="redtext">HERO</span></h1>
                             <p className="paratext">Your Ultimate Learning Journey Starts Here</p>
-                            <button className="regbtn"><Link to="/Login" className="rf_link">REGISTER NOW</Link></button>
+                            <button className="regbtn"><Link to="/UserCategoryLogin" className="rf_link">REGISTER NOW</Link></button>
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@ function GHome() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer2 />
         </div>
     );
 }

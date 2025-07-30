@@ -10,6 +10,7 @@ CREATE TABLE User (
     UserType ENUM('Learner', 'Coach', 'Seller', 'Admin'),
     Bio TEXT,
     District VARCHAR(50),
+    Phone VARCHAR(20),
     DPlink VARCHAR(500),
     Status BOOLEAN DEFAULT TRUE
 ) ENGINE=InnoDB;
@@ -37,7 +38,7 @@ CREATE TABLE Coach (
     CoachID INT PRIMARY KEY,
     Qualification TEXT,
     Experience TEXT,
-    Style TEXT,
+    KarateStyle ENUM('Shotokan', 'Shito', 'Goju', 'Wado ryu') NULL;,
     SportID INT,
     FOREIGN KEY (CoachID) REFERENCES User(UserID),
     FOREIGN KEY (SportID) REFERENCES Sport(SportID)
@@ -74,7 +75,8 @@ CREATE TABLE Progress (
     ProgressID INT AUTO_INCREMENT PRIMARY KEY,
     LearnerID INT,
     Date DATE,
-    Notes TEXT,
+    No_Of_Completed_Lessons INT DEFAULT 0,
+    No_Of_Total_Lessons INT DEFAULT 0,
     ProgressStatus VARCHAR(50),
     FOREIGN KEY (LearnerID) REFERENCES Learner(LearnerID)
 ) ENGINE=InnoDB;

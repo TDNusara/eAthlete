@@ -4,7 +4,9 @@ import { useNavigate, Link } from 'react-router-dom';
 import LoginImg from '../assets/Login.png';
 import TextField from '../components/LoginComponents/TextField';
 import PasswordField from '../components/LoginComponents/PasswordField';
-import "../css/LoginRegistration.css"
+import "../css/LoginRegistration.css";
+import Footer2 from "../components/Footer2";
+import Navbar from "../components/NavbarManager";
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -25,10 +27,13 @@ function Login({ onLogin }) {
       });
 
       if (res.data.success) {
+       
         localStorage.setItem('user', JSON.stringify(res.data.user));
-        if (onLogin) onLogin(res.data.user);
+
+        if (onLogin) onLogin(res.data.user.UserID);
 
         const userType = res.data.user.UserType;
+
         if (userType === 'Learner') {
           navigate('/LearnerHome');
         } else if (userType === 'Coach') {
@@ -52,42 +57,46 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="Login-container">
-      <div className="FLEmpty">
-        <div className="form-columns">
-          <div className="Form-left">
-            <img src={LoginImg} alt="login img" />
-          </div>
-          <div className="Form-right">
-            <br />
-            <h2 className="HLogin">Log in</h2>
-            <br />
-            <TextField
-              label="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your Username"
-            />
-            <br />
-            <PasswordField
-              label="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your Password"
-            />
-            <p className='LoginParagraph'>
-              <Link to="/HomePage" className="linkB">Forgot Password?</Link>
-            </p>
-            <br />
-            <button className="btnL" onClick={handleSubmit} disabled={loading}>
-              {loading ? 'Logging in...' : 'Login'}
-            </button>
-            {error && <p style={{ color: 'red', marginTop: 10 }}>{error}</p>}
-            <br />
-            <p>Don't have an account? <Link to="/SignUp" className="linkR">Signup</Link></p>
+    <div>
+      <Navbar/>
+      <div className="Login-container">
+        <div className="FLEmpty">
+          <div className="form-columns">
+            <div className="Form-left">
+              <img src={LoginImg} alt="login img" />
+            </div>
+            <div className="Form-right">
+              <br />
+              <h2 className="HLogin">Log in</h2>
+              <br />
+              <TextField
+                label="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Enter your Username"
+              />
+              <br />
+              <PasswordField
+                label="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your Password"
+              />
+              <p className='LoginParagraph'>
+                <Link to="/HomePage" className="linkB">Forgot Password?</Link>
+              </p>
+              <br />
+              <button className="btnL" onClick={handleSubmit} disabled={loading}>
+                {loading ? 'Logging in...' : 'Login'}
+              </button>
+              {error && <p style={{ color: 'red', marginTop: 10 }}>{error}</p>}
+              <br />
+              <p>Don't have an account? <Link to="/UserCategoryLogin" className="linkR">Signup</Link></p>
+            </div>
           </div>
         </div>
       </div>
+      <Footer2/>
     </div>
   );
 }

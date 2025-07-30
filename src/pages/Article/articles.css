@@ -1,0 +1,318 @@
+.article-page-container {
+  background-color: #ffffff;
+}
+
+.article-hero-section {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./articleImages/Grass.png');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.article-hero-section h1 {
+  text-align: left;
+  line-height: 1.2;
+}
+.hero-title-small {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.hero-title-large {
+  display: block;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.article-content-wrapper {
+  padding: 50px 10%;
+  padding-bottom: 200px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: two-column grid */
+  gap: 50px;
+}
+
+.article-card {
+  /* Intentionally left empty to remove borders */
+}
+
+.article-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.article-snippet {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.add-article-button-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.add-article-button {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 20px 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.add-article-button::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px dashed #aaa;
+  border-radius: 6px;
+}
+
+.add-article-button:hover {
+  background-color: #e0e0e0;
+  border-color: #aaa;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-body {
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-input::placeholder { color: #888; }
+.modal-input:focus { outline: none; }
+
+.topic-container {
+  border-bottom: 2px dashed #aaa;
+}
+
+.description-input {
+  height: 150px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.modal-icon {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal-icon:hover { transform: scale(1.1); }
+.check-icon { color: #4caf50; }
+.x-icon { color: #f44336; }
+
+
+.see-more-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 0;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.see-more-button:hover { text-decoration: underline; }
+
+.read-modal {
+  text-align: left;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.modal-scroll-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 15px;
+  margin: 20px 0;
+}
+
+.article-full-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.close-modal-icon {
+  width: 32px;
+  height: 32px;
+  color: #f44336;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.close-modal-icon:hover { transform: scale(1.1); }
+
+
+.comment-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.comment { margin-bottom: 15px; }
+.comment-user { color: #000; font-weight: bold; }
+.comment-text { margin: 5px 0 0 0; color: #555; }
+
+.comment-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px 30px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment-input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.post-comment-icon {
+  background-color: #007bff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.post-comment-icon:hover { transform: scale(1.1); }
+
+
+/*screens smaller than 992px*/
+@media (max-width: 992px) {
+    .article-content-wrapper {
+        padding: 40px 5%;
+    }
+    .article-grid {
+        gap: 30px;
+    }
+    .article-title {
+        font-size: 1.3rem;
+    }
+    .add-article-button {
+        padding: 15px 100px;
+    }
+}
+
+/*Mobile Styles*/
+@media (max-width: 768px) {
+    .article-grid {
+        /* On mobile, stack everything in a single column */
+        grid-template-columns: 1fr;
+    }
+    .article-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-title-small {
+        font-size: 1.2rem;
+    }
+    .hero-title-large {
+        font-size: 2.5rem;
+    }
+    .add-article-button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+    .comment-form {
+        padding: 15px 0 0;
+    }
+    .article-content-wrapper {
+        padding-bottom: 250px;
+    }
+}

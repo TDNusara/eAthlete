@@ -1,0 +1,77 @@
+.TopAddLesson {
+    padding: 100px 20px;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: center;
+}
+
+.AddLesson-text {
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.AddLesson-text h1 {
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+.AddLesson-text h2 {
+    font-size: 3rem;
+    margin-bottom: 100px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .AddLesson-text {
+        margin-left: 60px;
+    }
+
+    .AddLesson-text h1 {
+        font-size: 4rem;
+    }
+
+    .AddLesson-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .AddLesson-text {
+        margin-left: 40px;
+    }
+
+    .AddLesson-text h1 {
+        font-size: 3rem;
+    }
+
+    .AddLesson-text h2 {
+        font-size: 2rem;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .TopAddLesson {
+        padding: 60px 15px;
+        text-align: center;
+    }
+
+    .AddLesson-text {
+        margin-left: 0;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .AddLesson-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .AddLesson-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+}

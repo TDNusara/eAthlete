@@ -6,33 +6,37 @@ import CCard1 from "../../components/LoginComponents/CoachCard1";
 import CCard2 from "../../components/LoginComponents/CoachCard2";
 import CCard3 from "../../components/LoginComponents/CoachCard3";
 import Navbar from "../../components/NavbarManager";
-import Footer from "../../components/Footer";
+import Footer2 from "../../components/Footer2";
+import { Link } from 'react-router-dom';
 
 
 function CSportCategory() {
 
-  const Categories1 = [{ title: "VolleyBall", src: CVimage, position: "top-right" }];
-  const Categories2 =[{ title: "Karate", src: CKimage, position: "top-left" }];
-  const Categories3=[{ title: "Workout", src: CWImage, position: "bottom-right" }];
-  
+  const Categories1 = [{ title: "VolleyBall", src: CVimage, }];
+  const Categories2 = [{ title: "Karate", src: CKimage, }];
+  const Categories3 = [{ title: "Workout", src: CWImage, }];
+
 
   return (
-    <div>
-        <Navbar/>
-    <div class="UserC">
-      <div class="UEmpty">
-          <h2 className="Lh"><b>Choose Your Category</b></h2>
-        <CCard1 image1={Categories1} />
-         <CCard2 image2={Categories2} />
-         <CCard3 image3={Categories3} />
-
-
+    <>
+      <div>
+        <Navbar />
+        <div class="UserC">
+          <div class="UEmpty">
+            <h2 className="Lh"><b>Choose Your Category</b></h2>
+            <CCard1 image1={Categories1} />
+            <CCard2 image2={Categories2} />
+            <CCard3 image3={Categories3} />
+            <div className='btnGroup'>
+              <button className="btnL"><Link to="/UserCategoryLogin">Back To Sign Up</Link></button>
+            </div>
+          </div>
+        </div>
+        <Footer2 />
       </div>
-    </div>
-    <Footer/>
-    </div>
+    </>
   );
 }
 
 
-export default CSportCategory ;
+export default CSportCategory;

@@ -1,0 +1,78 @@
+.LessonBar {
+    background: #333;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 16px 0;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    max-width: 1000px;
+    display: block;
+}
+
+.LessonDay {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.LessonBarRow {
+    align-items: center;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    gap: 500px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.LessonBarRow.completed {
+    background-color: #4FBF26;
+}
+
+.LessonBarRow.notStarted {
+    background-color: white;
+}
+
+.LessonName {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.LessonAction {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+
+@media (max-width: 762px) {
+        .LessonBarRow {
+        align-items: center;
+        background: white;
+        padding: 10px 16px;
+        border-radius: 8px;
+        gap: 150px;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        justify-content: center;
+        }
+}
+
+@media (max-width: 480px){
+
+        .LessonBarRow {
+        align-items: center;
+        background: white;
+        padding: 10px 16px;
+        border-radius: 8px;
+        gap: 50px;
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+}

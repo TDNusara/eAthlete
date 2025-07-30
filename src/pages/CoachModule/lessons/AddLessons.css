@@ -1,0 +1,22 @@
+.MiddleAddLesson {
+    background-image: url("/src/pages/CoachModule/coachimages/PageTop.png");
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .MiddleAddLesson {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .MiddleAddLesson {
+        min-height: 200px;
+    }
+}

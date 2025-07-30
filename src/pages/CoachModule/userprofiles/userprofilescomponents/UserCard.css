@@ -1,0 +1,87 @@
+.PlayerProfileCard {
+    background-color: #fff;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    max-width: 320px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Saira Condensed', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.PlayerProfileCard:hover {
+    transform: translateY(-5px);
+}
+
+.PlayerProfileCardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.PlayerProfileCardName {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.PlayerProfileCardButtons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.PlayerProfileCardButton {
+    background-color: #FF3636;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.PlayerProfileCardButton:hover {
+    background-color: black;
+    color: #FF3636;
+}
+
+
+
+@media (max-width: 768px) {
+    .PlayerProfileCard {
+        width: 180px;
+    }
+
+    .PlayerProfileCardName {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .PlayerProfileCard {
+        width: 100%;
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .PlayerProfileCardName {
+        font-size: 1.2rem;
+    }
+
+    .PlayerProfileCardButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PlayerProfileCardButton {
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}

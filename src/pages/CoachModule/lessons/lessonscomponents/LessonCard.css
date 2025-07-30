@@ -1,0 +1,186 @@
+.LessonCard {
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 50px auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.LessonBox {
+    border: 2px dashed white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+.LessonBox h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.LessonBox p {
+    font-size: 19px;
+}
+
+.PageMiddle {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.AddButton {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.PopupContent {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.PopupContentBox {
+    border: 2px dashed white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.PopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.PopupTextField {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.PopupSubmit {
+    background-color: #FF3636;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.CloseButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.LessonHeader {
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+
+.LessonDescription {
+    margin-top: 10px;
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+.LessonLink {
+    margin-top: 10px;
+    color: lightskyblue;
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+@media (max-width: 850px) {
+    .LessonCard {
+        padding: 10px;
+        flex-direction: column;    
+        width: 80%;
+    }
+
+    .LessonBox h3 {
+        font-size: 20px;
+    }
+
+    .LessonBox p {
+        font-size: 16px;
+    }
+
+    .PopupContent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .PopupSubmit {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .AddButton {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .LessonBox h3 {
+        font-size: 18px;
+    }
+
+    .LessonBox p {
+        font-size: 15px;
+    }
+
+    .PopupContent {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .PopupSubmit {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+
+    .AddButton {
+        font-size: 16px;
+    }
+
+    .LessonHeader,
+    .LessonDescription,
+    .LessonLink {
+        font-size: 13px;
+    }
+}

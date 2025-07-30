@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from "../../components/NavbarManager";
-import Footer from '../../components/Footer';
+import Footer2 from '../../components/Footer2';
 import ProfileTable from '../../components/AdminComponents/ProfileTable';
+import "../../css/Admin.css";
+import { Link } from 'react-router-dom';
 
 function AManageProfiles() {
   
@@ -38,7 +40,7 @@ const profilesS = [
     <div className='AMPBody'>
       <br /><br />
         <h2 className='AMPTopic'> Coaches</h2>
-        <ProfileTable heading="Sport" profiles={profilesC} paragraph="Coaches"/>
+        <ProfileTable heading="Sport" profiles={profilesC} />
         
         <br /><br />
 
@@ -50,13 +52,16 @@ const profilesS = [
         <br /><br />
 
         <h2 className='AMPTopic'> Sellers</h2>
-        <ProfileTable heading="BusinessId" profiles={profilesS} paragraph="Sellers"/>
+        <ProfileTable heading="BusinessId" profiles={profilesS} />
         <br /><br />
-
+       
+        <div className='btnGroup'>
+          <button className="btnL"><Link to="/AdminPanelUrl">Back To Admin Panel</Link></button>
+        </div> 
         <br /><br /><br /><br /><br /><br /><br /><br />
 </div>
 
-      <Footer />
+      <Footer2 />
 
     </div>
  );
